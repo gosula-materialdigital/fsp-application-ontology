@@ -116,8 +116,10 @@ jobs:
       - name: Check for ontology file
         id: check
         run: |
-          # Release builds copy *-full.owl to the repo root (src/ontology/*-full.* is gitignored)
-          ONTOLOGY_FILE=$(ls src/ontology/*-full.owl ./*-full.owl 2>/dev/null | head -1)
+          # *-full.* is gitignored by ODK, so fall back to the committed main
+          # release (src/ontology/<id>.ttl, primary_release: full) built by qc.yml
+          ONT_ID=$(awk '/^id:/{print $2; exit}' project-odk.yaml)
+          ONTOLOGY_FILE=$(ls src/ontology/*-full.owl ./*-full.owl "src/ontology/${ONT_ID}.ttl" "./${ONT_ID}.ttl" 2>/dev/null | head -1)
           if [ -z "$ONTOLOGY_FILE" ]; then
             echo "No *-full.owl found — ontology not yet built. Skipping docs."
             echo "exists=false" >> $GITHUB_OUTPUT
