@@ -875,7 +875,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000009 "A label is a symbol that is
 AnnotationAssertion(rdfs:label obo:IAO_0000009 "datum label"@en)
 SubClassOf(obo:IAO_0000009 obo:IAO_0000030)
 
-# Class: obo:IAO_0000027 (data entity)
+# Class: obo:IAO_0000027 (data item)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
@@ -1029,7 +1029,7 @@ AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000520> "is a 
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000520> "ist ein Prozess, bei dem Wärmeenergie zwischen oder innerhalb materieller Einheiten übertragen wird"@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000520> obo:BFO_0000015)
 
-# Class: <https://w3id.org/pmd/co/PMD_0000553> (chemisches Potential)
+# Class: <https://w3id.org/pmd/co/PMD_0000553> (chemical potential)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemical potential"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemisches Potential"@de)
