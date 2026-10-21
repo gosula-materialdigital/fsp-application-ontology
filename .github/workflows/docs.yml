@@ -116,7 +116,8 @@ jobs:
       - name: Check for ontology file
         id: check
         run: |
-          ONTOLOGY_FILE=$(find src/ontology/ -name "*-full.owl" -type f 2>/dev/null | head -1)
+          # Release builds copy *-full.owl to the repo root (src/ontology/*-full.* is gitignored)
+          ONTOLOGY_FILE=$(ls src/ontology/*-full.owl ./*-full.owl 2>/dev/null | head -1)
           if [ -z "$ONTOLOGY_FILE" ]; then
             echo "No *-full.owl found — ontology not yet built. Skipping docs."
             echo "exists=false" >> $GITHUB_OUTPUT
