@@ -1,12 +1,379 @@
-Prefix(:=<https://w3id.org/pmd/fsp//imports/pmdco_import.owl>)
+Prefix(:=<https://w3id.org/pmd/fsp//imports/pmdco_import.owl#>)
+Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(prov:=<http://www.w3.org/ns/prov#>)
+Prefix(rdfa:=<http://www.w3.org/ns/rdfa#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(void:=<http://rdfs.org/ns/void#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
+
 Ontology(<https://w3id.org/pmd/fsp//imports/pmdco_import.owl>
-# This is a placeholder, it will be regenerated when makefile is first executed.
+<https://w3id.org/pmd/fsp//releases/2026-10-21/imports/pmdco_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/3.1.1>)
+Annotation(owl:versionInfo "2026-10-21")
+
+Declaration(Class(obo:BFO_0000001))
+Declaration(Class(obo:BFO_0000002))
+Declaration(Class(obo:BFO_0000004))
+Declaration(Class(obo:BFO_0000016))
+Declaration(Class(obo:BFO_0000017))
+Declaration(Class(obo:BFO_0000019))
+Declaration(Class(obo:BFO_0000020))
+Declaration(Class(obo:BFO_0000023))
+Declaration(Class(obo:BFO_0000031))
+Declaration(Class(obo:BFO_0000034))
+Declaration(Class(obo:BFO_0000145))
+Declaration(Class(obo:IAO_0000003))
+Declaration(Class(obo:IAO_0000009))
+Declaration(Class(obo:IAO_0000030))
+Declaration(Class(obo:OBI_0001931))
+Declaration(Class(obo:OBI_0001933))
+Declaration(Class(<http://qudt.org/schema/qudt/Unit>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020216>))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:IAO_0000039))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:RO_0000052))
+Declaration(ObjectProperty(obo:RO_0000053))
+Declaration(ObjectProperty(obo:RO_0000079))
+Declaration(ObjectProperty(obo:RO_0000080))
+Declaration(ObjectProperty(obo:RO_0000081))
+Declaration(ObjectProperty(obo:RO_0000085))
+Declaration(ObjectProperty(obo:RO_0000086))
+Declaration(ObjectProperty(obo:RO_0000087))
+Declaration(ObjectProperty(obo:RO_0000091))
+Declaration(ObjectProperty(obo:RO_0000092))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000004>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025998>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025999>))
+Declaration(DataProperty(obo:OBI_0001937))
+Declaration(DataProperty(obo:OBI_0002135))
+Declaration(NamedIndividual(<http://qudt.org/vocab/unit/PER-MOL>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020217>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020218>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020219>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020242>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020368>))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(dc:description))
+Declaration(AnnotationProperty(dc:license))
+Declaration(AnnotationProperty(dc:title))
+Declaration(Datatype(rdfs:Literal))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: dc:license (dcterms:license)
+
+AnnotationAssertion(rdfs:label dc:license "dcterms:license")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:BFO_0000050 (part of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000050 "a core relation that holds between a part and its whole"@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000050 "part of")
+AnnotationAssertion(rdfs:label obo:BFO_0000050 "part of"@en)
+InverseObjectProperties(obo:BFO_0000050 obo:BFO_0000051)
+TransitiveObjectProperty(obo:BFO_0000050)
+
+# Object Property: obo:BFO_0000051 (has part)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000051 "a core relation that holds between a whole and its part"@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"@en)
+SubObjectPropertyOf(obo:BFO_0000051 obo:BFO_0000051)
+TransitiveObjectProperty(obo:BFO_0000051)
+
+# Object Property: obo:IAO_0000039 (has measurement unit label)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000039 "has measurement unit label"@en)
+SubObjectPropertyOf(obo:IAO_0000039 obo:BFO_0000051)
+FunctionalObjectProperty(obo:IAO_0000039)
+ObjectPropertyRange(obo:IAO_0000039 obo:IAO_0000003)
+
+# Object Property: obo:IAO_0000136 (is about)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000136 "A (currently) primitive relation that relates an information artifact to an entity."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000136 "is about"@en)
+InverseObjectProperties(obo:IAO_0000136 <https://w3id.org/pmd/co/PMD_0000004>)
+ObjectPropertyDomain(obo:IAO_0000136 obo:IAO_0000030)
+
+# Object Property: obo:RO_0000052 (characteristic of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000052 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en)
+AnnotationAssertion(rdfs:label obo:RO_0000052 "characteristic of"@en)
+InverseObjectProperties(obo:RO_0000052 obo:RO_0000053)
+FunctionalObjectProperty(obo:RO_0000052)
+
+# Object Property: obo:RO_0000053 (has characteristic)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000053 "Inverse of characteristic_of"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000053 "has characteristic"@en)
+InverseFunctionalObjectProperty(obo:RO_0000053)
+ObjectPropertyRange(obo:RO_0000053 obo:BFO_0000020)
+
+# Object Property: obo:RO_0000079 (function of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000079 "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000079 "function of"@en)
+SubObjectPropertyOf(obo:RO_0000079 obo:RO_0000052)
+InverseObjectProperties(obo:RO_0000079 obo:RO_0000085)
+ObjectPropertyDomain(obo:RO_0000079 obo:BFO_0000034)
+
+# Object Property: obo:RO_0000080 (quality of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000080 "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000080 "quality of"@en)
+SubObjectPropertyOf(obo:RO_0000080 obo:RO_0000052)
+InverseObjectProperties(obo:RO_0000080 obo:RO_0000086)
+ObjectPropertyDomain(obo:RO_0000080 ObjectIntersectionOf(obo:BFO_0000019 ObjectComplementOf(obo:BFO_0000145)))
+
+# Object Property: obo:RO_0000081 (role of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000081 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000081 "role of"@en)
+SubObjectPropertyOf(obo:RO_0000081 obo:RO_0000052)
+InverseObjectProperties(obo:RO_0000081 obo:RO_0000087)
+
+# Object Property: obo:RO_0000085 (has function)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000085 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000085 "has function"@en)
+SubObjectPropertyOf(obo:RO_0000085 obo:RO_0000053)
+ObjectPropertyDomain(obo:RO_0000085 obo:BFO_0000004)
+ObjectPropertyRange(obo:RO_0000085 obo:BFO_0000034)
+
+# Object Property: obo:RO_0000086 (has quality)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000086 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000086 "has quality"@en)
+SubObjectPropertyOf(obo:RO_0000086 obo:RO_0000053)
+ObjectPropertyRange(obo:RO_0000086 obo:BFO_0000019)
+
+# Object Property: obo:RO_0000087 (has role)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000087 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000087 "has role"@en)
+SubObjectPropertyOf(obo:RO_0000087 obo:RO_0000053)
+ObjectPropertyDomain(obo:RO_0000087 obo:BFO_0000004)
+ObjectPropertyRange(obo:RO_0000087 obo:BFO_0000023)
+
+# Object Property: obo:RO_0000091 (has disposition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000091 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000091 "has disposition"@en)
+SubObjectPropertyOf(obo:RO_0000091 obo:RO_0000053)
+InverseObjectProperties(obo:RO_0000091 obo:RO_0000092)
+ObjectPropertyDomain(obo:RO_0000091 obo:BFO_0000004)
+ObjectPropertyRange(obo:RO_0000091 obo:BFO_0000016)
+
+# Object Property: obo:RO_0000092 (disposition of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000092 "inverse of has disposition")
+AnnotationAssertion(rdfs:label obo:RO_0000092 "disposition of"@en)
+SubObjectPropertyOf(obo:RO_0000092 obo:RO_0000052)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0000004> (is subject of)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000004> "is subject of"@en)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0025998> (hat relationale Qualität)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025998> "has relational quality"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025998> "hat relationale Qualität"@de)
+InverseObjectProperties(<https://w3id.org/pmd/co/PMD_0025998> <https://w3id.org/pmd/co/PMD_0025999>)
+ObjectPropertyDomain(<https://w3id.org/pmd/co/PMD_0025998> obo:BFO_0000004)
+ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0025998> obo:BFO_0000145)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0025999> (relational quality of)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025999> "relational quality of"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025999> "relationale Qualität von"@de)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: obo:OBI_0001937 (has specified numeric value)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001937 "A relation between a value specification and a number that quantifies it."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001937 "has specified numeric value")
+SubDataPropertyOf(obo:OBI_0001937 obo:OBI_0002135)
+DataPropertyDomain(obo:OBI_0001937 obo:OBI_0001933)
+
+# Data Property: obo:OBI_0002135 (has specified value)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0002135 "A relation between a value specification and a literal."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0002135 "has specified value"@en)
+DataPropertyDomain(obo:OBI_0002135 obo:OBI_0001933)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:BFO_0000001 (entity)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000001 "entity"@en)
+
+# Class: obo:BFO_0000002 (continuant)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000002 "continuant"@en)
+SubClassOf(obo:BFO_0000002 obo:BFO_0000001)
+SubClassOf(obo:BFO_0000002 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000002))
+
+# Class: obo:BFO_0000004 (independent continuant)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000004 "independent continuant"@en)
+SubClassOf(obo:BFO_0000004 obo:BFO_0000002)
+SubClassOf(obo:BFO_0000004 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000004))
+DisjointClasses(obo:BFO_0000004 obo:BFO_0000020)
+DisjointClasses(obo:BFO_0000004 obo:BFO_0000031)
+
+# Class: obo:BFO_0000016 (disposition)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000016 "disposition"@en)
+SubClassOf(obo:BFO_0000016 obo:BFO_0000017)
+DisjointClasses(obo:BFO_0000016 obo:BFO_0000023)
+
+# Class: obo:BFO_0000017 (realizable entity)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000017 "realizable entity"@en)
+SubClassOf(obo:BFO_0000017 obo:BFO_0000020)
+SubClassOf(obo:BFO_0000017 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000017))
+DisjointClasses(obo:BFO_0000017 obo:BFO_0000019)
+
+# Class: obo:BFO_0000019 (quality)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000019 "quality"@en)
+SubClassOf(obo:BFO_0000019 obo:BFO_0000020)
+SubClassOf(obo:BFO_0000019 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000019))
+
+# Class: obo:BFO_0000020 (specifically dependent continuant)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000020 "specifically dependent continuant"@en)
+SubClassOf(obo:BFO_0000020 obo:BFO_0000002)
+SubClassOf(obo:BFO_0000020 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000020))
+DisjointClasses(obo:BFO_0000020 obo:BFO_0000031)
+
+# Class: obo:BFO_0000023 (role)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000023 "role"@en)
+SubClassOf(obo:BFO_0000023 obo:BFO_0000017)
+
+# Class: obo:BFO_0000031 (generically dependent continuant)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000031 "generically dependent continuant"@en)
+SubClassOf(obo:BFO_0000031 obo:BFO_0000002)
+SubClassOf(obo:BFO_0000031 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000031))
+
+# Class: obo:BFO_0000034 (function)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000034 "function"@en)
+SubClassOf(obo:BFO_0000034 obo:BFO_0000016)
+
+# Class: obo:BFO_0000145 (relational quality)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000145 "relational quality"@en)
+SubClassOf(obo:BFO_0000145 obo:BFO_0000019)
+SubClassOf(obo:BFO_0000145 ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000002))
+
+# Class: obo:IAO_0000003 (measurement unit label)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000003 "A measurement unit label is as a label that is part of a scalar measurement datum and denotes a unit of measure."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000003 "measurement unit label"@en)
+SubClassOf(obo:IAO_0000003 obo:IAO_0000009)
+
+# Class: obo:IAO_0000009 (datum label)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000009 "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label"@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000009 "datum label"@en)
+SubClassOf(obo:IAO_0000009 obo:IAO_0000030)
+
+# Class: obo:IAO_0000030 (information content entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000030 "A generically dependent continuant that is about some thing."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000030 "information content entity"@en)
+SubClassOf(obo:IAO_0000030 obo:BFO_0000031)
+SubClassOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:IAO_0000136 obo:BFO_0000001))
+
+# Class: obo:OBI_0001931 (scalar value specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001931 "A value specification that consists of two parts: a numeral and a unit label"@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001931 "scalar value specification")
+SubClassOf(obo:OBI_0001931 obo:OBI_0001933)
+SubClassOf(obo:OBI_0001931 DataMinCardinality(1 obo:OBI_0001937))
+
+# Class: obo:OBI_0001933 (value specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001933 "An information content entity that specifies a value within a classification scheme or on a quantitative scale."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001933 "value specification")
+SubClassOf(obo:OBI_0001933 obo:IAO_0000030)
+
+# Class: <http://qudt.org/schema/qudt/Unit> (Unit)
+
+AnnotationAssertion(rdfs:label <http://qudt.org/schema/qudt/Unit> "Unit")
+
+# Class: <https://w3id.org/pmd/co/PMD_0020216> (DEPRECATED order scale value)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020216> "DEPRECATED order scale value"@en)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://qudt.org/vocab/unit/PER-MOL> (<http://qudt.org/vocab/unit/PER-MOL>)
+
+ClassAssertion(<http://qudt.org/schema/qudt/Unit> <http://qudt.org/vocab/unit/PER-MOL>)
+
+# Individual: <https://w3id.org/pmd/co/PMD_0020217> (DEPRECATED short range order)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020217> "DEPRECATED short range order"@en)
+ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020217>)
+
+# Individual: <https://w3id.org/pmd/co/PMD_0020218> (DEPRECATED medium range order)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020218> "DEPRECATED medium range order"@en)
+ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020218>)
+
+# Individual: <https://w3id.org/pmd/co/PMD_0020219> (DEPRECATED long range order)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020219> "DEPRECATED long range order"@en)
+ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020219>)
+
+# Individual: <https://w3id.org/pmd/co/PMD_0020242> (DEPRECATED no range order)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020242> "DEPRECATED no range order"@en)
+ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020242>)
+
+# Individual: <https://w3id.org/pmd/co/PMD_0020368> (avogadro number)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020368> "avogadro number"@en)
+ClassAssertion(obo:OBI_0001931 <https://w3id.org/pmd/co/PMD_0020368>)
+ObjectPropertyAssertion(obo:IAO_0000039 <https://w3id.org/pmd/co/PMD_0020368> <http://qudt.org/vocab/unit/PER-MOL>)
+DataPropertyAssertion(obo:OBI_0001937 <https://w3id.org/pmd/co/PMD_0020368> "602214086000000000000000"^^xsd:decimal)
+
+
+DisjointClasses(obo:BFO_0000004 obo:BFO_0000020 obo:BFO_0000031)
+SubObjectPropertyOf(ObjectPropertyChain(obo:BFO_0000051 <https://w3id.org/pmd/co/PMD_0025998>) <https://w3id.org/pmd/co/PMD_0025998>)
+SubObjectPropertyOf(ObjectPropertyChain(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000050) <https://w3id.org/pmd/co/PMD_0025999>)
+DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000016 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000091 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000019 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000086 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000023 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000087 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000034 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000085 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
 )
