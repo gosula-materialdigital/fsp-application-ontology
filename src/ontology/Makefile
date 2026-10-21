@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                956067f0015cb9fd0b63f0b93acaa2a54dae5699e793ae0387d8766f3c4a2e6c
+CONFIG_HASH=                3d8fba81fa7042b84335166801bc4d2f0f6c08c00a97f2dcd80b35f49244c16a
 
 
 # ----------------------------------------
@@ -21,7 +21,7 @@ CONFIG_HASH=                956067f0015cb9fd0b63f0b93acaa2a54dae5699e793ae0387d8
 OBOBASE=                    http://purl.obolibrary.org/obo
 URIBASE=                    https://w3id.org/pmd
 ONT=                        fsp
-ONTBASE=                    https://w3id.org/pmd/fsp/
+ONTBASE=                    https://w3id.org/pmd/fsp
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false

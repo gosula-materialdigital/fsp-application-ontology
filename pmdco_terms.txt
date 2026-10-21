@@ -1,0 +1,19 @@
+http://purl.obolibrary.org/obo/BFO_0000030 # object
+http://purl.obolibrary.org/obo/BFO_0000145 # relational quality
+https://w3id.org/pmd/co/PMD_0000002 # engineered material
+https://w3id.org/pmd/co/PMD_0000602 # device
+https://w3id.org/pmd/co/PMD_0000833 # manufacturing process
+https://w3id.org/pmd/co/PMD_0000896 # pressure
+https://w3id.org/pmd/co/PMD_0020101 # proportion
+https://w3id.org/pmd/co/PMD_0020113 # fluid (object)
+https://w3id.org/pmd/co/PMD_0020152 # component
+https://w3id.org/pmd/co/PMD_0020226 # flow rate
+https://w3id.org/pmd/co/PMD_0020246 # continous transport
+https://w3id.org/pmd/co/PMD_0040001 # length
+https://w3id.org/pmd/co/PMD_0060008 # recipe
+https://w3id.org/pmd/co/PMD_0000892 # 
+http://purl.obolibrary.org/obo/BFO_0000040 # material entity
+https://w3id.org/pmd/co/PMD_0000967 # temperature
+https://w3id.org/pmd/co/PMD_0020102 # mass ratio
+https://w3id.org/pmd/co/PMD_0020104 # volume ratio
+http://purl.obolibrary.org/obo/IAO_0020000 # identifier

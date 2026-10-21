@@ -22,7 +22,7 @@ repo: materialdigital/fsp-application-ontology
 git_main_branch: main
 license: "CC-BY-4.0"
 description: >
-  PMD Core application ontology generated via ODK Template.
+  Application ontology for the flame spray pyrolysis (FSP) process for manufacturing nanoparticles, aligned with PMDco.
 
 # ------------------------------------------------------------------------------
 # ONTOLOGY FILE CONFIGURATION
@@ -52,7 +52,7 @@ edit_ontology_file: "src/ontology/fsp-edit.owl"
 uribase: "https://w3id.org/pmd"
 # uribase_suffix: Your ontology ID (gets appended to uribase)
 # Combined result: https://w3id.org/pmd/co/<uribase_suffix>/
-uribase_suffix: "fsp/"
+uribase_suffix: "fsp"
 # preferredPrefix: Uppercase prefix used in entity IDs and serializations
 # Example: "TRYCE" results in entity IDs like TRYCE_0000001
 preferredPrefix: "FSP"

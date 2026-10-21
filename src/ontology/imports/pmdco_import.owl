@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/pmd/fsp//imports/pmdco_import.owl#>)
+Prefix(:=<https://w3id.org/pmd/fsp/imports/pmdco_import.owl#>)
 Prefix(dc:=<http://purl.org/dc/terms/>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
@@ -14,35 +14,187 @@ Prefix(void:=<http://rdfs.org/ns/void#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
-Ontology(<https://w3id.org/pmd/fsp//imports/pmdco_import.owl>
-<https://w3id.org/pmd/fsp//releases/2026-10-21/imports/pmdco_import.owl>
+Ontology(<https://w3id.org/pmd/fsp/imports/pmdco_import.owl>
+<https://w3id.org/pmd/fsp/releases/2026-10-21/imports/pmdco_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/3.1.1>)
 Annotation(owl:versionInfo "2026-10-21")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
+Declaration(Class(obo:BFO_0000003))
 Declaration(Class(obo:BFO_0000004))
+Declaration(Class(obo:BFO_0000006))
+Declaration(Class(obo:BFO_0000008))
+Declaration(Class(obo:BFO_0000011))
+Declaration(Class(obo:BFO_0000015))
 Declaration(Class(obo:BFO_0000016))
 Declaration(Class(obo:BFO_0000017))
 Declaration(Class(obo:BFO_0000019))
 Declaration(Class(obo:BFO_0000020))
 Declaration(Class(obo:BFO_0000023))
+Declaration(Class(obo:BFO_0000024))
+Declaration(Class(obo:BFO_0000027))
+Declaration(Class(obo:BFO_0000029))
+Declaration(Class(obo:BFO_0000030))
 Declaration(Class(obo:BFO_0000031))
 Declaration(Class(obo:BFO_0000034))
+Declaration(Class(obo:BFO_0000035))
+Declaration(Class(obo:BFO_0000040))
+Declaration(Class(obo:BFO_0000140))
+Declaration(Class(obo:BFO_0000141))
 Declaration(Class(obo:BFO_0000145))
+Declaration(Class(obo:CHEBI_24431))
+Declaration(Class(obo:CHEBI_59999))
+Declaration(Class(obo:CHEBI_60003))
+Declaration(Class(obo:COB_0000035))
+Declaration(Class(obo:COB_0000082))
+Declaration(Class(obo:GO_0008150))
 Declaration(Class(obo:IAO_0000003))
+Declaration(Class(obo:IAO_0000005))
+Declaration(Class(obo:IAO_0000007))
 Declaration(Class(obo:IAO_0000009))
+Declaration(Class(obo:IAO_0000027))
 Declaration(Class(obo:IAO_0000030))
+Declaration(Class(obo:IAO_0000033))
+Declaration(Class(obo:IAO_0000104))
+Declaration(Class(obo:IAO_0020000))
+Declaration(Class(obo:IAO_0020010))
+Declaration(Class(obo:OBI_0000067))
+Declaration(Class(obo:OBI_0000070))
+Declaration(Class(obo:OBI_0000260))
 Declaration(Class(obo:OBI_0001931))
 Declaration(Class(obo:OBI_0001933))
 Declaration(Class(<http://qudt.org/schema/qudt/Unit>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000000>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000001>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000002>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000005>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000068>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000110>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000520>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000553>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000583>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000597>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000602>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000619>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000654>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000661>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000777>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000790>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000833>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000848>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000868>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000877>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000882>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000888>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000891>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000896>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000899>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000907>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000949>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000952>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000967>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0010026>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0010033>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020101>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020102>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020103>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020104>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020113>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020128>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020132>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020133>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020136>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020142>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020150>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020151>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020152>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020161>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020200>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020216>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020226>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020227>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020228>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020229>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020230>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020245>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020246>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020258>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020259>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020265>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020287>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020288>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020289>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020290>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020291>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020292>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020293>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020294>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020295>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020296>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020311>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020312>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020313>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020317>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020318>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020319>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020335>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020353>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020364>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020365>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020366>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020367>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020369>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020370>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023000>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023001>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023002>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023003>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023004>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023007>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023023>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023035>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023036>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023041>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023043>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025019>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0040001>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0050004>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0050118>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0050133>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0050137>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0060008>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0080019>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0080022>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0080069>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0080116>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0090012>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0090014>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0090016>))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:BFO_0000054))
+Declaration(ObjectProperty(obo:BFO_0000055))
+Declaration(ObjectProperty(obo:BFO_0000108))
+Declaration(ObjectProperty(obo:BFO_0000117))
+Declaration(ObjectProperty(obo:BFO_0000132))
 Declaration(ObjectProperty(obo:IAO_0000039))
 Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:IAO_0000219))
+Declaration(ObjectProperty(obo:IAO_0000235))
+Declaration(ObjectProperty(obo:OBI_0000293))
+Declaration(ObjectProperty(obo:OBI_0000295))
+Declaration(ObjectProperty(obo:OBI_0000299))
+Declaration(ObjectProperty(obo:OBI_0000312))
+Declaration(ObjectProperty(obo:OBI_0000417))
+Declaration(ObjectProperty(obo:OBI_0001927))
 Declaration(ObjectProperty(obo:RO_0000052))
 Declaration(ObjectProperty(obo:RO_0000053))
+Declaration(ObjectProperty(obo:RO_0000056))
+Declaration(ObjectProperty(obo:RO_0000057))
+Declaration(ObjectProperty(obo:RO_0000058))
+Declaration(ObjectProperty(obo:RO_0000059))
 Declaration(ObjectProperty(obo:RO_0000079))
 Declaration(ObjectProperty(obo:RO_0000080))
 Declaration(ObjectProperty(obo:RO_0000081))
@@ -51,7 +203,21 @@ Declaration(ObjectProperty(obo:RO_0000086))
 Declaration(ObjectProperty(obo:RO_0000087))
 Declaration(ObjectProperty(obo:RO_0000091))
 Declaration(ObjectProperty(obo:RO_0000092))
+Declaration(ObjectProperty(obo:RO_0002234))
+Declaration(ObjectProperty(obo:RO_0002328))
+Declaration(ObjectProperty(obo:RO_0002350))
+Declaration(ObjectProperty(obo:RO_0002351))
+Declaration(ObjectProperty(obo:RO_0002353))
+Declaration(ObjectProperty(obo:RO_0009006))
+Declaration(ObjectProperty(obo:RO_0009007))
+Declaration(ObjectProperty(obo:STATO_0000102))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000004>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000009>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000069>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000070>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000077>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0020127>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025006>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025998>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025999>))
 Declaration(DataProperty(obo:OBI_0001937))
@@ -64,13 +230,31 @@ Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020242>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020368>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(dc:creator))
 Declaration(AnnotationProperty(dc:description))
 Declaration(AnnotationProperty(dc:license))
 Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(skos:definition))
 Declaration(Datatype(rdfs:Literal))
 ############################
 #   Annotation Properties
 ############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000115 "A property representing the English language definitions of what NCI means by the concept. They may also include information about the definition's source and attribution in a form that can easily be interpreted by software.")
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000115 "English language definitions of what NCI means by the concept. These are limited to 1024 characters. They may also include information about the definition's source and attribution in a form that can easily be interpreted by software.")
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000115 "The official OBI definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000115 "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000115 "The official definition.")
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "textual definition")
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/source> (Source)
+
+AnnotationAssertion(rdfs:label <http://purl.org/dc/elements/1.1/source> "Source")
+AnnotationAssertion(rdfs:label <http://purl.org/dc/elements/1.1/source> "Source"@en-us)
 
 # Annotation Property: dc:license (dcterms:license)
 
@@ -96,6 +280,49 @@ AnnotationAssertion(rdfs:label obo:BFO_0000051 "has part"@en)
 SubObjectPropertyOf(obo:BFO_0000051 obo:BFO_0000051)
 TransitiveObjectProperty(obo:BFO_0000051)
 
+# Object Property: obo:BFO_0000054 (realized in)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000054 "has realization"@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000054 "realized in"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000054 "b has realization c =Def c realizes b"@en)
+InverseObjectProperties(obo:BFO_0000054 obo:BFO_0000055)
+ObjectPropertyDomain(obo:BFO_0000054 obo:BFO_0000017)
+ObjectPropertyRange(obo:BFO_0000054 obo:BFO_0000015)
+
+# Object Property: obo:BFO_0000055 (realizes)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000055 "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process"@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000055 "realizes"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000055 "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en)
+ObjectPropertyDomain(obo:BFO_0000055 obo:BFO_0000015)
+ObjectPropertyRange(obo:BFO_0000055 obo:BFO_0000017)
+
+# Object Property: obo:BFO_0000108 (exists at)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000108 "exists at"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000108 "(Elucidation) exists at is a relation between a particular and some temporal region at which the particular exists"@en)
+ObjectPropertyDomain(obo:BFO_0000108 obo:BFO_0000001)
+ObjectPropertyRange(obo:BFO_0000108 obo:BFO_0000008)
+
+# Object Property: obo:BFO_0000117 (has occurrent part)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000117 "has occurrent part"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000117 "b has occurrent part c =Def c occurrent part of b"@en)
+SubObjectPropertyOf(obo:BFO_0000117 obo:BFO_0000051)
+InverseObjectProperties(obo:BFO_0000117 obo:BFO_0000132)
+TransitiveObjectProperty(obo:BFO_0000117)
+ObjectPropertyDomain(obo:BFO_0000117 obo:BFO_0000003)
+ObjectPropertyRange(obo:BFO_0000117 obo:BFO_0000003)
+
+# Object Property: obo:BFO_0000132 (occurrent part of)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000132 "occurrent part of"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000132 "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en)
+SubObjectPropertyOf(obo:BFO_0000132 obo:BFO_0000050)
+TransitiveObjectProperty(obo:BFO_0000132)
+ObjectPropertyDomain(obo:BFO_0000132 obo:BFO_0000003)
+ObjectPropertyRange(obo:BFO_0000132 obo:BFO_0000003)
+
 # Object Property: obo:IAO_0000039 (has measurement unit label)
 
 AnnotationAssertion(rdfs:label obo:IAO_0000039 "has measurement unit label"@en)
@@ -110,6 +337,67 @@ AnnotationAssertion(rdfs:label obo:IAO_0000136 "is about"@en)
 InverseObjectProperties(obo:IAO_0000136 <https://w3id.org/pmd/co/PMD_0000004>)
 ObjectPropertyDomain(obo:IAO_0000136 obo:IAO_0000030)
 
+# Object Property: obo:IAO_0000219 (denotes)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000219 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000219 "denotes"@en)
+SubObjectPropertyOf(obo:IAO_0000219 obo:IAO_0000136)
+InverseObjectProperties(obo:IAO_0000219 obo:IAO_0000235)
+ObjectPropertyDomain(obo:IAO_0000219 obo:IAO_0000030)
+ObjectPropertyRange(obo:IAO_0000219 obo:BFO_0000001)
+
+# Object Property: obo:IAO_0000235 (denoted by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000235 "inverse of the relation 'denotes'"@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000235 "denoted by"@en)
+ObjectPropertyDomain(obo:IAO_0000235 obo:BFO_0000001)
+ObjectPropertyRange(obo:IAO_0000235 obo:IAO_0000030)
+
+# Object Property: obo:OBI_0000293 (has specified input)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000293 "The inverse property of is specified input of")
+AnnotationAssertion(rdfs:label obo:OBI_0000293 "has specified input"@en)
+SubObjectPropertyOf(obo:OBI_0000293 obo:RO_0000057)
+InverseObjectProperties(obo:OBI_0000293 obo:OBI_0000295)
+ObjectPropertyDomain(obo:OBI_0000293 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000295 (is specified input of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000295 "A relation between a completely executed planned process and a continuant participating in that process that is not created during the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of.")
+AnnotationAssertion(rdfs:label obo:OBI_0000295 "is specified input of"@en)
+SubObjectPropertyOf(obo:OBI_0000295 obo:RO_0000056)
+ObjectPropertyRange(obo:OBI_0000295 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000299 (has specified output)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000299 "The inverse property of is specified output of")
+AnnotationAssertion(rdfs:label obo:OBI_0000299 "has specified output"@en)
+SubObjectPropertyOf(obo:OBI_0000299 obo:RO_0000057)
+InverseObjectProperties(obo:OBI_0000299 obo:OBI_0000312)
+ObjectPropertyDomain(obo:OBI_0000299 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000312 (is specified output of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000312 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000312 "is specified output of"@en)
+SubObjectPropertyOf(obo:OBI_0000312 obo:RO_0000056)
+ObjectPropertyRange(obo:OBI_0000312 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000417 (achieves_planned_objective)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000417 "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000417 "achieves_planned_objective")
+ObjectPropertyDomain(obo:OBI_0000417 obo:COB_0000035)
+ObjectPropertyRange(obo:OBI_0000417 obo:IAO_0000005)
+
+# Object Property: obo:OBI_0001927 (specifies value of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001927 "A relation between a value specification and an entity which the specification is about."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001927 "specifies value of")
+SubObjectPropertyOf(obo:OBI_0001927 obo:IAO_0000136)
+InverseObjectProperties(obo:OBI_0001927 <https://w3id.org/pmd/co/PMD_0000077>)
+ObjectPropertyDomain(obo:OBI_0001927 obo:OBI_0001933)
+
 # Object Property: obo:RO_0000052 (characteristic of)
 
 AnnotationAssertion(obo:IAO_0000115 obo:RO_0000052 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en)
@@ -123,6 +411,38 @@ AnnotationAssertion(obo:IAO_0000115 obo:RO_0000053 "Inverse of characteristic_of
 AnnotationAssertion(rdfs:label obo:RO_0000053 "has characteristic"@en)
 InverseFunctionalObjectProperty(obo:RO_0000053)
 ObjectPropertyRange(obo:RO_0000053 obo:BFO_0000020)
+
+# Object Property: obo:RO_0000056 (participates in)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000056 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000056 "participates in"@en)
+InverseObjectProperties(obo:RO_0000056 obo:RO_0000057)
+ObjectPropertyDomain(obo:RO_0000056 obo:BFO_0000002)
+ObjectPropertyRange(obo:RO_0000056 obo:BFO_0000003)
+
+# Object Property: obo:RO_0000057 (has participant)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000057 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en)
+AnnotationAssertion(rdfs:label obo:RO_0000057 "has participant"@en)
+ObjectPropertyDomain(obo:RO_0000057 obo:BFO_0000003)
+ObjectPropertyRange(obo:RO_0000057 obo:BFO_0000002)
+
+# Object Property: obo:RO_0000058 (is concretized as)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000058 "A relationship between a generically dependent continuant and a specifically dependent continuant or process, in which the generically dependent continuant depends on some independent continuant or process in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants or processes."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000058 "A relationship between a generically dependent continuant and a specifically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. A generically dependent continuant may be concretized as multiple specifically dependent continuants."@en)
+AnnotationAssertion(rdfs:label obo:RO_0000058 "is concretized as"@en)
+InverseObjectProperties(obo:RO_0000058 obo:RO_0000059)
+ObjectPropertyDomain(obo:RO_0000058 obo:BFO_0000031)
+ObjectPropertyRange(obo:RO_0000058 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000020))
+
+# Object Property: obo:RO_0000059 (concretizes)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000059 "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0000059 "A relationship between a specifically dependent continuant or process and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. Multiple specifically dependent continuants or processes can concretize the same generically dependent continuant."@en)
+AnnotationAssertion(rdfs:label obo:RO_0000059 "concretizes"@en)
+ObjectPropertyDomain(obo:RO_0000059 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000020))
+ObjectPropertyRange(obo:RO_0000059 obo:BFO_0000031)
 
 # Object Property: obo:RO_0000079 (function of)
 
@@ -185,14 +505,110 @@ AnnotationAssertion(obo:IAO_0000115 obo:RO_0000092 "inverse of has disposition")
 AnnotationAssertion(rdfs:label obo:RO_0000092 "disposition of"@en)
 SubObjectPropertyOf(obo:RO_0000092 obo:RO_0000052)
 
+# Object Property: obo:RO_0002234 (has output)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002234 "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p.")
+AnnotationAssertion(rdfs:label obo:RO_0002234 "has output"@en)
+SubObjectPropertyOf(obo:RO_0002234 obo:RO_0000057)
+InverseObjectProperties(obo:RO_0002234 obo:RO_0002353)
+
+# Object Property: obo:RO_0002328 (functionally related to)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002328 "A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities.")
+AnnotationAssertion(rdfs:label obo:RO_0002328 "functionally related to"@en)
+AnnotationAssertion(skos:definition obo:RO_0002328 "A grouping relationship for any relationship directly involving a function, or that holds because of a function of one of the related entities."@en)
+
+# Object Property: obo:RO_0002350 (member of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002350 "is member of is a mereological relation between a item and a collection.")
+AnnotationAssertion(rdfs:label obo:RO_0002350 "member of"@en)
+SubObjectPropertyOf(obo:RO_0002350 obo:BFO_0000050)
+InverseObjectProperties(obo:RO_0002350 obo:RO_0002351)
+
+# Object Property: obo:RO_0002351 (has member)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002351 "has member is a mereological relation between a collection and an item.")
+AnnotationAssertion(rdfs:label obo:RO_0002351 "has member"@en)
+SubObjectPropertyOf(obo:RO_0002351 obo:BFO_0000051)
+IrreflexiveObjectProperty(obo:RO_0002351)
+
+# Object Property: obo:RO_0002353 (output of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002353 "inverse of has output")
+AnnotationAssertion(rdfs:label obo:RO_0002353 "output of"@en)
+SubObjectPropertyOf(obo:RO_0002353 obo:RO_0000056)
+SubObjectPropertyOf(obo:RO_0002353 obo:RO_0002328)
+
+# Object Property: obo:RO_0009006 (assay measures characteristic)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0009006 "A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic."@en)
+AnnotationAssertion(rdfs:label obo:RO_0009006 "assay measures characteristic"@en)
+InverseObjectProperties(obo:RO_0009006 obo:RO_0009007)
+ObjectPropertyRange(obo:RO_0009006 obo:BFO_0000020)
+
+# Object Property: obo:RO_0009007 (characteristic measured by assay)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0009007 "Inverse of 'assay measures characteristic'"@en)
+AnnotationAssertion(rdfs:label obo:RO_0009007 "characteristic measured by assay"@en)
+ObjectPropertyDomain(obo:RO_0009007 obo:BFO_0000020)
+
+# Object Property: obo:STATO_0000102 (executes)
+
+AnnotationAssertion(obo:IAO_0000115 obo:STATO_0000102 "relationship between a planned process and the plan specification that it carries out; it is defined as equivalent to the composed relationship (realizes o concretizes)"@en)
+AnnotationAssertion(rdfs:label obo:STATO_0000102 "executes")
+
 # Object Property: <https://w3id.org/pmd/co/PMD_0000004> (is subject of)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000004> "is subject of"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000004> "Inverse of 'is about'."@en)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0000009> (has process attribute)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000009> "has process attribute"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000009> "A relation between a process and a process attribute that depends on it."@en)
+InverseObjectProperties(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/co/PMD_0025006>)
+ObjectPropertyDomain(<https://w3id.org/pmd/co/PMD_0000009> obo:BFO_0000015)
+ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/co/PMD_0000008>)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0000069> (has state)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000069> "has state"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000069> "relates an anchor continuant to a temporally qualified continuant that represents a specific temporal phase of its existence."@en)
+InverseObjectProperties(<https://w3id.org/pmd/co/PMD_0000069> <https://w3id.org/pmd/co/PMD_0000070>)
+InverseFunctionalObjectProperty(<https://w3id.org/pmd/co/PMD_0000069>)
+ObjectPropertyDomain(<https://w3id.org/pmd/co/PMD_0000069> ObjectIntersectionOf(obo:BFO_0000002 ObjectComplementOf(<https://w3id.org/pmd/co/PMD_0000068>)))
+ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0000069> <https://w3id.org/pmd/co/PMD_0000068>)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0000070> (is state of)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000070> "is state of"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000070> "relates a temporally qualified continuant to the unique anchor continuant that it is a temporal phase of"@en)
+FunctionalObjectProperty(<https://w3id.org/pmd/co/PMD_0000070>)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0000077> (specified by value)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000077> "specified by value"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000077> "A relation between an entity and a value specification which is about this entity."@en)
+SubObjectPropertyOf(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0000004>)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0020127> (refers to)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020127> "refers to"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020127> "a relation between a process attribute and an SDC of some participant in a process"@en)
+ObjectPropertyDomain(<https://w3id.org/pmd/co/PMD_0020127> <https://w3id.org/pmd/co/PMD_0000008>)
+ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0020127> obo:BFO_0000020)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0025006> (process attribute of)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025006> "process attribute of"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025006> "A relation between a process attribute and a process, which \"bears\" the attribute."@en)
 
 # Object Property: <https://w3id.org/pmd/co/PMD_0025998> (hat relationale Qualität)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025998> "has relational quality"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025998> "hat relationale Qualität"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025998> "a relation between an independent continuant (the bearer) and a relational quality, in which the quality specifically depends on the bearer for its existence"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025998> "eine Beziehung zwischen einem unabhängigen Kontinuum (dem Träger) und einer relationalen Qualität, bei der die Qualität in ihrer Existenz speziell vom Träger abhängt"@de)
 InverseObjectProperties(<https://w3id.org/pmd/co/PMD_0025998> <https://w3id.org/pmd/co/PMD_0025999>)
 ObjectPropertyDomain(<https://w3id.org/pmd/co/PMD_0025998> obo:BFO_0000004)
 ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0025998> obo:BFO_0000145)
@@ -201,6 +617,8 @@ ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0025998> obo:BFO_0000145)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025999> "relational quality of"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025999> "relationale Qualität von"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025999> "a relation between a relational quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025999> "eine Beziehung zwischen einer relationalen Qualität und einem unabhängigen Kontinuum (dem Träger), bei der die Existenz der Qualität speziell vom Träger abhängt"@de)
 
 
 ############################
@@ -229,30 +647,73 @@ DataPropertyDomain(obo:OBI_0002135 obo:OBI_0001933)
 # Class: obo:BFO_0000001 (entity)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000001 "entity"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000001 "(Elucidation) An entity is anything that exists or has existed or will exist"@en)
 
 # Class: obo:BFO_0000002 (continuant)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000002 "continuant"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000002 "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en)
 SubClassOf(obo:BFO_0000002 obo:BFO_0000001)
 SubClassOf(obo:BFO_0000002 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000002))
+DisjointClasses(obo:BFO_0000002 obo:BFO_0000003)
+DisjointClasses(obo:BFO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:BFO_0000003))
+
+# Class: obo:BFO_0000003 (occurrent)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000003 "occurrent"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000003 "(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region"@en)
+SubClassOf(obo:BFO_0000003 obo:BFO_0000001)
+SubClassOf(obo:BFO_0000003 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000003))
+DisjointClasses(obo:BFO_0000003 ObjectSomeValuesFrom(obo:BFO_0000050 obo:BFO_0000002))
 
 # Class: obo:BFO_0000004 (independent continuant)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000004 "independent continuant"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000004 "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en)
 SubClassOf(obo:BFO_0000004 obo:BFO_0000002)
 SubClassOf(obo:BFO_0000004 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000004))
 DisjointClasses(obo:BFO_0000004 obo:BFO_0000020)
 DisjointClasses(obo:BFO_0000004 obo:BFO_0000031)
 
+# Class: obo:BFO_0000006 (spatial region)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000006 "spatial region"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000006 "(Elucidation) A spatial region is a continuant entity that is a continuant part of the spatial projection of a portion of spacetime at a given time"@en)
+SubClassOf(obo:BFO_0000006 obo:BFO_0000141)
+
+# Class: obo:BFO_0000008 (temporal region)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000008 "temporal region"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000008 "(Elucidation) A temporal region is an occurrent over which processes can unfold"@en)
+SubClassOf(obo:BFO_0000008 obo:BFO_0000003)
+SubClassOf(obo:BFO_0000008 ObjectAllValuesFrom(obo:BFO_0000132 obo:BFO_0000008))
+
+# Class: obo:BFO_0000011 (spatiotemporal region)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000011 "spatiotemporal region"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000011 "(Elucidation) A spatiotemporal region is an occurrent that is an occurrent part of spacetime"@en)
+SubClassOf(obo:BFO_0000011 obo:BFO_0000003)
+SubClassOf(obo:BFO_0000011 ObjectAllValuesFrom(obo:BFO_0000132 obo:BFO_0000011))
+
+# Class: obo:BFO_0000015 (process)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000015 "process"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000015 "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en)
+SubClassOf(obo:BFO_0000015 obo:BFO_0000003)
+SubClassOf(obo:BFO_0000015 ObjectAllValuesFrom(obo:BFO_0000117 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000035)))
+SubClassOf(obo:BFO_0000015 ObjectAllValuesFrom(obo:BFO_0000132 obo:BFO_0000015))
+
 # Class: obo:BFO_0000016 (disposition)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000016 "disposition"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000016 "(Elucidation) A disposition b is a realizable entity such that if b ceases to exist then its bearer is physically changed & b's realization occurs when and because this bearer is in some special physical circumstances & this realization occurs in virtue of the bearer's physical make-up"@en)
 SubClassOf(obo:BFO_0000016 obo:BFO_0000017)
 DisjointClasses(obo:BFO_0000016 obo:BFO_0000023)
 
 # Class: obo:BFO_0000017 (realizable entity)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000017 "realizable entity"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000017 "(Elucidation) A realizable entity is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region & which is of a type some instances of which are realized in processes of a correlated type"@en)
 SubClassOf(obo:BFO_0000017 obo:BFO_0000020)
 SubClassOf(obo:BFO_0000017 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000017))
 DisjointClasses(obo:BFO_0000017 obo:BFO_0000019)
@@ -260,12 +721,14 @@ DisjointClasses(obo:BFO_0000017 obo:BFO_0000019)
 # Class: obo:BFO_0000019 (quality)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000019 "quality"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000019 "(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized"@en)
 SubClassOf(obo:BFO_0000019 obo:BFO_0000020)
 SubClassOf(obo:BFO_0000019 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000019))
 
 # Class: obo:BFO_0000020 (specifically dependent continuant)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000020 "specifically dependent continuant"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000020 "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en)
 SubClassOf(obo:BFO_0000020 obo:BFO_0000002)
 SubClassOf(obo:BFO_0000020 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000020))
 DisjointClasses(obo:BFO_0000020 obo:BFO_0000031)
@@ -273,24 +736,120 @@ DisjointClasses(obo:BFO_0000020 obo:BFO_0000031)
 # Class: obo:BFO_0000023 (role)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000023 "role"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000023 "(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed"@en)
 SubClassOf(obo:BFO_0000023 obo:BFO_0000017)
+
+# Class: obo:BFO_0000024 (fiat object part)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000024 "fiat object part"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000024 "(Elucidation) A fiat object part b is a material entity & such that if b exists then it is continuant part of some object c & demarcated from the remainder of c by one or more fiat surfaces"@en)
+SubClassOf(obo:BFO_0000024 obo:BFO_0000040)
+
+# Class: obo:BFO_0000027 (object aggregate)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000027 "object aggregate"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000027 "(Elucidation) An object aggregate is a material entity consisting exactly of a plurality (≥1) of objects as member parts which together form a unit"@en)
+SubClassOf(obo:BFO_0000027 obo:BFO_0000040)
+
+# Class: obo:BFO_0000029 (site)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000029 "site"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000029 "(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity"@en)
+SubClassOf(obo:BFO_0000029 obo:BFO_0000141)
+
+# Class: obo:BFO_0000030 (object)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000030 "object"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000030 "(Elucidation) An object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en)
+SubClassOf(obo:BFO_0000030 obo:BFO_0000040)
 
 # Class: obo:BFO_0000031 (generically dependent continuant)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000031 "generically dependent continuant"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000031 "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en)
 SubClassOf(obo:BFO_0000031 obo:BFO_0000002)
 SubClassOf(obo:BFO_0000031 ObjectAllValuesFrom(obo:BFO_0000050 obo:BFO_0000031))
 
 # Class: obo:BFO_0000034 (function)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000034 "function"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000034 "(Elucidation) A function is a disposition that exists in virtue of its bearer's physical make-up & this physical make-up is something the bearer possesses because it came into being either through evolution (in the case of natural biological entities) or through intentional design (in the case of artefacts) in order to realize processes of a certain sort"@en)
 SubClassOf(obo:BFO_0000034 obo:BFO_0000016)
+
+# Class: obo:BFO_0000035 (process boundary)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000035 "process boundary"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000035 "p is a process boundary =Def p is a temporal part of a process & p has no proper temporal parts"@en)
+SubClassOf(obo:BFO_0000035 obo:BFO_0000003)
+SubClassOf(obo:BFO_0000035 ObjectAllValuesFrom(obo:BFO_0000117 obo:BFO_0000035))
+SubClassOf(obo:BFO_0000035 ObjectAllValuesFrom(obo:BFO_0000132 ObjectUnionOf(obo:BFO_0000015 obo:BFO_0000035)))
+
+# Class: obo:BFO_0000040 (material entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000040 "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000040 "material entity"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000040 "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en)
+SubClassOf(obo:BFO_0000040 obo:BFO_0000004)
+DisjointClasses(obo:BFO_0000040 obo:BFO_0000141)
+
+# Class: obo:BFO_0000140 (continuant fiat boundary)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000140 "continuant fiat boundary"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000140 "(Elucidation) A continuant fiat boundary b is an immaterial entity that is of zero, one or two dimensions & such that there is no time t when b has a spatial region as continuant part & whose location is determined in relation to some material entity"@en)
+SubClassOf(obo:BFO_0000140 obo:BFO_0000141)
+
+# Class: obo:BFO_0000141 (immaterial entity)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000141 "immaterial entity"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000141 "b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part"@en)
+SubClassOf(obo:BFO_0000141 obo:BFO_0000004)
 
 # Class: obo:BFO_0000145 (relational quality)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000145 "relational quality"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000145 "b is a relational quality =Def b is a quality & there exists c and d such that c and d are not identical & b specifically depends on c & b specifically depends on d"@en)
 SubClassOf(obo:BFO_0000145 obo:BFO_0000019)
 SubClassOf(obo:BFO_0000145 ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000002))
+
+# Class: obo:CHEBI_24431 (chemical entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_24431 "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.")
+AnnotationAssertion(rdfs:label obo:CHEBI_24431 "chemical entity")
+SubClassOf(obo:CHEBI_24431 obo:BFO_0000040)
+
+# Class: obo:CHEBI_59999 (chemical substance)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_59999 "A chemical substance is a portion of matter of constant composition, composed of molecular entities of the same type or of different types.")
+AnnotationAssertion(rdfs:label obo:CHEBI_59999 "chemical substance")
+SubClassOf(obo:CHEBI_59999 obo:CHEBI_24431)
+SubClassOf(obo:CHEBI_59999 <https://w3id.org/pmd/co/PMD_0000001>)
+
+# Class: obo:CHEBI_60003 (pure substance)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_60003 "A pure substance is a chemical substance composed of multiple molecules, which are all of the same kind.")
+AnnotationAssertion(rdfs:label obo:CHEBI_60003 "pure substance")
+SubClassOf(obo:CHEBI_60003 obo:CHEBI_59999)
+
+# Class: obo:COB_0000035 (completely executed planned process)
+
+AnnotationAssertion(rdfs:label obo:COB_0000035 "completely executed planned process"@en)
+SubClassOf(obo:COB_0000035 obo:COB_0000082)
+SubClassOf(obo:COB_0000035 ObjectSomeValuesFrom(obo:BFO_0000055 obo:OBI_0000260))
+DisjointClasses(obo:COB_0000035 obo:GO_0008150)
+
+# Class: obo:COB_0000082 (planned process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000082 "A process that is initiated by an agent who intends to carry out a plan to achieve an objective through one or more actions as described in a plan specification."@en)
+AnnotationAssertion(rdfs:label obo:COB_0000082 "planned process"@en)
+SubClassOf(obo:COB_0000082 obo:BFO_0000015)
+
+# Class: obo:GO_0008150 (biological_process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:GO_0008150 "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.")
+AnnotationAssertion(rdfs:label obo:GO_0008150 "biological process"@en)
+AnnotationAssertion(rdfs:label obo:GO_0008150 "biological_process")
+SubClassOf(obo:GO_0008150 obo:BFO_0000015)
+SubClassOf(obo:GO_0008150 ObjectSomeValuesFrom(obo:BFO_0000051 obo:BFO_0000015))
 
 # Class: obo:IAO_0000003 (measurement unit label)
 
@@ -298,11 +857,31 @@ AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000003 "A measurement unit label is
 AnnotationAssertion(rdfs:label obo:IAO_0000003 "measurement unit label"@en)
 SubClassOf(obo:IAO_0000003 obo:IAO_0000009)
 
+# Class: obo:IAO_0000005 (objective specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000005 "A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000005 "objective specification"@en)
+SubClassOf(obo:IAO_0000005 obo:IAO_0000033)
+
+# Class: obo:IAO_0000007 (action specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000007 "A directive information entity that describes an action the bearer will take."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000007 "action specification"@en)
+SubClassOf(obo:IAO_0000007 obo:IAO_0000033)
+
 # Class: obo:IAO_0000009 (datum label)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000009 "A label is a symbol that is part of some other datum and is used to either partially define  the denotation of that datum or to provide a means for identifying the datum as a member of the set of data with the same label"@en)
 AnnotationAssertion(rdfs:label obo:IAO_0000009 "datum label"@en)
 SubClassOf(obo:IAO_0000009 obo:IAO_0000030)
+
+# Class: obo:IAO_0000027 (data entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000027 "data entity"@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000027 "data item"@en)
+SubClassOf(obo:IAO_0000027 obo:IAO_0000030)
 
 # Class: obo:IAO_0000030 (information content entity)
 
@@ -310,6 +889,65 @@ AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000030 "A generically dependent con
 AnnotationAssertion(rdfs:label obo:IAO_0000030 "information content entity"@en)
 SubClassOf(obo:IAO_0000030 obo:BFO_0000031)
 SubClassOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:IAO_0000136 obo:BFO_0000001))
+
+# Class: obo:IAO_0000033 (directive information entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000033 "An information content entity whose concretizations indicate to their bearer how to realize them in a process."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000033 "directive information entity"@en)
+SubClassOf(obo:IAO_0000033 obo:IAO_0000030)
+SubClassOf(obo:IAO_0000033 ObjectSomeValuesFrom(obo:IAO_0000136 obo:BFO_0000017))
+
+# Class: obo:IAO_0000104 (plan specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000104 "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0000104 "plan specification"@en)
+SubClassOf(obo:IAO_0000104 obo:IAO_0000033)
+SubClassOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000005))
+SubClassOf(obo:IAO_0000104 ObjectSomeValuesFrom(obo:BFO_0000051 obo:IAO_0000007))
+
+# Class: obo:IAO_0020000 (identifier)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0020000 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0020000 "identifier"@en)
+EquivalentClasses(obo:IAO_0020000 ObjectIntersectionOf(obo:IAO_0000030 ObjectSomeValuesFrom(obo:IAO_0000219 obo:BFO_0000001) ObjectSomeValuesFrom(obo:OBI_0000312 obo:IAO_0020010)))
+SubClassOf(obo:IAO_0020000 obo:IAO_0000030)
+SubClassOf(obo:IAO_0020000 ObjectSomeValuesFrom(obo:IAO_0000219 obo:BFO_0000001))
+SubClassOf(obo:IAO_0020000 ObjectSomeValuesFrom(obo:OBI_0000312 obo:IAO_0020010))
+
+# Class: obo:IAO_0020010 (identifier creating process)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0020010 "A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity."@en)
+AnnotationAssertion(rdfs:label obo:IAO_0020010 "identifier creating process"@en)
+EquivalentClasses(obo:IAO_0020010 ObjectIntersectionOf(obo:COB_0000035 ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0020000)))
+SubClassOf(obo:IAO_0020010 obo:COB_0000035)
+SubClassOf(obo:IAO_0020010 ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0020000))
+
+# Class: obo:OBI_0000067 (evaluant role)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000067 "a role that inheres in a material entity that is realized in an assay in which data is generated about the bearer of the evaluant role"@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000067 "evaluant role"@en)
+SubClassOf(obo:OBI_0000067 obo:BFO_0000023)
+SubClassOf(obo:OBI_0000067 ObjectSomeValuesFrom(obo:RO_0000052 obo:BFO_0000040))
+SubClassOf(obo:OBI_0000067 ObjectAllValuesFrom(obo:BFO_0000054 obo:OBI_0000070))
+
+# Class: obo:OBI_0000070 (assay)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000070 "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000070 "assay"@en)
+SubClassOf(obo:OBI_0000070 obo:COB_0000035)
+SubClassOf(obo:OBI_0000070 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040) ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0000027)))
+SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:BFO_0000055 obo:OBI_0000067))
+SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:OBI_0000293 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000087 obo:OBI_0000067))))
+SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:OBI_0000299 ObjectIntersectionOf(obo:IAO_0000027 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000087 obo:OBI_0000067))))))
+SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:OBI_0000417 obo:IAO_0000005))
+SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:RO_0009006 ObjectUnionOf(obo:BFO_0000019 <https://w3id.org/pmd/co/PMD_0000005>)))
+
+# Class: obo:OBI_0000260 (plan)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000260 "A plan is a realizable entity that is the inheres in a bearer who is committed to realizing it as a completely executed planned process."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000260 "plan"@en)
+SubClassOf(obo:OBI_0000260 obo:BFO_0000017)
+SubClassOf(obo:OBI_0000260 ObjectSomeValuesFrom(obo:RO_0000059 obo:IAO_0000104))
 
 # Class: obo:OBI_0001931 (scalar value specification)
 
@@ -327,10 +965,807 @@ SubClassOf(obo:OBI_0001933 obo:IAO_0000030)
 # Class: <http://qudt.org/schema/qudt/Unit> (Unit)
 
 AnnotationAssertion(rdfs:label <http://qudt.org/schema/qudt/Unit> "Unit")
+AnnotationAssertion(skos:definition <http://qudt.org/schema/qudt/Unit> "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). 
+For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures).  Any measurement of the length can be expressed as a number multiplied by the unit meter. 
+More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  $Q = nU$."@en)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000000> (Material)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000000> "Material"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000000> "material"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000000> "A material is a portion of matter that may participate in some manufacturing process and whose shape is not relevant for its participation in the manufacturing process."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000000> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000001> ObjectSomeValuesFrom(obo:RO_0000053 obo:BFO_0000017) ObjectSomeValuesFrom(obo:RO_0000086 obo:BFO_0000019) ObjectSomeValuesFrom(obo:RO_0002353 obo:BFO_0000015)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000001> (portion of matter)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000001> "portion of matter"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000001> "A material entity that is not demarcated by any physical discontinuities. At some finer level of granularity it is an object aggregate, at some coarser level of granularity it is a fiat object part,but at this level of granularity it is neither."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000001> obo:BFO_0000040)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000002> (engineered material)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000002> "engineered material"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000002> "material that is output of a manufacturing process"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000002> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000000> ObjectSomeValuesFrom(obo:OBI_0000312 <https://w3id.org/pmd/co/PMD_0000833>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000002> <https://w3id.org/pmd/co/PMD_0000000>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000002> ObjectSomeValuesFrom(obo:OBI_0000312 <https://w3id.org/pmd/co/PMD_0000833>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000005> (Materialeigenschaft)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000005> "Materialeigenschaft"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000005> "material performance property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000005> "a disposition of a portion of matter that is realized in a compatible process and whose realization is grounded in the portions intensive qualities"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> <https://w3id.org/pmd/co/PMD_0020353>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> <https://w3id.org/pmd/co/PMD_0023004>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000005> ObjectSomeValuesFrom(obo:RO_0000052 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000001> ObjectSomeValuesFrom(obo:RO_0000056 obo:BFO_0000015))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000008> (process attribute)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000008> "process attribute"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000008> "a process attribute is a dependent occurrent that existentially depends on a process."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000008> obo:BFO_0000003)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000008> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> obo:BFO_0000015))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000068> (temporally qualified continuant)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000068> "temporally qualified continuant"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000068> "A temporally qualified continuant is a continuant that, by reference to a determinate temporal region, is such as to possess its properties only for so long as that period obtains, being otherwise in its essentiality unchanged."@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000068> ObjectIntersectionOf(obo:BFO_0000004 ObjectSomeValuesFrom(obo:BFO_0000108 obo:BFO_0000008) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000070> ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(<https://w3id.org/pmd/co/PMD_0000068>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> obo:BFO_0000004)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> ObjectSomeValuesFrom(obo:BFO_0000108 obo:BFO_0000008))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000068> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000070> ObjectIntersectionOf(obo:BFO_0000004 ObjectComplementOf(<https://w3id.org/pmd/co/PMD_0000068>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000110> (geological process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000110> "geological process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000110> "A natural process that operates within the Earth system to transform, transport, or deform Earth materials, thereby changing Earth structures and landforms"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000110> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000520> (heat flow)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000520> "Wärmefluss"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000520> "heat flow"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000520> "is a process in which transfer of thermal energy between or within material entities occurs"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000520> "ist ein Prozess, bei dem Wärmeenergie zwischen oder innerhalb materieller Einheiten übertragen wird"@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000520> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000553> (chemisches Potential)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemical potential"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemisches Potential"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000553> "a quality of a thermodynamic system describing the energy change associated with the addition of a small quantity of a substance to a system at constant temperature and pressure."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000553> "eine intensive Qualität eines thermodynamischen Systems, die die Energieänderung beschreibt, die mit der Zugabe einer kleinen Menge einer Substanz zu einem System bei konstanter Temperatur und konstantem Druck verbunden ist."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000553> <https://w3id.org/pmd/co/PMD_0080116>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000583> (Rechenprozess)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000583> "Rechenprozess"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000583> "computing process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000583> "A process that involves the systematic use of computational methods and tools to perform simulations, analyses, or data transformations to achieve specific scientific or engineering goals."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000583> "Ein Prozess, der die systematische Verwendung von rechnerischen Methoden und Werkzeugen umfasst, um Simulationen, Analysen oder Datenumwandlungen durchzuführen, um spezifische wissenschaftliche oder technische Ziele zu erreichen."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000583> obo:COB_0000035)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000583> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000293 obo:IAO_0000030) ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0000030)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000597> (mass density)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000597> "mass density"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000597> "fundamental property of matter representing the mass of a portion of matter per unit volume"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000597> <https://w3id.org/pmd/co/PMD_0023043>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000602> (device)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000602> "Gerät"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000602> "device"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000602> "A device is an object that is designed to perform a specific function or task involving measurement, manipulation, processing, or analysis."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000602> "Ein physisches oder virtuelles Objekt, das verwendet wird, um eine bestimmte Funktion oder Aufgabe auszuführen, häufig im Zusammenhang mit der Messung, Manipulation oder Analyse von Materialien."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000602> obo:BFO_0000030)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000619> (electric potential)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000619> "electric potential"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000619> "an extensvie quality describing the amount of work needed to move a unit charge from a reference point to a specific location in an electric field."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000619> <https://w3id.org/pmd/co/PMD_0080116>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000619> ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0080022>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000654> (functional material)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000654> "functional material"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000654> "A functional material F is a material which has the function to be used for an object O (O consists of F) and O's function is other/more than mechanical load carrying."@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000654> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000000> ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000085 obo:BFO_0000034)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000654> <https://w3id.org/pmd/co/PMD_0000000>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000654> ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000085 obo:BFO_0000034))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000661> (glass)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000661> "glass"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000661> "material present as an amorphous solid typically formed by rapid cooling of a melt"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000661> <https://w3id.org/pmd/co/PMD_0000000>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000777> (Wärmekapazität)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000777> "Wärmekapazität"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000777> "heat capacity"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000777> "Die Wärmekapazität ist eine thermische Eigenschaft, die die Menge an Wärmeenergie beschreibt, die erforderlich ist, um die Temperatur einer Entität um einen bestimmten Betrag zu erhöhen."@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000777> "The heat capacity is a thermal property describing the amount of heat energy required to raise the temperature of an entity by a given amount."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000777> obo:BFO_0000017)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000777> <https://w3id.org/pmd/co/PMD_0020313>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000777> ObjectSomeValuesFrom(obo:BFO_0000054 <https://w3id.org/pmd/co/PMD_0000520>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000790> (Brechung)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000790> "Brechung"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000790> "optical refraction"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000790> "Optical property which describes the bending of light as it passes from one medium into another due to a change in the light’s speed."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000790> "Optische Eigenschaft, die die Ablenkung des Lichts beim Übergang von einem Medium in ein anderes aufgrund einer Änderung der Lichtgeschwindigkeit beschreibt."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000790> <https://w3id.org/pmd/co/PMD_0000877>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000833> (manufacturing process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000833> "Herstellungsprozess"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000833> "manufacturing process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000833> "A planned process that is driven by the primary intent to transform objects
+A manufacturing process is always a transformative process."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000833> "Ein geplannter Prozess, der von der primären Absicht angetrieben wird, Objekte zu transformieren. Ein Herstellungsprozess ist immer ein Transformationsprozess."@de)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000833> ObjectIntersectionOf(obo:COB_0000035 ObjectSomeValuesFrom(obo:OBI_0000293 ObjectUnionOf(obo:BFO_0000027 obo:BFO_0000030)) ObjectSomeValuesFrom(obo:OBI_0000299 ObjectUnionOf(obo:BFO_0000027 obo:BFO_0000030))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000833> obo:COB_0000035)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000833> ObjectSomeValuesFrom(obo:OBI_0000293 ObjectUnionOf(obo:BFO_0000027 obo:BFO_0000030)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000833> ObjectSomeValuesFrom(obo:OBI_0000299 ObjectUnionOf(obo:BFO_0000027 obo:BFO_0000030)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000848> (DEPRECATED mechanische Eigenschaft)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000848> "DEPRECATED mechanical property"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000848> "DEPRECATED mechanische Eigenschaft"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000848> "DEPRECATED A mechanical property is a material property which is a characteristic of material M. Mechanical property has realization in a stimulating process (in most cases, application of mechanical load), and the stimulating process is an occurent part of another process, in which an object O that is an instance of M participates."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000848> "DEPRECATED Eine mechanische Eigenschaft ist eine Materialeigenschaft, die eine Eigenschaft des Materials M ist. Eine mechanische Eigenschaft wird in einem stimulierenden Prozess (in den meisten Fällen durch Anwendung einer mechanischen Belastung) verwirklicht, und der stimulierende Prozess ist ein stattfindender Teil eines anderen Prozesses, an dem ein Objekt O, das eine Instanz von M ist, teilnimmt."@de)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000868> (natural organic material)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000868> "natural organic material"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000868> "material derived from natural biological sources or processes"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000868> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000000> ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0010026>) ObjectSomeValuesFrom(obo:RO_0002353 ObjectUnionOf(obo:GO_0008150 <https://w3id.org/pmd/co/PMD_0000110>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000868> <https://w3id.org/pmd/co/PMD_0000000>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000868> ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0010026>))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000868> ObjectSomeValuesFrom(obo:RO_0002353 ObjectUnionOf(obo:GO_0008150 <https://w3id.org/pmd/co/PMD_0000110>)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000877> (optical property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000877> "optical property"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000877> "optische Eigenschaft"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000877> "a property that is commonly associated with the domain of optics"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000877> <https://w3id.org/pmd/co/PMD_0020265>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000882> (Phasengrenze (Realisierung))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000882> "Phasengrenze (Realisierung)"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000882> "phase boundary (realization)"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000882> "A phase boundary is a realizable entity that is realized by the transition between distinct phases."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000882> "Eine Phasengrenze ist eine realisierbare Einheit, die durch den Übergang zwischen verschiedenen Phasen realisiert wird."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000882> obo:BFO_0000017)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000882> <https://w3id.org/pmd/co/PMD_0020313>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000882> ObjectSomeValuesFrom(obo:BFO_0000054 <https://w3id.org/pmd/co/PMD_0020136>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000888> (polymer)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000888> "polymer"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000888> "A polymer is a material that consists of many repeated subunits (monomers) to form long chains. The atoms within a polymer chain are bonded together by covalent bonds. The intermolecular forces between polymer chains are typically represented by van der waals forces and hydrogen bonds."@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000888> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000000> ObjectSomeValuesFrom(obo:RO_0002353 <https://w3id.org/pmd/co/PMD_0010033>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000888> <https://w3id.org/pmd/co/PMD_0000000>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000888> ObjectSomeValuesFrom(obo:RO_0002353 <https://w3id.org/pmd/co/PMD_0010033>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000891> (disconnected material entity aggregate)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000891> "disconnected material entity aggregate"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000891> "An object aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000891> obo:BFO_0000027)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000896> (pressure)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000896> "Druck"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000896> "pressure"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000896> "a quality describing the force exerted per unit area in or on a material."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000896> "eine intensive Qualität, die die Kraft beschreibt, die pro Flächeneinheit in oder auf ein Material ausgeübt wird."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000896> <https://w3id.org/pmd/co/PMD_0023043>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000899> (Urformen)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000899> "Urformen"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000899> "primary shaping"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000899> "A manufacturing process that creates a defined workpiece from shapeless material by producing cohesion, whereby the characteristic properties of the material become visible in the end product."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000899> "Ein Herstellungsprozess, der aus formlosem Stoff durch das Herstellen von Kohäsion ein definiertes Werkstück schafft, wobei die charakteristischen Eigenschaften des Materials im Endprodukt sichtbar werden."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000899> <https://w3id.org/pmd/co/PMD_0000833>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000907> (Urformen Aus Dem Plastischen Zustand)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000907> "Urformen Aus Dem Plastischen Zustand"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000907> "primary shaping from the plastic state"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000907> "A primary shaping process that involves forming materials from a plastic state."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000907> "Ein Urformprozess, der das Formen von Materialien aus einem plastischen Zustand beinhaltet."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000907> <https://w3id.org/pmd/co/PMD_0000899>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000949> (stiffness)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000949> "Steifigkeit"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000949> "stiffness"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000949> "The stiffness is an object property describing the resistance of the object to deformation under an applied force."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000949> <https://w3id.org/pmd/co/PMD_0020317>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000949> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020311> ObjectSomeValuesFrom(obo:RO_0000052 obo:BFO_0000030) ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0020132>) ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0020200>)))
+DisjointClasses(<https://w3id.org/pmd/co/PMD_0000949> <https://w3id.org/pmd/co/PMD_0000952>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000952> (strength)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000952> "Festigkeit"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000952> "strength"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000952> "is a material property describing the stress before a characteristic (failure-) event occurs."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000952> <https://w3id.org/pmd/co/PMD_0020335>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000952> <https://w3id.org/pmd/co/PMD_0023004>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000952> ObjectIntersectionOf(ObjectUnionOf(ObjectSomeValuesFrom(obo:BFO_0000054 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:BFO_0000117 <https://w3id.org/pmd/co/PMD_0020258>))) ObjectSomeValuesFrom(obo:RO_0000052 <https://w3id.org/pmd/co/PMD_0000068>)) ObjectSomeValuesFrom(obo:RO_0000052 <https://w3id.org/pmd/co/PMD_0000001>) ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0020200>) ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0080019>)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000967> (temperature)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000967> "Temperatur"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000967> "temperature"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000967> "Die Temperatur ist eine grundlegende intensive Qualität, die die durchschnittliche atomare oder molekulare Bewegung oder Schwingung eines Teils der Materie darstellt."@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000967> "The temperature is a fundamental intensive quality representing the average atomic or molcular movement or vibration of a portion of matter."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000967> <https://w3id.org/pmd/co/PMD_0023043>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0010026> (organische Zusammensetzung)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0010026> "organic composition"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0010026> "organische Zusammensetzung"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0010026> "A composition characterized by a primary molecular structure of carbon atoms covalently bonded to hydrogen (C-H bonds), typically forming linear, branched, or networked chains."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0010026> <https://w3id.org/pmd/co/PMD_0020353>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0010033> (polymerization)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0010033> "polymerization"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0010033> "The chemical process of reacting monomers, oligomers, or reactive precursors together to form longer macromolecular chains or three-dimensional networks"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0010033> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020101> (proportion)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020101> "Anteil"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020101> "proportion"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020101> "A proportion is a relational quality between two entities (the whole and the part) which quantifies the relation between the whole and its part."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020101> <https://w3id.org/pmd/co/PMD_0020353>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(obo:RO_0002328 obo:BFO_0000001))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020102> (mass ratio)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020102> "Massenverhältnis"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020102> "mass ratio"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020102> "Das Massenverhältnis bezeichnet eine relationale Qualität, die einen Massenwert im Verhältnis zu einem anderen ausdrückt und typischerweise eine dimensionslose Zahl ergibt"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020102> "Mass ratio denotes a relational quality expressing one mass value relative to another, typically producing a dimensionless number"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020102> <https://w3id.org/pmd/co/PMD_0080069>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020103> (Molverhältnis)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020103> "Molverhältnis"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020103> "molar ratio"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020103> "Der Molanteil ist der Anteil, der die Anzahl der Einheiten des Teils im Verhältnis zur Anzahl der Einheiten des Ganzen quantifiziert."@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020103> "Molar proportion is the proportion which quantifies the entities count of the part in relation to the entities count of the whole."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020103> <https://w3id.org/pmd/co/PMD_0080069>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020104> (volume ratio)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020104> "Volumenverhältnis"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020104> "volume ratio"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020104> "Volume ratio represents a relational quality expressing one volume value relative to another, typically resulting in a dimensionless number"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020104> "Volumenverhältnis stellt eine relationale Qualität dar, die einen Volumenwert im Verhältnis zu einem anderen ausdrückt, typischerweise resultierend in einer dimensionslosen Zahl"@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020104> <https://w3id.org/pmd/co/PMD_0080069>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020113> (fluid (object))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020113> "fluid (object)"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020113> "Fluid (object) is an object that consists of some portion of matter which bears an aggregate state that concretizes a liquid or gaseous aggregate state."@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020113> ObjectIntersectionOf(obo:BFO_0000030 ObjectUnionOf(<https://w3id.org/pmd/co/PMD_0020289> <https://w3id.org/pmd/co/PMD_0020290>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020113> obo:BFO_0000030)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020128> (thermodynamic system)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020128> "thermodynamic system"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020128> "A thermodynamic system is a material entity whose parts are bearer of thermodynamic properties. A thermodynamic system environs a thermodynamic process by which the thermodynamic properties of the objects of the thermodynamic system change over time."@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020128> ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000053 <https://w3id.org/pmd/co/PMD_0020313>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020128> obo:BFO_0000040)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020128> ObjectSomeValuesFrom(obo:RO_0000053 <https://w3id.org/pmd/co/PMD_0020313>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020132> (spatial extend)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020132> "spatial extend"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020132> "Dimension quality is a quality of a material entity that pertains to its measurable spatial extent, such as length, area, or volume"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020132> ObjectIntersectionOf(obo:BFO_0000019 ObjectSomeValuesFrom(obo:RO_0000080 ObjectUnionOf(obo:BFO_0000024 obo:BFO_0000027 obo:BFO_0000029 obo:BFO_0000030 obo:BFO_0000140))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020133> (Masse)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020133> "Masse"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020133> "mass"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020133> "Mass is fundamental extensive quality."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020133> <https://w3id.org/pmd/co/PMD_0023000>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020133> ObjectSomeValuesFrom(obo:RO_0000080 ObjectUnionOf(obo:BFO_0000024 obo:BFO_0000027 obo:BFO_0000030)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020136> (phase transformation)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020136> "phase transformation"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020136> "A thermodynamic phase transformation is a process in/of a thermodynamic system, that involves the transformation of phases of the system to other phases."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020136> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020142> (energy)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020142> "Energie"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020142> "energy"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020142> "an extensive quality of material entities which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020142> obo:BFO_0000019)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020142> <https://w3id.org/pmd/co/PMD_0020353>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020142> ObjectSomeValuesFrom(obo:RO_0000080 ObjectUnionOf(obo:BFO_0000024 obo:BFO_0000027 obo:BFO_0000030)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020150> (Volumen)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020150> "Volumen"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020150> "volume"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020150> "Volume is a three dimensional size."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020150> "Volumen ist eine dreidimensionale Größe."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020150> <https://w3id.org/pmd/co/PMD_0020132>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020150> <https://w3id.org/pmd/co/PMD_0023000>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020151> (internal energy)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020151> "innere Energie"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020151> "internal energy"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020151> "Innere Energie ist eine universelle umfassende Qualität, die das Potenzial des Trägers zur Arbeit festlegt."@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020151> "Internal energy is a universal extensive quality that specifies the bearers potential to do work."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020151> <https://w3id.org/pmd/co/PMD_0020142>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020151> <https://w3id.org/pmd/co/PMD_0023000>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020152> (component)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020152> "component"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020152> "A component is an object aggregate that bears a function in a technical system."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020152> obo:BFO_0000027)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020161> (activity (thermodynamic))
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020161> "activity (thermodynamic)"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020161> "thermodynamische Aktivität"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020161> "Thermodynamic activity is a relational quality that inheres between a chemical species and a non-ideal solution and represents the effective concentration of the species accounting for particle interactions."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020161> "Thermodynamische Aktivität ist eine Beziehungsqualität, die zwischen einer chemischen Spezies und einer nicht idealen Lösung innewohnt und die effektive Konzentration der Spezies darstellt, die für Partikelwechselwirkungen verantwortlich ist."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> obo:BFO_0000019)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> <https://w3id.org/pmd/co/PMD_0020313>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> <https://w3id.org/pmd/co/PMD_0023004>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> ObjectSomeValuesFrom(obo:RO_0000080 ObjectIntersectionOf(obo:CHEBI_60003 ObjectSomeValuesFrom(obo:RO_0000087 <https://w3id.org/pmd/co/PMD_0020227>) ObjectSomeValuesFrom(obo:RO_0002350 <https://w3id.org/pmd/co/PMD_0020229>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020200> (force)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020200> "force"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020200> "A force is an entity that consists of a reciprocal interaction between two objects and is realized as equal and opposite influences capable of changing motion or causing deformation."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020200> <https://w3id.org/pmd/co/PMD_0020311>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020200> <https://w3id.org/pmd/co/PMD_0020317>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020200> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000030))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020216> (DEPRECATED order scale value)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020216> "DEPRECATED order scale value"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020216> "DEPRECATED Mögliche Werte der charakteristischen Länge, über die strukturelle Zusammenhänge in einem Material bestehen bleiben"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020216> "DEPRECATED possible values of characteristic length over which structural correlations persist in a material"@en)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020226> (flow rate)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020226> "flow rate"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020226> "process attribute that represents the amount of transported entites per time"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020226> <https://w3id.org/pmd/co/PMD_0025019>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020226> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> <https://w3id.org/pmd/co/PMD_0020246>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020227> (solute role)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020227> "gelöste Rolle"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020227> "solute role"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020227> "Rolle einer Entität, die in einer Lösung in geringer Konzentration vorhanden ist"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020227> "role of an entity that is present in minor concentration in a solution"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020227> <https://w3id.org/pmd/co/PMD_0020259>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020227> ObjectSomeValuesFrom(obo:RO_0000081 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:BFO_0000050 <https://w3id.org/pmd/co/PMD_0020229>))))
+DisjointClasses(<https://w3id.org/pmd/co/PMD_0020227> <https://w3id.org/pmd/co/PMD_0020228>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020228> (Lösungsmittelrolle)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020228> "Lösungsmittelrolle"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020228> "solvent role"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020228> "Rolle einer Entität, die in einer Lösung in großer Konzentration vorhanden ist"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020228> "role of an entity that is present in major concentration in a solution"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020228> <https://w3id.org/pmd/co/PMD_0020259>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020228> ObjectSomeValuesFrom(obo:RO_0000081 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:BFO_0000050 <https://w3id.org/pmd/co/PMD_0020229>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020229> (solution)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020229> "solution"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020229> "A portion of matter that is homogeneous, made up of at least two entity types, one playing the role of sovlent and the others playing the role of solute"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020229> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:CHEBI_60003 ObjectSomeValuesFrom(obo:RO_0000087 <https://w3id.org/pmd/co/PMD_0020227>))) ObjectExactCardinality(1 obo:RO_0002351 ObjectIntersectionOf(obo:CHEBI_60003 ObjectSomeValuesFrom(obo:RO_0000087 <https://w3id.org/pmd/co/PMD_0020228>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020229> <https://w3id.org/pmd/co/PMD_0000001>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020229> ObjectSomeValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:CHEBI_60003 ObjectSomeValuesFrom(obo:RO_0000087 <https://w3id.org/pmd/co/PMD_0020227>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020229> ObjectSomeValuesFrom(obo:RO_0002351 ObjectIntersectionOf(obo:CHEBI_60003 ObjectSomeValuesFrom(obo:RO_0000087 <https://w3id.org/pmd/co/PMD_0020228>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020230> (solid solution)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020230> "solid solution"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020230> "a solution with solid aggregate state"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020230> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020229> <https://w3id.org/pmd/co/PMD_0020293>))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020230> <https://w3id.org/pmd/co/PMD_0020229>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020230> <https://w3id.org/pmd/co/PMD_0020293>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020245> (transport)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020245> "transport"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020245> "is a process in which an entity being moved within or accross another entity"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020245> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020246> (continous transport)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020246> "continous transport"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020246> "recurring transport of multiple entities, such that the transported entities are not being discretized anymore"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020246> <https://w3id.org/pmd/co/PMD_0020245>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020258> (failure)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020258> "failure"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020258> "a process boundary at which a function of a participant ceases to exist"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020258> obo:BFO_0000035)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020259> (chemical property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020259> "chemical property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020259> "a property that is commonly associated with the domain of chemistry"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020259> <https://w3id.org/pmd/co/PMD_0020265>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020265> (property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020265> "property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020265> "property is a collection class for entities that are either qualites (represent a state) or realizable entities (represent a behavior)"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020265> obo:BFO_0000020)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020287> (portion of matter in aggregate state)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020287> "portion of matter in aggregate state"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020287> "a portion of matter that is at the same time in a specific aggregate state"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020287> <https://w3id.org/pmd/co/PMD_0000001>)
+DisjointUnion(<https://w3id.org/pmd/co/PMD_0020287> <https://w3id.org/pmd/co/PMD_0020288> <https://w3id.org/pmd/co/PMD_0020289> <https://w3id.org/pmd/co/PMD_0020290> <https://w3id.org/pmd/co/PMD_0020291> <https://w3id.org/pmd/co/PMD_0020292> <https://w3id.org/pmd/co/PMD_0020293> <https://w3id.org/pmd/co/PMD_0020294> <https://w3id.org/pmd/co/PMD_0020295> <https://w3id.org/pmd/co/PMD_0020296>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020288> (atom gas)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020288> "atom gas"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020288> "a portion of matter in an gaseous aggregate state where the gas entities are atoms"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020288> <https://w3id.org/pmd/co/PMD_0020287>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020289> (gas)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020289> "gas"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020289> "a portion of matter in an gaseous aggregate state where the gas entities have no bonds"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020289> <https://w3id.org/pmd/co/PMD_0020287>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020290> (liquid)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020290> "liquid"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020290> "a portion of matter in an liquid aggregate state where the liquid's entities transmit no shear stress"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020290> <https://w3id.org/pmd/co/PMD_0020287>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020291> (mesomorphic)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020291> "mesomorphic"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020291> "a portion of matter in an mesomorphic aggregate state where some entities transmit no shear stress while others do"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020291> <https://w3id.org/pmd/co/PMD_0020287>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020292> (plasma)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020292> "plasma"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020292> "a portion of matter in an plasma aggregate state where entities are atom nuclei and have no bonds"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020292> <https://w3id.org/pmd/co/PMD_0020287>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020293> (solid)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020293> "solid"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020293> "a portion of matter in an solid aggregate state where the solid's entities transmit shear stress"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020293> <https://w3id.org/pmd/co/PMD_0020287>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020294> (supercritical fluid)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020294> "supercritical fluid"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020294> "a portion of matter in an supercritical fluid aggregate state"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020294> <https://w3id.org/pmd/co/PMD_0020287>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020295> (suprafluid)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020295> "suprafluid"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020295> "a portion of matter in an suprafluid aggregate state"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020295> <https://w3id.org/pmd/co/PMD_0020287>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020296> (suprasolid)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020296> "suprasolid"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020296> "a portion of matter in a suprasolid aggregate state"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020296> <https://w3id.org/pmd/co/PMD_0020287>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020311> (classical mechanics property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020311> "classical mechanics property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020311> "a property that is commonly associated with the domain of classical (Newtonian) mechanics"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020311> <https://w3id.org/pmd/co/PMD_0020265>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020312> (electromagnetic property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020312> "electromagnetic property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020312> "a property that is commonly associated with the domain of electricity and magnetics"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020312> <https://w3id.org/pmd/co/PMD_0020265>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020313> (thermodynamic property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020313> "thermodynamic property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020313> "a property that is commonly associated with the domain of thermodynamics"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020313> <https://w3id.org/pmd/co/PMD_0020265>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020317> (an objects property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020317> "an objects property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020317> "a 'property by bearer' that indicates that its bearer is an object")
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020317> ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0000052 obo:BFO_0000030) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000030)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020317> <https://w3id.org/pmd/co/PMD_0023003>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020318> (intensive property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020318> "intensive property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020318> "a facetted property that is characteristic of some portion of matter or chemical substance"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020318> ObjectIntersectionOf(ObjectComplementOf(ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0023000>)) ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:CHEBI_59999 <https://w3id.org/pmd/co/PMD_0000001>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020318> <https://w3id.org/pmd/co/PMD_0023002>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020318> ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:CHEBI_59999 <https://w3id.org/pmd/co/PMD_0000001>)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020319> (extensive property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020319> "extensive property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020319> "a facetted property that is characteristic of some object or object aggregate or fiat object part and that changes with bearers makeup."@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020319> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:BFO_0000024 obo:BFO_0000027 obo:BFO_0000029 obo:BFO_0000030 obo:BFO_0000140)) ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0023000>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020319> <https://w3id.org/pmd/co/PMD_0023002>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020319> ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(obo:BFO_0000024 obo:BFO_0000027 obo:BFO_0000029 obo:BFO_0000030 obo:BFO_0000140)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020319> ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0023000>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020335> (characteristic material property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020335> "characteristic material property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020335> "a property that is commonly associated with the domain of materials science and engineering"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020335> <https://w3id.org/pmd/co/PMD_0020265>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020335> ObjectSomeValuesFrom(obo:RO_0000052 ObjectUnionOf(<https://w3id.org/pmd/co/PMD_0000000> ObjectIntersectionOf(ObjectUnionOf(obo:BFO_0000024 obo:BFO_0000027 obo:BFO_0000029 obo:BFO_0000030) ObjectSomeValuesFrom(obo:BFO_0000050 <https://w3id.org/pmd/co/PMD_0000000>)))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020353> (unclassified property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020353> "unclassified property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020353> "a collection of to-be classifed SDCs"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020353> <https://w3id.org/pmd/co/PMD_0020265>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020364> (per count property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020364> "per count property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020364> "a quotient with a denominator that has is a count"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020364> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0023001> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931)))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020364> <https://w3id.org/pmd/co/PMD_0023001>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020364> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931))))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020365> (per volume property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020365> "per volume property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020365> "a quotient where the denominator is a volume"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020365> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020365> <https://w3id.org/pmd/co/PMD_0023001>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020365> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020365> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020150> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020366> (per mass property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020366> "per mass property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020366> "a quotient where the denominator is the mass of the bearer"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020366> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020366> <https://w3id.org/pmd/co/PMD_0023001>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020366> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020367> (member count)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020367> "member count"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020367> "the number of similar objects in an object aggregate"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020367> <https://w3id.org/pmd/co/PMD_0023000>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectAllValuesFrom(obo:RO_0000080 obo:BFO_0000027))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020369> (per mol property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020369> "per mol property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020369> "a per count with the count of Avogadro-number"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020369> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0023001> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectHasValue(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020368>)))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020369> <https://w3id.org/pmd/co/PMD_0020364>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020369> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectHasValue(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020368>))))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020370> (a mol of entites)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020370> "a mol of entites"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020370> "an object aggregate which Avogadro-number coount members of same type"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020370> ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectHasValue(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020368>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020370> obo:BFO_0000027)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020370> ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectHasValue(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020368>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0023000> (fundamental quality of system)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023000> "fundamental quality of system"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023000> "a quality that is quality of every system made of demarcated materail entites"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023000> obo:BFO_0000019)
+DisjointUnion(<https://w3id.org/pmd/co/PMD_0023000> <https://w3id.org/pmd/co/PMD_0020133> <https://w3id.org/pmd/co/PMD_0020150> <https://w3id.org/pmd/co/PMD_0020151> <https://w3id.org/pmd/co/PMD_0020367>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0023001> (normalized property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023001> "normalized property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023001> "a facetted property that subsumes quotient classes"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023001> <https://w3id.org/pmd/co/PMD_0023002>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023001> ObjectSomeValuesFrom(obo:RO_0002328 obo:BFO_0000020))
+DisjointUnion(<https://w3id.org/pmd/co/PMD_0023001> <https://w3id.org/pmd/co/PMD_0020364> <https://w3id.org/pmd/co/PMD_0020365> <https://w3id.org/pmd/co/PMD_0020366>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0023002> (facetted property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023002> "facetted property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023002> "an specifically dependent continuant that is giving more detail to an other property or about its bearer"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023002> <https://w3id.org/pmd/co/PMD_0020265>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0023003> (property by bearer)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023003> "property by bearer"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023003> "is a facetted property that indicates the type of its bearer")
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023003> <https://w3id.org/pmd/co/PMD_0023002>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0023004> (a portions property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023004> "a portions property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023004> "a 'property by bearer' that indicates that its bearer is a portion of matter"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0023004> ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0000052 <https://w3id.org/pmd/co/PMD_0000001>) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> <https://w3id.org/pmd/co/PMD_0000001>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023004> <https://w3id.org/pmd/co/PMD_0023003>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0023007> (an object aggregates property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023007> "an object aggregates property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023007> "a 'property by bearer' that indicates that its bearer is an object aggregate"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0023007> ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0000052 obo:BFO_0000027) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000027)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023007> <https://w3id.org/pmd/co/PMD_0023003>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0023023> (fluid property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023023> "fluid property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023023> "a 'property by bearer' that indicates that its bearer is a fluid"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0023023> ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0000052 <https://w3id.org/pmd/co/PMD_0020113>) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> <https://w3id.org/pmd/co/PMD_0020113>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023023> <https://w3id.org/pmd/co/PMD_0023003>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0023035> (aggregated property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023035> "aggregated property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023035> "a facetted property that aggregates/condenses multiple values of members of an object aggregate"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023035> <https://w3id.org/pmd/co/PMD_0023002>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0023036> (averaged property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023036> "averaged property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023036> "an aggregated property that expresses an average of a property value of the members of an object aggregate"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0023036> ObjectSomeValuesFrom(obo:RO_0002328 ObjectSomeValuesFrom(obo:RO_0000052 ObjectIntersectionOf(obo:BFO_0000027 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000053 ObjectIntersectionOf(ObjectUnionOf(obo:BFO_0000017 obo:BFO_0000019) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931))))) ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023036> <https://w3id.org/pmd/co/PMD_0023035>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023036> ObjectSomeValuesFrom(obo:RO_0002328 ObjectSomeValuesFrom(obo:RO_0000052 ObjectIntersectionOf(obo:BFO_0000027 ObjectSomeValuesFrom(obo:BFO_0000051 ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000053 ObjectIntersectionOf(ObjectUnionOf(obo:BFO_0000017 obo:BFO_0000019) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931))))) ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>)))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0023041> (a sites property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023041> "a sites property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023041> "a 'property by bearer' that indicates that its bearer is a site"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0023041> ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0000052 obo:BFO_0000029) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000029)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023041> <https://w3id.org/pmd/co/PMD_0023003>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0023043> (fundamental quality of matter)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023043> "fundamental quality of matter"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023043> "a quality that is quality of every portion of matter"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023043> obo:BFO_0000019)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023043> <https://w3id.org/pmd/co/PMD_0023004>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023043> ObjectSomeValuesFrom(obo:RO_0000080 <https://w3id.org/pmd/co/PMD_0000001>))
+DisjointUnion(<https://w3id.org/pmd/co/PMD_0023043> <https://w3id.org/pmd/co/PMD_0000597> <https://w3id.org/pmd/co/PMD_0000896> <https://w3id.org/pmd/co/PMD_0000967>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0025019> (rate)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025019> "rate"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025019> "process attribute which describes the change of some quality of some of the participants in a process over time"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025019> <https://w3id.org/pmd/co/PMD_0000008>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025019> ObjectIntersectionOf(ObjectAllValuesFrom(<https://w3id.org/pmd/co/PMD_0020127> obo:BFO_0000019) ObjectAllValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(ObjectUnionOf(obo:BFO_0000004 <https://w3id.org/pmd/co/PMD_0000068>) ObjectSomeValuesFrom(obo:RO_0000086 obo:BFO_0000019)))))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0040001> (Länge)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0040001> "Länge"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0040001> "length"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0040001> "Die Länge ist eine eindimensionale Größe."@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0040001> "Length is a one dimensional size."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0040001> <https://w3id.org/pmd/co/PMD_0020132>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0050004> (thermoplastic polymer)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0050004> "thermoplastic polymer"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0050004> "polymer that becomes moldable when heated and solidifies upon cooling"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0050004> <https://w3id.org/pmd/co/PMD_0000888>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0050118> (optical glass)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0050118> "optical glass"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0050118> "glass manufactured for optical components"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0050118> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000661> ObjectSomeValuesFrom(obo:RO_0000053 <https://w3id.org/pmd/co/PMD_0000877>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0050118> <https://w3id.org/pmd/co/PMD_0000661>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0050118> ObjectSomeValuesFrom(obo:RO_0000053 <https://w3id.org/pmd/co/PMD_0000790>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0050133> (functional glass)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0050133> "functional glass"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0050133> "glass that is designed to perform specific roles beyond conventional optical applications"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0050133> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000661> ObjectSomeValuesFrom(obo:BFO_0000050 ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000085 obo:BFO_0000034)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0050133> <https://w3id.org/pmd/co/PMD_0000654>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0050133> <https://w3id.org/pmd/co/PMD_0000661>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0050137> (magnetic glass)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0050137> "magnetic glass"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0050137> "glass that exhibits intrinsic bulk magnetic behavior|Magnetic glass is functional glass that is modified to exhibit magnetic properties"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0050137> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000661> ObjectSomeValuesFrom(obo:RO_0000053 <https://w3id.org/pmd/co/PMD_0020312>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0050137> <https://w3id.org/pmd/co/PMD_0000661>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0050137> ObjectSomeValuesFrom(obo:RO_0000053 <https://w3id.org/pmd/co/PMD_0020312>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0060008> (recipe)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0060008> "recipe"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0060008> "A plan specification that outlines the ingredients, proportions, and procedural steps required to prepare a specific product, typically in cooking, manufacturing, or chemical processes."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0060008> obo:IAO_0000104)
+
+# Class: <https://w3id.org/pmd/co/PMD_0080019> (Fläche)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080019> "Fläche"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080019> "area"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080019> "Area signifies a 2-D extent quality inhering by virtue of the bearer's two-dimensional extent"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080019> "Fläche bedeutet eine zweidimensionale Ausdehnungsqualität, die aufgrund der zweidimensionalen Ausdehnung des Trägers inhärent ist"@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0080019> <https://w3id.org/pmd/co/PMD_0020132>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0080022> (elektrische Ladung)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080022> "electric charge"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080022> "elektrische Ladung"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080022> "Electric charge refers to the physical property of matter causing it to experience a force when placed in an electromagnetic field"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0080022> obo:BFO_0000019)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0080022> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020312> ObjectSomeValuesFrom(obo:RO_0000080 ObjectUnionOf(obo:BFO_0000027 obo:BFO_0000030))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0080069> (physisch relative Qualität)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080069> "physical relational quality"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080069> "physisch relative Qualität"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080069> "Die physische Beziehungsqualität bezieht sich auf Eigenschaften oder Merkmale einer Entität, die von ihrer Beziehung zu anderen Entitäten abhängig sind"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080069> "Physical relational quality pertains to properties or characteristics of an entity dependent on its relation to other entities"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0080069> <https://w3id.org/pmd/co/PMD_0020353>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0080116> (potential)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080116> "potential"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080116> "a partial derivative of energy with respect to its conjugate extensive quantity"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0080116> obo:BFO_0000019)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0080116> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0020142>) ObjectSomeValuesFrom(obo:RO_0002328 <https://w3id.org/pmd/co/PMD_0020319>)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0090012> (biological material)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0090012> "biological material"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0090012> "material produced by a living organism"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0090012> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000000> ObjectSomeValuesFrom(obo:RO_0002353 obo:GO_0008150)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0090012> <https://w3id.org/pmd/co/PMD_0000000>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0090012> ObjectSomeValuesFrom(obo:RO_0002353 obo:GO_0008150))
+
+# Class: <https://w3id.org/pmd/co/PMD_0090014> (biopolymer)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0090014> "biopolymer"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0090014> "polymer produced by the metabolic processes of a living organism"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0090014> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000888> <https://w3id.org/pmd/co/PMD_0090012>))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0090014> <https://w3id.org/pmd/co/PMD_0000888>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0090014> <https://w3id.org/pmd/co/PMD_0090012>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0090016> (bio-based material)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0090016> "bio-based material"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0090016> "material intentionally processed from materials derived from living (or once-living) organisms"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0090016> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000000> ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000833> ObjectSomeValuesFrom(obo:OBI_0000293 <https://w3id.org/pmd/co/PMD_0090012>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0090016> <https://w3id.org/pmd/co/PMD_0000000>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0090016> ObjectSomeValuesFrom(obo:RO_0002353 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000833> ObjectSomeValuesFrom(obo:OBI_0000293 <https://w3id.org/pmd/co/PMD_0090012>))))
 
 
 ############################
@@ -344,33 +1779,50 @@ ClassAssertion(<http://qudt.org/schema/qudt/Unit> <http://qudt.org/vocab/unit/PE
 # Individual: <https://w3id.org/pmd/co/PMD_0020217> (DEPRECATED short range order)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020217> "DEPRECATED short range order"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020217> "DEPRECATED periodic arrangement of structural features up to a few entities"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020217> "DEPRECATED periodische Anordnung von Strukturmerkmalen bis hin zu wenigen Einheiten"@de)
 ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020217>)
 
 # Individual: <https://w3id.org/pmd/co/PMD_0020218> (DEPRECATED medium range order)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020218> "DEPRECATED medium range order"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020218> "DEPRECATED periodic arrangement of structural features of many entities"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020218> "DEPRECATED periodische Anordnung struktureller Merkmale vieler Entitäten"@de)
 ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020218>)
 
 # Individual: <https://w3id.org/pmd/co/PMD_0020219> (DEPRECATED long range order)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020219> "DEPRECATED long range order"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020219> "DEPRECATED periodic arrangement of structural features of virtually all entities"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020219> "DEPRECATED periodische Anordnung struktureller Merkmale praktisch aller Entitäten"@de)
 ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020219>)
 
 # Individual: <https://w3id.org/pmd/co/PMD_0020242> (DEPRECATED no range order)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020242> "DEPRECATED no range order"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020242> "DEPRECATED keine periodische Anordnung struktureller Merkmale von Entitäten"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020242> "DEPRECATED no periodic arrangement of structural features of entites"@en)
 ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020242>)
 
 # Individual: <https://w3id.org/pmd/co/PMD_0020368> (avogadro number)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020368> "avogadro number"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020368> "The Avogadro number"@en)
 ClassAssertion(obo:OBI_0001931 <https://w3id.org/pmd/co/PMD_0020368>)
 ObjectPropertyAssertion(obo:IAO_0000039 <https://w3id.org/pmd/co/PMD_0020368> <http://qudt.org/vocab/unit/PER-MOL>)
 DataPropertyAssertion(obo:OBI_0001937 <https://w3id.org/pmd/co/PMD_0020368> "602214086000000000000000"^^xsd:decimal)
 
 
 DisjointClasses(obo:BFO_0000004 obo:BFO_0000020 obo:BFO_0000031)
+DisjointClasses(obo:BFO_0000006 obo:BFO_0000029 obo:BFO_0000140)
+DisjointClasses(obo:BFO_0000008 obo:BFO_0000011 obo:BFO_0000015 obo:BFO_0000035)
+DisjointClasses(<https://w3id.org/pmd/co/PMD_0000553> <https://w3id.org/pmd/co/PMD_0000619> <https://w3id.org/pmd/co/PMD_0020132> <https://w3id.org/pmd/co/PMD_0020133> <https://w3id.org/pmd/co/PMD_0020142> <https://w3id.org/pmd/co/PMD_0020161>)
+DisjointClasses(<https://w3id.org/pmd/co/PMD_0020102> <https://w3id.org/pmd/co/PMD_0020103> <https://w3id.org/pmd/co/PMD_0020104>)
+DisjointClasses(<https://w3id.org/pmd/co/PMD_0020288> <https://w3id.org/pmd/co/PMD_0020289> <https://w3id.org/pmd/co/PMD_0020290> <https://w3id.org/pmd/co/PMD_0020291> <https://w3id.org/pmd/co/PMD_0020292> <https://w3id.org/pmd/co/PMD_0020293> <https://w3id.org/pmd/co/PMD_0020294> <https://w3id.org/pmd/co/PMD_0020295> <https://w3id.org/pmd/co/PMD_0020296>)
+DisjointClasses(<https://w3id.org/pmd/co/PMD_0020364> <https://w3id.org/pmd/co/PMD_0020365> <https://w3id.org/pmd/co/PMD_0020366>)
+SubObjectPropertyOf(ObjectPropertyChain(obo:BFO_0000051 obo:RO_0000057) obo:RO_0000057)
 SubObjectPropertyOf(ObjectPropertyChain(obo:BFO_0000051 <https://w3id.org/pmd/co/PMD_0025998>) <https://w3id.org/pmd/co/PMD_0025998>)
+SubObjectPropertyOf(ObjectPropertyChain(obo:BFO_0000055 obo:RO_0000059) obo:STATO_0000102)
 SubObjectPropertyOf(ObjectPropertyChain(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000050) <https://w3id.org/pmd/co/PMD_0025999>)
 DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000016 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000091 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
 DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000019 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000086 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))

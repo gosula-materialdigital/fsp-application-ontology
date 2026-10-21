@@ -1,5 +1,6 @@
-Prefix(:=<https://w3id.org/pmd/fsp.owl#>)
+Prefix(:=<https://w3id.org/pmd/fsp/>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -8,37 +9,303 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
-Ontology(<https://w3id.org/pmd/fsp.owl>
-
-Import(<https://w3id.org/pmd/fsp//imports/pmdco_import.owl>)
-
-
-Annotation(dcterms:description "PMD Core application ontology generated via ODK Template.
-")
-Annotation(dcterms:license <CC-BY-4.0>)
+Ontology(<https://w3id.org/pmd/fsp/>
+Import(<https://w3id.org/pmd/fsp/components/fsp-axioms-shared.owl>)
+Import(<https://w3id.org/pmd/fsp/components/fsp-shared.owl>)
+Import(<https://w3id.org/pmd/fsp/components/imports-edit.owl>)
+Import(<https://w3id.org/pmd/fsp/imports/pmdco_import.owl>)
+Annotation(dcterms:creator "Divya Gosula")
+Annotation(dcterms:description "Application ontology for the flame spray pyrolysis (FSP) process for manufacturing nanoparticles, aligned with the PMD Core Ontology (PMDco).")
+Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "Flame Spray Pyrolysis Ontology")
 
-
-Declaration(Class(<https://w3id.org/pmd/FSP_0000000>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020101>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020113>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020152>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020226>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020246>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0040001>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0060008>))
+Declaration(Class(:FSP_0000001))
+Declaration(Class(:FSP_0000002))
+Declaration(Class(:FSP_0000003))
+Declaration(Class(:FSP_0000004))
+Declaration(Class(:FSP_0000005))
+Declaration(Class(:FSP_0000006))
+Declaration(Class(:FSP_0000007))
+Declaration(Class(:FSP_0000008))
+Declaration(Class(:FSP_0000009))
+Declaration(Class(:FSP_0000010))
+Declaration(Class(:FSP_0000011))
+Declaration(Class(:FSP_0000012))
+Declaration(Class(:FSP_0000013))
+Declaration(Class(:FSP_0000014))
+Declaration(Class(:FSP_0000015))
+Declaration(Class(:FSP_0000016))
+Declaration(Class(:FSP_0000017))
+Declaration(Class(:FSP_0000018))
+Declaration(Class(:FSP_0000019))
+Declaration(Class(:FSP_0000020))
+Declaration(Class(:FSP_0000021))
+Declaration(Class(:FSP_0000022))
+Declaration(Class(:FSP_0000023))
+Declaration(Class(:FSP_0000024))
+Declaration(Class(:FSP_0000025))
+Declaration(Class(:FSP_0000026))
+Declaration(Class(:FSP_0000027))
+Declaration(Class(:FSP_0000028))
+Declaration(Class(:FSP_0000029))
+Declaration(Class(:FSP_0000030))
+Declaration(Class(:FSP_0000031))
+Declaration(Class(:FSP_0000032))
+Declaration(Class(:FSP_0000033))
+Declaration(Class(:FSP_0000034))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
-
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
 ############################
 #   Annotation Properties
 ############################
 
+# Annotation Property: dcterms:description (description)
+
 AnnotationAssertion(rdfs:label dcterms:description "description")
+
+# Annotation Property: dcterms:license (dcterms:license)
+
 AnnotationAssertion(rdfs:label dcterms:license "license")
+
+# Annotation Property: dcterms:title (title)
+
 AnnotationAssertion(rdfs:label dcterms:title "title")
+
+
 
 ############################
 #   Classes
 ############################
 
-# Class: <https://w3id.org/pmd/FSP_0000000> (root node)
+# Class: :FSP_0000001 (pressure drop)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/FSP_0000000> "root node"@en)
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000001 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000001 "pressure drop"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000001 "A significant change in pressure measured over a time span or in a direction.")
+SubClassOf(:FSP_0000001 <https://w3id.org/pmd/co/PMD_0000896>)
+
+# Class: :FSP_0000002 (reactor)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000002 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000002 "reactor"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000002 "An entity which contains and controls a process.")
+SubClassOf(:FSP_0000002 <https://w3id.org/pmd/co/PMD_0000602>)
+
+# Class: :FSP_0000003 (flame spray pyrolysis reactor)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000003 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000003 "flame spray pyrolysis reactor"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000003 "static experimental set-up of the flame spray pyrolysis process, including nozzle and deposition specifications")
+SubClassOf(:FSP_0000003 :FSP_0000002)
+
+# Class: :FSP_0000004 (sheath gas)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000004 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000004 "sheath gas"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000004 "Gas which protects an entity from ambient influences, e.g. oxygen entrainment.")
+SubClassOf(:FSP_0000004 <https://w3id.org/pmd/co/PMD_0020113>)
+
+# Class: :FSP_0000005 (oxidation gas)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000005 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000005 "oxidation gas"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000005 "Educt gas which contributes as an oxygen source in a combustion process.")
+SubClassOf(:FSP_0000005 <https://w3id.org/pmd/co/PMD_0020113>)
+
+# Class: :FSP_0000006 (fuel gas)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000006 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000006 "fuel gas"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000006 "Educt gas taking part in a combustion process.")
+SubClassOf(:FSP_0000006 <https://w3id.org/pmd/co/PMD_0020113>)
+
+# Class: :FSP_0000007 (dispersion gas)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000007 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000007 "dispersion gas"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000007 "Gas which is used to disperse a liquid into droplets.")
+SubClassOf(:FSP_0000007 <https://w3id.org/pmd/co/PMD_0020113>)
+
+# Class: :FSP_0000008 (nanoparticle synthesis)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000008 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000008 "nanoparticle synthesis"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000008 "A manufacturing process with the intend to synthesize nanoparticles.")
+SubClassOf(:FSP_0000008 <https://w3id.org/pmd/co/PMD_0000833>)
+
+# Class: :FSP_0000009 (Flammensprühpyrolyse)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000009 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000009 "Flammensprühpyrolyse"@de)
+AnnotationAssertion(rdfs:label :FSP_0000009 "flame spray pyrolysis"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000009 "A manufacturing process with the intend to synthesize aggregated nanoparticles in the gas phase through the controlled combustion of a dispersed liquid precursor solution.")
+SubClassOf(:FSP_0000009 :FSP_0000008)
+
+# Class: :FSP_0000010 (nanoparticle)
+
+AnnotationAssertion(rdfs:label :FSP_0000010 "nanoparticle"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000010 "A nanoscale particle")
+SubClassOf(:FSP_0000010 <https://w3id.org/pmd/co/PMD_0000002>)
+
+# Class: :FSP_0000011 (nozzle nozzle distance)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000011 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000011 "nozzle nozzle distance"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000011 "Euclidean distance between  the annular gaps of two nozzles.")
+SubClassOf(:FSP_0000011 <https://w3id.org/pmd/co/PMD_0040001>)
+
+# Class: :FSP_0000012 (nozzle filter distance)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000012 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000012 "nozzle filter distance"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000012 "Distance bewtween the annular gap of a nozzle and a filter medium.")
+SubClassOf(:FSP_0000012 <https://w3id.org/pmd/co/PMD_0040001>)
+
+# Class: :FSP_0000013 (deposition component)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000013 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000013 "deposition component"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000013 "The component used to separate an entity from a gas flow, e.g. a filter.")
+SubClassOf(:FSP_0000013 <https://w3id.org/pmd/co/PMD_0020152>)
+
+# Class: :FSP_0000014 (nanoparticle filter)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000014 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000014 "nanoparticle filter"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000014 "A component used for retrieving nanoparticles from the gas flow. Nanoparticles will accumulate on the filter and can later be scraped off.")
+SubClassOf(:FSP_0000014 :FSP_0000013)
+
+# Class: :FSP_0000015 (GD/F filter)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000015 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000015 "GD/F filter"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000015 "Filter class, made of amorphous silicon dioxide.")
+SubClassOf(:FSP_0000015 :FSP_0000014)
+
+# Class: :FSP_0000016 (enclosure)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000016 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000016 "enclosure"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000016 "Physical hollow body which surrounds an entitiy with the purpose to protect it from ambient influences.")
+SubClassOf(:FSP_0000016 <https://w3id.org/pmd/co/PMD_0020152>)
+
+# Class: :FSP_0000017 (nozzle)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000017 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000017 "nozzle"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000017 "A short tube with a taper or constriction used (as on a hose) to speed up or direct a flow of fluid.")
+SubClassOf(:FSP_0000017 <https://w3id.org/pmd/co/PMD_0020152>)
+
+# Class: :FSP_0000018 (spray syn nozzle)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000018 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000018 "spray syn nozzle"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000018 "A standard for a free-jet type burner that offers well-defined and simulation-friendly boundary conditions and geometries as well as accessibility for optical diagnostics.")
+SubClassOf(:FSP_0000018 :FSP_0000017)
+
+# Class: :FSP_0000019 (tethis nozzle)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000019 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000019 "tethis nozzle"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000019 "An external-mixing gas-assisted nozzle that is made from a capillary tube of outer diameter 0.91 mm (inner diameter 0.6 mm) that lies in an opening of 1.2 mm in diameter creating an annular gap of 0.48 mm^2 maximum area. Precursor and fuel flow through the capillary tube while the dispersion gas passes through the annular gap. The capillary ends 0.5 mm above the opening.")
+SubClassOf(:FSP_0000019 :FSP_0000017)
+
+# Class: :FSP_0000020 (vacuum pump)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000020 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000020 "vacuum pump"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000020 "A piece of equipment for removing air or gas from a container, creating a vacuum inside.")
+SubClassOf(:FSP_0000020 <https://w3id.org/pmd/co/PMD_0020152>)
+
+# Class: :FSP_0000021 (molarity)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000021 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000021 "molarity"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000021 "Molarity is a unit of concentration expressed as the number of moles of dissolved solute per liter of solution.")
+SubClassOf(:FSP_0000021 <https://w3id.org/pmd/co/PMD_0020101>)
+
+# Class: :FSP_0000022 (Reinheit)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000022 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000022 "Reinheit"@de)
+AnnotationAssertion(rdfs:label :FSP_0000022 "purity"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000022 "The quality or state of being pure")
+SubClassOf(:FSP_0000022 obo:BFO_0000145)
+
+# Class: :FSP_0000023 (precursor)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000023 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000023 "precursor"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000023 "Liquid solution composed of solvent and solute that is dispersed and combusted in a flame spray pyrolysis process.")
+SubClassOf(:FSP_0000023 <https://w3id.org/pmd/co/PMD_0020113>)
+
+# Class: :FSP_0000024 (solvent)
+
+AnnotationAssertion(rdfs:label :FSP_0000024 "solvent"@en)
+SubClassOf(:FSP_0000024 <https://w3id.org/pmd/co/PMD_0020113>)
+
+# Class: :FSP_0000025 (solute)
+
+AnnotationAssertion(rdfs:label :FSP_0000025 "solute"@en)
+SubClassOf(:FSP_0000025 obo:BFO_0000030)
+
+# Class: :FSP_0000026 (feed rate)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000026 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000026 "feed rate"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000026 "Temporal rate with which a defined volume of a species is fed into a process.")
+SubClassOf(:FSP_0000026 <https://w3id.org/pmd/co/PMD_0020226>)
+
+# Class: :FSP_0000027 (gas flow)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000027 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000027 "gas flow"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000027 "The volume flow of a gas.")
+SubClassOf(:FSP_0000027 <https://w3id.org/pmd/co/PMD_0020226>)
+
+# Class: :FSP_0000028 (precursor feeding process)
+
+AnnotationAssertion(rdfs:label :FSP_0000028 "precursor feeding process"@en)
+SubClassOf(:FSP_0000028 <https://w3id.org/pmd/co/PMD_0020246>)
+
+# Class: :FSP_0000029 (gas flow process)
+
+AnnotationAssertion(rdfs:label :FSP_0000029 "gas flow process"@en)
+SubClassOf(:FSP_0000029 <https://w3id.org/pmd/co/PMD_0020246>)
+
+# Class: :FSP_0000030 (mass flow controller)
+
+AnnotationAssertion(rdfs:label :FSP_0000030 "mass flow controller"@en)
+SubClassOf(:FSP_0000030 <https://w3id.org/pmd/co/PMD_0000602>)
+
+# Class: :FSP_0000031 (syringe pump)
+
+AnnotationAssertion(rdfs:label :FSP_0000031 "syringe pump"@en)
+SubClassOf(:FSP_0000031 <https://w3id.org/pmd/co/PMD_0000602>)
+
+# Class: :FSP_0000032 (pipette)
+
+AnnotationAssertion(rdfs:label :FSP_0000032 "pipette"@en)
+SubClassOf(:FSP_0000032 <https://w3id.org/pmd/co/PMD_0000602>)
+
+# Class: :FSP_0000033 (mixing recipe)
+
+AnnotationAssertion(rdfs:label :FSP_0000033 "mixing recipe"@en)
+SubClassOf(:FSP_0000033 <https://w3id.org/pmd/co/PMD_0060008>)
+
+# Class: :FSP_0000034 (flame spray pyrolysis recipe)
+
+AnnotationAssertion(rdfs:label :FSP_0000034 "flame spray pyrolysis recipe"@en)
+SubClassOf(:FSP_0000034 <https://w3id.org/pmd/co/PMD_0060008>)
 
 
 )
