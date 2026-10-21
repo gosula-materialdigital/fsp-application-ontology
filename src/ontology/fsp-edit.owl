@@ -142,7 +142,7 @@ AnnotationAssertion(rdfs:label :FSP_0000008 "nanoparticle synthesis"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000008 "A manufacturing process with the intend to synthesize nanoparticles.")
 SubClassOf(:FSP_0000008 <https://w3id.org/pmd/co/PMD_0000833>)
 
-# Class: :FSP_0000009 (Flammensprühpyrolyse)
+# Class: :FSP_0000009 (flame spray pyrolysis)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000009 <https://w3id.org/pmd/fsp/>)
 AnnotationAssertion(rdfs:label :FSP_0000009 "Flammensprühpyrolyse"@de)
