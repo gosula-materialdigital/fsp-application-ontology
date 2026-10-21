@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <group id="odk-managed-catalog" prefer="public">
+    <uri name="https://w3id.org/pmd/fsp//imports/pmdco_import.owl" uri="imports/pmdco_import.owl"/>
+    <uri name="https://w3id.org/pmd/fsp//components/imports-edit.owl" uri="components/imports-edit.owl"/>
+    <uri name="https://w3id.org/pmd/fsp//components/fsp-shared.owl" uri="components/fsp-shared.owl"/>
+    <uri name="https://w3id.org/pmd/fsp//components/fsp-axioms-shared.owl" uri="components/fsp-axioms-shared.owl"/>
+  </group>
+</catalog>

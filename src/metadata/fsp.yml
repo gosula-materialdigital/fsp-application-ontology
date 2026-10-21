@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/fsp
+
+idspace: FSP
+base_url: /obo/fsp
+
+products:
+- fsp.owl: https://raw.githubusercontent.com/materialdigital/materialdigital/fsp-application-ontology/main/fsp.owl
+- fsp.obo: https://raw.githubusercontent.com/materialdigital/materialdigital/fsp-application-ontology/main/fsp.obo
+
+term_browser: ontobee
+example_terms:
+- FSP_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/materialdigital/materialdigital/fsp-application-ontology/v
+
+- prefix: /tracker/
+  replacement: https://github.com/materialdigital/materialdigital/fsp-application-ontology/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/FSP?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/materialdigital/materialdigital/fsp-application-ontology/main/
