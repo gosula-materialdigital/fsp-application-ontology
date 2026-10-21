@@ -17,8 +17,8 @@
 
 id: fsp
 title: "Flame Spray Pyrolysis Ontology"
-github_org: materialdigital
-repo: materialdigital/fsp-application-ontology
+github_org: gosula-materialdigital
+repo: fsp-application-ontology
 git_main_branch: main
 license: "CC-BY-4.0"
 description: >

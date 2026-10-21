@@ -21,7 +21,7 @@ Editors of this ontology should use the edit version, [src/ontology/fsp-edit.owl
 
 ## Contact
 
-Please use this GitHub repository's [Issue tracker](https://github.com/materialdigital/fsp-application-ontology/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
+Please use this GitHub repository's [Issue tracker](https://github.com/gosula-materialdigital/fsp-application-ontology/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
 
 ## Acknowledgements
 
@@ -63,9 +63,9 @@ The modular import structure used by this ontology:
 
 We welcome contributions to the Flame Spray Pyrolysis Ontology ontology!
 
-- **Issue tracker**: [github.com/materialdigital/fsp-application-ontology/issues](https://github.com/materialdigital/fsp-application-ontology/issues)
+- **Issue tracker**: [github.com/gosula-materialdigital/fsp-application-ontology/issues](https://github.com/gosula-materialdigital/fsp-application-ontology/issues)
   Report errors, request new terms, or flag modeling concerns.
-- **Discussion forum**: [github.com/materialdigital/fsp-application-ontology/discussions](https://github.com/materialdigital/fsp-application-ontology/discussions)
+- **Discussion forum**: [github.com/gosula-materialdigital/fsp-application-ontology/discussions](https://github.com/gosula-materialdigital/fsp-application-ontology/discussions)
   Discuss modeling decisions with the community.
 - **Application ontology template**:
   [application-ontology-template](https://github.com/materialdigital/application-ontology-template/)

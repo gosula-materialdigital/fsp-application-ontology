@@ -3,10 +3,10 @@ layout: ontology_detail
 id: fsp
 title: Flame Spray Pyrolysis Ontology
 jobs:
-  - id: https://travis-ci.org/materialdigital/materialdigital/fsp-application-ontology
+  - id: https://travis-ci.org/gosula-materialdigital/fsp-application-ontology
     type: travis-ci
 build:
-  checkout: git clone https://github.com/materialdigital/materialdigital/fsp-application-ontology.git
+  checkout: git clone https://github.com/gosula-materialdigital/fsp-application-ontology.git
   system: git
   path: "."
 contact:
@@ -15,7 +15,7 @@ contact:
   github: 
 description: Flame Spray Pyrolysis Ontology is an ontology...
 domain: stuff
-homepage: https://github.com/materialdigital/materialdigital/fsp-application-ontology
+homepage: https://github.com/gosula-materialdigital/fsp-application-ontology
 products:
   - id: fsp.owl
     name: "Flame Spray Pyrolysis Ontology main release in OWL format"
@@ -31,7 +31,7 @@ products:
     name: "Flame Spray Pyrolysis Ontology additional release in OBOJSon format"
 dependencies:
 - id: pmdco
-tracker: https://github.com/materialdigital/materialdigital/fsp-application-ontology/issues
+tracker: https://github.com/gosula-materialdigital/fsp-application-ontology/issues
 license:
   url: http://creativecommons.org/licenses/by/3.0/
   label: CC-BY
