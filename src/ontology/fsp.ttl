@@ -68,6 +68,17 @@ dcterms:title rdf:type owl:AnnotationProperty ;
               rdfs:label "title" .
 
 
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty ;
+           obo:IAO_0000115 "A human readable name for this class." ;
+           rdfs:label "label" ,
+                      "label"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:AnnotationProperty .
 
@@ -884,6 +895,13 @@ obo:BFO_0000141 rdf:type owl:Class ;
                 skos:definition "b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part"@en .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000142
+obo:BFO_0000142 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000140 ;
+                rdfs:label "fiat line"@en ;
+                skos:definition "(Elucidation) A fiat line is a one-dimensional continuant fiat boundary that is continuous"@en .
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000145
 obo:BFO_0000145 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000019 ,
@@ -895,11 +913,153 @@ obo:BFO_0000145 rdf:type owl:Class ;
                 skos:definition "b is a relational quality =Def b is a quality & there exists c and d such that c and d are not identical & b specifically depends on c & b specifically depends on d"@en .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000146
+obo:BFO_0000146 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000140 ;
+                rdfs:label "fiat surface"@en ;
+                skos:definition "(Elucidation) A fiat surface is a two-dimensional continuant fiat boundary that is self-connected"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000147
+obo:BFO_0000147 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000140 ;
+                rdfs:label "fiat point"@en ;
+                skos:definition "(Elucidation) A fiat point is a zero-dimensional continuant fiat boundary that consists of a single point"@en .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_138675
+obo:CHEBI_138675 rdf:type owl:Class ;
+                 rdfs:subClassOf obo:CHEBI_33579 ;
+                 obo:IAO_0000115 "Any main group molecular entity that is gaseous at standard temperature and pressure (STP; 0°C and 100 kPa)." ;
+                 rdfs:label "gas molecular entity" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_16183
+obo:CHEBI_16183 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_138675 ,
+                                obo:CHEBI_18310 ,
+                                obo:CHEBI_37176 ,
+                                obo:CHEBI_64708 ;
+                obo:IAO_0000115 "A one-carbon compound in which the carbon is attached by single bonds to four hydrogen atoms. It is a colourless, odourless, non-toxic but flammable gas (b.p. −161°C)." ;
+                rdfs:label "methane" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_18310
+obo:CHEBI_18310 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_24632 ,
+                                obo:CHEBI_33653 ;
+                obo:IAO_0000115 "An acyclic branched or unbranched hydrocarbon having the general formula C<small><sub><em>n</em></sub></small>H<small><sub>2<em>n</em>+2</sub></small>, and therefore consisting entirely of hydrogen atoms and saturated carbon atoms." ;
+                rdfs:label "alkane" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_23367
+obo:CHEBI_23367 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_24431 ;
+                obo:IAO_0000115 "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." ;
+                rdfs:label "molecular entity" .
+
+
 ###  http://purl.obolibrary.org/obo/CHEBI_24431
 obo:CHEBI_24431 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000040 ;
                 obo:IAO_0000115 "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." ;
                 rdfs:label "chemical entity" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_24632
+obo:CHEBI_24632 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_33245 ;
+                obo:IAO_0000115 "A compound consisting of carbon and hydrogen only." ;
+                rdfs:label "hydrocarbon" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33245
+obo:CHEBI_33245 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_37175 ,
+                                obo:CHEBI_50860 ;
+                obo:IAO_0000115 "An organic fundamental parent is a structure used as a basis for substitutive names in organic nomenclature, containing, in addition to one or more hydrogen atoms, a single atom of an element, a number of atoms (alike or different) linked together to form an unbranched chain, a monocyclic or polycyclic ring system, or a ring assembly or ring/chain system." ;
+                rdfs:label "organic fundamental parent" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33579
+obo:CHEBI_33579 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_23367 ;
+                obo:IAO_0000115 "A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table." ;
+                rdfs:label "main group molecular entity" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33582
+obo:CHEBI_33582 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_33675 ;
+                rdfs:label "carbon group molecular entity" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33608
+obo:CHEBI_33608 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_33674 ;
+                rdfs:label "hydrogen molecular entity" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33653
+obo:CHEBI_33653 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_50860 ;
+                obo:IAO_0000115 "Any acyclic or cyclic, saturated or unsaturated carbon compound, excluding aromatic compounds." ;
+                rdfs:label "aliphatic compound" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33674
+obo:CHEBI_33674 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_33579 ;
+                obo:IAO_0000115 "An s-block molecular entity is a molecular entity containing one or more atoms of an s-block element." ;
+                rdfs:label "s-block molecular entity" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33675
+obo:CHEBI_33675 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_33579 ;
+                obo:IAO_0000115 "A main group molecular entity that contains one or more atoms of a p-block element." ;
+                rdfs:label "p-block molecular entity" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_33692
+obo:CHEBI_33692 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_33608 ,
+                                obo:CHEBI_37577 ;
+                obo:IAO_0000115 "Hydrides are chemical compounds of hydrogen with other chemical elements." ;
+                rdfs:label "hydrides" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_36357
+obo:CHEBI_36357 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_23367 ;
+                obo:IAO_0000115 "Any molecular entity consisting of more than one atom." ;
+                rdfs:label "polyatomic entity" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_37175
+obo:CHEBI_37175 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_33692 ;
+                rdfs:label "organic hydride" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_37176
+obo:CHEBI_37176 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_33692 ;
+                rdfs:label "mononuclear parent hydride" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_37577
+obo:CHEBI_37577 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_36357 ;
+                obo:IAO_0000115 "A molecular entity consisting of two or more chemical elements." ;
+                rdfs:label "heteroatomic molecular entity" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_50860
+obo:CHEBI_50860 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_33582 ;
+                obo:IAO_0000115 "Any molecular entity that contains carbon." ;
+                rdfs:label "organic molecular entity" .
 
 
 ###  http://purl.obolibrary.org/obo/CHEBI_59999
@@ -915,6 +1075,13 @@ obo:CHEBI_60003 rdf:type owl:Class ;
                 rdfs:subClassOf obo:CHEBI_59999 ;
                 obo:IAO_0000115 "A pure substance is a chemical substance composed of multiple molecules, which are all of the same kind." ;
                 rdfs:label "pure substance" .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_64708
+obo:CHEBI_64708 rdf:type owl:Class ;
+                rdfs:subClassOf obo:CHEBI_50860 ;
+                obo:IAO_0000115 "An organic molecular entity containing a single carbon atom (C<small><sub>1</sub></small>)." ;
+                rdfs:label "one-carbon compound" .
 
 
 ###  http://purl.obolibrary.org/obo/COB_0000035
@@ -1306,6 +1473,7 @@ More formally, the value of a physical quantity Q with respect to a unit (U) is 
                                                       ] ;
                                       rdfs:label "Material"@de ,
                                                  "material"@en ;
+                                      skos:altLabel "Portion of Material"@en ;
                                       skos:definition "A material is a portion of matter that may participate in some manufacturing process and whose shape is not relevant for its participation in the manufacturing process."@en .
 
 
@@ -1363,6 +1531,7 @@ More formally, the value of a physical quantity Q with respect to a unit (U) is 
                                                         owl:someValuesFrom obo:BFO_0000015
                                                       ] ;
                                       rdfs:label "process attribute"@en ;
+                                      skos:altLabel "process characteristic"@en ;
                                       skos:definition "a process attribute is a dependent occurrent that existentially depends on a process."@en .
 
 
@@ -1723,6 +1892,7 @@ A manufacturing process is always a transformative process."""@en ,
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000833> ;
                                       rdfs:label "Urformen"@de ,
                                                  "primary shaping"@en ;
+                                      skos:altLabel "Primary Forming"@en ;
                                       skos:definition "A manufacturing process that creates a defined workpiece from shapeless material by producing cohesion, whereby the characteristic properties of the material become visible in the end product."@en ,
                                                       "Ein Herstellungsprozess, der aus formlosem Stoff durch das Herstellen von Kohäsion ein definiertes Werkstück schafft, wobei die charakteristischen Eigenschaften des Materials im Endprodukt sichtbar werden."@de .
 
@@ -1812,6 +1982,24 @@ A manufacturing process is always a transformative process."""@en ,
                                                       "The temperature is a fundamental intensive quality representing the average atomic or molcular movement or vibration of a portion of matter."@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0001035
+<https://w3id.org/pmd/co/PMD_0001035> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0025018> ,
+                                                      [ rdf:type owl:Class ;
+                                                        owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0025999> ;
+                                                                        owl:someValuesFrom obo:BFO_0000142
+                                                                      ]
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0025999> ;
+                                                                        owl:someValuesFrom obo:BFO_0000146
+                                                                      ]
+                                                                    )
+                                                      ] ;
+                                      rdfs:label "angle"@en ;
+                                      skos:definition "A property that represents the measure of rotation or inclination between two intersecting lines or planes, independent of the size of the object." .
+
+
 ###  https://w3id.org/pmd/co/PMD_0010026
 <https://w3id.org/pmd/co/PMD_0010026> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020353> ;
@@ -1842,6 +2030,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0025997>
                                                       ] ;
                                       rdfs:label "composition data item"@en ;
+                                      skos:altLabel "composition specification"@en ;
                                       skos:definition "Bei einem Zusammensetzungsdatenelement handelt es sich um eine Informationsinhaltseinheit, die sich mit der Zusammensetzung einer materiellen Einheit befasst. Es verfügt über Bruchwertspezifikationen für Mitglieder, die Werte von Anteilen von Verbindungen angeben, die Teile der materiellen Einheit sind."@de ,
                                                       "Composition data entity is an information content entity that is about composition of a material enity. It has members fraction value specifications which specifiy values of propotions of compounds, which are parts of the material enity."@en .
 
@@ -1879,6 +2068,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                                            ]
                                                       ] ;
                                       rdfs:label "fraction property"@en ;
+                                      skos:altLabel "part-whole property"@en ;
                                       skos:definition "a property describing a quantitative relation between two entites where one entity represents the whole and the other entity represents a part of the whole"@en .
 
 
@@ -1985,6 +2175,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                           ] ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
                                       rdfs:label "molar fraction"@en ;
+                                      skos:altLabel "count per count"@en ;
                                       skos:definition "Molar fraction is the fraction which quantifies the entities count of the part in relation to the entities count of the whole."@en .
 
 
@@ -2032,6 +2223,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                                            ]
                                                       ] ;
                                       rdfs:label "volume fraction"@en ;
+                                      skos:altLabel "volume per volume"@en ;
                                       skos:definition "a relational quality expressing the volume of a part in relation to the volume of the whole"@en .
 
 
@@ -2378,6 +2570,7 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/co/PMD_0020246> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020245> ;
                                       rdfs:label "continous transport"@en ;
+                                      skos:altLabel "flow"@en ;
                                       skos:definition "recurring transport of multiple entities, such that the transported entities are not being discretized anymore"@en .
 
 
@@ -2555,6 +2748,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                           ] ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
                                       rdfs:label "count per volume"@en ;
+                                      skos:altLabel "volume number density"@en ;
                                       skos:definition "a relational quality expressing a count of a part in relation to the volume of the whole"@en .
 
 
@@ -2737,6 +2931,24 @@ A manufacturing process is always a transformative process."""@en ,
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020287> ;
                                       rdfs:label "suprasolid"@en ;
                                       skos:definition "a portion of matter in a suprasolid aggregate state"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020309
+<https://w3id.org/pmd/co/PMD_0020309> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty obo:RO_0000052 ;
+                                                                            owl:someValuesFrom obo:BFO_0000146
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <https://w3id.org/pmd/co/PMD_0025999> ;
+                                                                            owl:someValuesFrom obo:BFO_0000146
+                                                                          ]
+                                                                        )
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0023003> ;
+                                      rdfs:label "interface property"@en ;
+                                      skos:definition "a a 'property by bearer' that indicates its bearer is an interface"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020311
@@ -3198,6 +3410,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                         rdf:type owl:Class
                                                       ] ;
                                       rdfs:label "spontaneous process"@en ;
+                                      skos:altLabel "naturally occuring process"@en ;
                                       skos:definition "a process that occurs due to favorable driving force and overcomming of activatgion energy of the participants"@en .
 
 
@@ -3675,6 +3888,7 @@ A manufacturing process is always a transformative process."""@en ,
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020132> ;
                                       rdfs:label "Länge"@de ,
                                                  "length"@en ;
+                                      skos:altLabel "dimension"@en ;
                                       skos:definition "Die Länge ist eine eindimensionale Größe."@de ,
                                                       "Length is a one dimensional size."@en .
 
@@ -3862,6 +4076,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                           ] ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
                                       rdfs:label "mass concentration"@en ;
+                                      skos:altLabel "mass per volume"@en ;
                                       skos:definition "Mass concentration links mass of a mixture component to the total volume in quantitative description, frequently used in solutions"@en .
 
 
@@ -3899,6 +4114,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                         owl:someValuesFrom obo:GO_0008150
                                                       ] ;
                                       rdfs:label "biological material"@en ;
+                                      skos:altLabel "biomaterial" ;
                                       skos:definition "material produced by a living organism"@en .
 
 
@@ -3912,6 +4128,7 @@ A manufacturing process is always a transformative process."""@en ,
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000888> ,
                                                       <https://w3id.org/pmd/co/PMD_0090012> ;
                                       rdfs:label "biopolymer"@en ;
+                                      skos:altLabel "biomacromoleules" ;
                                       skos:definition "polymer produced by the metabolic processes of a living organism"@en .
 
 
@@ -3948,23 +4165,12 @@ A manufacturing process is always a transformative process."""@en ,
                                       skos:definition "material intentionally processed from materials derived from living (or once-living) organisms"@en .
 
 
-###  https://w3id.org/pmd/fsp/FSP_0000000
-<https://w3id.org/pmd/fsp/FSP_0000000> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000037>
-                                                       ] ;
-                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "dispersion gas flow rate"@en ;
-                                       skos:definition "A gas flow that is the volumetric flow rate of the dispersion gas in a dispersion gas flow process."@en .
-
-
 ###  https://w3id.org/pmd/fsp/FSP_0000001
 <https://w3id.org/pmd/fsp/FSP_0000001> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "pressure drop"@en ;
+                                       rdfs:label "Druckverlust"@de ,
+                                                  "pressure drop"@en ;
                                        skos:definition "A process attribute of a fluid flow process that is the difference between the static pressure of the fluid upstream and downstream of a flow-restricting component, e.g. the nozzle gap or the filter."@en .
 
 
@@ -3972,7 +4178,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000002> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "reactor"@en ;
+                                       rdfs:label "Reaktor"@de ,
+                                                  "reactor"@en ;
                                        skos:definition "A device that encloses a space in which a chemical reaction is carried out under controlled conditions."@en .
 
 
@@ -3980,7 +4187,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000003> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000002> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "flame spray pyrolysis reactor"@en ;
+                                       rdfs:label "Flammensprühpyrolyse-Reaktor"@de ,
+                                                  "flame spray pyrolysis reactor"@en ;
                                        skos:definition "A reactor in which flame spray pyrolysis is carried out; it comprises at least one nozzle, a nanoparticle filter and a vacuum pump, and optionally an enclosure."@en .
 
 
@@ -3988,7 +4196,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000004> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020289> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "sheath gas"@en ;
+                                       rdfs:label "Hüllgas"@de ,
+                                                  "sheath gas"@en ;
                                        skos:definition "A gas that is supplied around the flame of a flame spray pyrolysis reactor to shield it from ambient influences (e.g. entrainment of ambient air) and to stabilise it."@en .
 
 
@@ -3996,7 +4205,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000005> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020289> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "oxidation gas"@en ;
+                                       rdfs:label "Oxidationsgas"@de ,
+                                                  "oxidation gas"@en ;
                                        skos:definition "A gas (typically oxygen) that is premixed with the fuel gas and supplies the oxidant for its combustion in the pilot flame."@en .
 
 
@@ -4004,7 +4214,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000006> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020289> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "fuel gas"@en ;
+                                       rdfs:label "Brenngas"@de ,
+                                                  "fuel gas"@en ;
                                        skos:definition "A combustible gas (typically methane) that is burned together with the oxidation gas in the pilot flame to ignite and stabilise the spray flame."@en .
 
 
@@ -4012,7 +4223,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000007> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020289> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "dispersion gas"@en ;
+                                       rdfs:label "Dispersionsgas"@de ,
+                                                  "dispersion gas"@en ;
                                        skos:definition "A gas (typically oxygen) that flows through the annular gap of the nozzle and atomises the precursor solution into a spray; it also supplies oxygen for the spray combustion."@en .
 
 
@@ -4020,7 +4232,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000008> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000833> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "nanoparticle synthesis"@en ;
+                                       rdfs:label "Nanopartikelsynthese"@de ,
+                                                  "nanoparticle synthesis"@en ;
                                        skos:definition "A manufacturing process that has nanoparticles as its specified output."@en .
 
 
@@ -4037,7 +4250,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000010> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000002> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "nanoparticle"@en ;
+                                       rdfs:label "Nanopartikel"@de ,
+                                                  "nanoparticle"@en ;
                                        skos:definition "An engineered material that is a particle with all three external dimensions in the nanoscale (approx. 1-100 nm, cf. ISO/TS 80004-1)."@en .
 
 
@@ -4045,7 +4259,9 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000011> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000141> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "nozzle nozzle distance"@en ;
+                                       rdfs:label "Düse-Düse-Abstand"@de ,
+                                                  "nozzle nozzle distance"@en ;
+                                       skos:altLabel "horizontal nozzle distance"@en ;
                                        skos:definition "A distance between the outlets (annular gaps) of two nozzles in a multi-flame flame spray pyrolysis reactor."@en .
 
 
@@ -4053,7 +4269,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000012> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000141> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "nozzle filter distance"@en ;
+                                       rdfs:label "Düse-Filter-Abstand"@de ,
+                                                  "nozzle filter distance"@en ;
                                        skos:definition "A distance between the outlet (annular gap) of a nozzle and the filter medium."@en .
 
 
@@ -4061,7 +4278,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000013> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020152> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "deposition component"@en ;
+                                       rdfs:label "Abscheidekomponente"@de ,
+                                                  "deposition component"@en ;
                                        skos:definition "A component that separates particles from a gas flow and collects them, e.g. a filter."@en .
 
 
@@ -4069,7 +4287,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000014> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000013> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "nanoparticle filter"@en ;
+                                       rdfs:label "Nanopartikelfilter"@de ,
+                                                  "nanoparticle filter"@en ;
                                        skos:definition "A deposition component on which nanoparticles from the off-gas accumulate and from which they can later be scraped off."@en .
 
 
@@ -4077,7 +4296,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000015> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000014> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "GD/F filter"@en ;
+                                       rdfs:label "GD/F filter"@en ,
+                                                  "GD/F-Filter"@de ;
                                        skos:definition "A nanoparticle filter made of glass microfibre (amorphous silicon dioxide)."@en .
 
 
@@ -4085,7 +4305,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000016> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020152> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "enclosure"@en ;
+                                       rdfs:label "Einhausung"@de ,
+                                                  "enclosure"@en ;
                                        skos:definition "A component that is a hollow body surrounding the flame of a flame spray pyrolysis reactor to protect the process from ambient influences (closed reactor)."@en .
 
 
@@ -4093,7 +4314,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000017> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020152> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "nozzle"@en ;
+                                       rdfs:label "Düse"@de ,
+                                                  "nozzle"@en ;
                                        skos:definition "A component of a flame spray pyrolysis reactor that comprises a capillary for the precursor solution, an annular gap for the dispersion gas and a pilot flame ring, and forms the spray and the flame."@en .
 
 
@@ -4101,7 +4323,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000018> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000017> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "spray syn nozzle"@en ;
+                                       rdfs:label "SpraySyn-Düse"@de ,
+                                                  "spray syn nozzle"@en ;
                                        skos:definition "A nozzle built to the SpraySyn standard burner design, a free-jet spray flame burner with well-defined, simulation-friendly boundary conditions and geometry and optical access for diagnostics."@en .
 
 
@@ -4109,15 +4332,17 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000019> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000017> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "tethis nozzle"@en ;
-                                       skos:definition "An external-mixing gas-assisted nozzle that is made from a capillary tube of outer diameter 0.91 mm (inner diameter 0.6 mm) that lies in an opening of 1.2 mm in diameter creating an annular gap of 0.48 mm^2 maximum area. Precursor and fuel flow through the capillary tube while the dispersion gas passes through the annular gap. The capillary ends 0.5 mm above the opening." .
+                                       rdfs:label "Tethis-Düse"@de ,
+                                                  "tethis nozzle"@en ;
+                                       skos:definition "A nozzle that is an external-mixing, gas-assisted nozzle made from a capillary tube of outer diameter 0.91 mm (inner diameter 0.6 mm) that lies in an opening of 1.2 mm in diameter, creating an annular gap of 0.48 mm^2 maximum area. The precursor solution flows through the capillary tube while the dispersion gas passes through the annular gap. The capillary ends 0.5 mm above the opening."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000020
 <https://w3id.org/pmd/fsp/FSP_0000020> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020152> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "vacuum pump"@en ;
+                                       rdfs:label "Vakuumpumpe"@de ,
+                                                  "vacuum pump"@en ;
                                        skos:definition "A device that removes gas from an enclosed volume; in a flame spray pyrolysis reactor it draws the off-gas with the particles through the nanoparticle filter."@en .
 
 
@@ -4125,7 +4350,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000021> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020272> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "molarity"@en ;
+                                       rdfs:label "Molarität"@de ,
+                                                  "molarity"@en ;
                                        skos:definition "A count per volume of a solution that is the amount of substance (moles) of a solute per volume of the solution, usually expressed in mol/L."@en .
 
 
@@ -4142,7 +4368,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000023> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020229> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "precursor"@en ;
+                                       rdfs:label "Präkursor"@de ,
+                                                  "precursor"@en ;
                                        skos:definition "A solution of one or more metal-containing solutes in a solvent that is fed to a flame spray pyrolysis process and combusted to form nanoparticles."@en .
 
 
@@ -4150,7 +4377,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000024> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020290> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "solvent"@en ;
+                                       rdfs:label "Lösungsmittel"@de ,
+                                                  "solvent"@en ;
                                        skos:definition "A liquid that bears a solvent role in a precursor solution; it dissolves the solutes and is the main fuel of the spray flame (e.g. xylene, ethanol, 2-ethylhexanoic acid)."@en .
 
 
@@ -4158,7 +4386,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000025> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000001> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "solute"@en ;
+                                       rdfs:label "gelöster Stoff"@de ,
+                                                  "solute"@en ;
                                        skos:definition "A portion of matter that bears a solute role in a precursor solution and supplies the metal of the product nanoparticles (e.g. a metal-organic compound or metal salt)."@en .
 
 
@@ -4166,7 +4395,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000026> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020226> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "feed rate"@en ;
+                                       rdfs:label "Förderrate"@de ,
+                                                  "feed rate"@en ;
                                        skos:definition "A flow rate that is the volume of a liquid fed into a process per unit time."@en .
 
 
@@ -4174,24 +4404,17 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000027> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020226> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "gas flow"@en ;
+                                       rdfs:label "Gasdurchfluss"@de ,
+                                                  "gas flow"@en ;
                                        skos:definition "A flow rate that is the volume of a gas supplied per unit time."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000028
 <https://w3id.org/pmd/fsp/FSP_0000028> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:COB_0000035 ,
-                                                       <https://w3id.org/pmd/co/PMD_0020246> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0000293 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000023>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000042>
-                                                       ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020246> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "precursor feeding process"@en ;
+                                       rdfs:label "Präkursorzufuhr"@de ,
+                                                  "precursor feeding process"@en ;
                                        skos:definition "A continuous transport in which the precursor solution is fed at a controlled feed rate through the capillary of the nozzle."@en .
 
 
@@ -4199,7 +4422,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000029> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020246> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "gas flow process"@en ;
+                                       rdfs:label "Gaszufuhr"@de ,
+                                                  "gas flow process"@en ;
                                        skos:definition "A continuous transport in which a gas is supplied at a controlled flow rate to a flame spray pyrolysis reactor."@en .
 
 
@@ -4207,7 +4431,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000030> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "mass flow controller"@en ;
+                                       rdfs:label "Massendurchflussregler"@de ,
+                                                  "mass flow controller"@en ;
                                        skos:definition "A device that measures the mass flow of a gas and controls it to a set point."@en .
 
 
@@ -4215,7 +4440,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000031> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "syringe pump"@en ;
+                                       rdfs:label "Spritzenpumpe"@de ,
+                                                  "syringe pump"@en ;
                                        skos:definition "A device that delivers a liquid at a constant, set volumetric flow rate by advancing the plunger of a syringe."@en .
 
 
@@ -4223,7 +4449,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000032> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "pipette"@en ;
+                                       rdfs:label "Pipette"@de ,
+                                                  "pipette"@en ;
                                        skos:definition "A device for transferring a defined volume of liquid; used to dose solute and solvent when preparing a precursor solution."@en .
 
 
@@ -4231,7 +4458,8 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000033> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "mixing recipe"@en ;
+                                       rdfs:label "Mischrezept"@de ,
+                                                  "mixing recipe"@en ;
                                        skos:definition "A recipe that specifies the solutes, solvents and their amounts for preparing a precursor solution."@en .
 
 
@@ -4239,75 +4467,44 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/fsp/FSP_0000034> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "flame spray pyrolysis recipe"@en ;
+                                       rdfs:label "Flammensprühpyrolyse-Rezept"@de ,
+                                                  "flame spray pyrolysis recipe"@en ;
                                        skos:definition "A recipe that specifies the set points of a flame spray pyrolysis process, such as gas flow rates, precursor feed rate and nozzle settings."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000035
 <https://w3id.org/pmd/fsp/FSP_0000035> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:COB_0000035 ,
-                                                       <https://w3id.org/pmd/fsp/FSP_0000029> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0000293 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000005>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000040>
-                                                       ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000029> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "oxygen gas flow process"@en ;
+                                       rdfs:label "Sauerstoffzufuhr"@de ,
+                                                  "oxygen gas flow process"@en ;
                                        skos:definition "A gas flow process in which oxygen is supplied to the pilot flame as the oxidation gas for the fuel gas."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000036
 <https://w3id.org/pmd/fsp/FSP_0000036> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:COB_0000035 ,
-                                                       <https://w3id.org/pmd/fsp/FSP_0000029> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0000293 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000006>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000039>
-                                                       ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000029> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "fuel gas flow process"@en ;
+                                       rdfs:label "Brenngaszufuhr"@de ,
+                                                  "fuel gas flow process"@en ;
                                        skos:definition "A gas flow process in which the fuel gas (e.g. methane) is supplied to the pilot flame of the nozzle."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000037
 <https://w3id.org/pmd/fsp/FSP_0000037> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:COB_0000035 ,
-                                                       <https://w3id.org/pmd/fsp/FSP_0000029> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0000293 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000007>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000000>
-                                                       ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000029> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "dispersion gas flow process"@en ;
+                                       rdfs:label "Dispersionsgaszufuhr"@de ,
+                                                  "dispersion gas flow process"@en ;
                                        skos:definition "A gas flow process in which the dispersion gas is supplied through the annular gap around the capillary of the nozzle to atomise the precursor solution into a spray."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000038
 <https://w3id.org/pmd/fsp/FSP_0000038> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:COB_0000035 ,
-                                                       <https://w3id.org/pmd/fsp/FSP_0000029> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0000293 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000004>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000041>
-                                                       ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000029> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "sheath gas flow process"@en ;
+                                       rdfs:label "Hüllgaszufuhr"@de ,
+                                                  "sheath gas flow process"@en ;
                                        skos:definition "A gas flow process in which the sheath gas is supplied around the flame to shield and stabilise it."@en .
 
 
@@ -4319,7 +4516,8 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000036>
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "fuel gas flow rate"@en ;
+                                       rdfs:label "Brenngasdurchfluss"@de ,
+                                                  "fuel gas flow rate"@en ;
                                        skos:definition "A gas flow that is the volumetric flow rate of the fuel gas in a fuel gas flow process."@en .
 
 
@@ -4331,7 +4529,8 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000035>
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "oxygen gas flow rate"@en ;
+                                       rdfs:label "Sauerstoffdurchfluss"@de ,
+                                                  "oxygen gas flow rate"@en ;
                                        skos:definition "A gas flow that is the volumetric flow rate of the oxygen supplied to the pilot flame in an oxygen gas flow process."@en .
 
 
@@ -4343,7 +4542,8 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000038>
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "sheath gas flow rate"@en ;
+                                       rdfs:label "Hüllgasdurchfluss"@de ,
+                                                  "sheath gas flow rate"@en ;
                                        skos:definition "A gas flow that is the volumetric flow rate of the sheath gas in a sheath gas flow process."@en .
 
 
@@ -4355,7 +4555,8 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000028>
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "precursor feed rate"@en ;
+                                       rdfs:label "Präkursorförderrate"@de ,
+                                                  "precursor feed rate"@en ;
                                        skos:definition "A feed rate that is the volumetric flow rate of the precursor solution in a precursor feeding process."@en .
 
 
@@ -4371,7 +4572,8 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom obo:OBI_0001931
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "specified precursor feed rate datum"@en ;
+                                       rdfs:label "Sollwert der Präkursorförderrate"@de ,
+                                                  "specified precursor feed rate datum"@en ;
                                        skos:definition "A specification datum that specifies the intended (set point) precursor feed rate of a precursor feeding process."@en .
 
 
@@ -4387,7 +4589,8 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom obo:OBI_0001931
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "specified sheath gas flow rate datum"@en ;
+                                       rdfs:label "Sollwert des Hüllgasdurchflusses"@de ,
+                                                  "specified sheath gas flow rate datum"@en ;
                                        skos:definition "A specification datum that specifies the intended (set point) sheath gas flow rate of a sheath gas flow process."@en .
 
 
@@ -4403,7 +4606,8 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom obo:OBI_0001931
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "specified oxygen gas flow rate datum"@en ;
+                                       rdfs:label "Sollwert des Sauerstoffdurchflusses"@de ,
+                                                  "specified oxygen gas flow rate datum"@en ;
                                        skos:definition "A specification datum that specifies the intended (set point) oxygen gas flow rate of an oxygen gas flow process."@en .
 
 
@@ -4419,7 +4623,8 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom obo:OBI_0001931
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "specified fuel gas flow rate datum"@en ;
+                                       rdfs:label "Sollwert des Brenngasdurchflusses"@de ,
+                                                  "specified fuel gas flow rate datum"@en ;
                                        skos:definition "A specification datum that specifies the intended (set point) fuel gas flow rate of a fuel gas flow process."@en .
 
 
@@ -4428,14 +4633,15 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:IAO_0000136 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000000>
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000053>
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:OBI_0001938 ;
                                                          owl:someValuesFrom obo:OBI_0001931
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "specified dispersion gas flow rate datum"@en ;
+                                       rdfs:label "Sollwert des Dispersionsgasdurchflusses"@de ,
+                                                  "specified dispersion gas flow rate datum"@en ;
                                        skos:definition "A specification datum that specifies the intended (set point) dispersion gas flow rate of a dispersion gas flow process."@en .
 
 
@@ -4447,7 +4653,8 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000037>
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "nozzle pressure drop"@en ;
+                                       rdfs:label "Düsendruckverlust"@de ,
+                                                  "nozzle pressure drop"@en ;
                                        skos:definition "A pressure drop of the dispersion gas across the annular gap of the nozzle; it determines the gas exit velocity and thus the atomisation of the precursor solution."@en .
 
 
@@ -4459,53 +4666,81 @@ A manufacturing process is always a transformative process."""@en ,
                                                          owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000050>
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "filter pressure drop"@en ;
+                                       rdfs:label "Filterdruckverlust"@de ,
+                                                  "filter pressure drop"@en ;
                                        skos:definition "A pressure drop of the off-gas across the nanoparticle filter, which increases during the process as nanoparticles accumulate on the filter."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000050
 <https://w3id.org/pmd/fsp/FSP_0000050> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:OBI_0302885 ,
-                                                       <https://w3id.org/pmd/co/PMD_0000833> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0000293 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020115>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0000299 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000893>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:RO_0000057 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000014>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:RO_0000057 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000020>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000049>
-                                                       ] ;
+                                       rdfs:subClassOf obo:OBI_0302885 ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "particle filtration"@en ;
+                                       rdfs:label "Partikelfiltration"@de ,
+                                                  "particle filtration"@en ;
                                        skos:definition "A filtration in which the aerosol leaving the flame of a flame spray pyrolysis process is drawn by a vacuum pump through a nanoparticle filter, on which the nanoparticles are collected while the gas passes through."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000051
 <https://w3id.org/pmd/fsp/FSP_0000051> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000869> ,
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000869> ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "Sprühverbrennung"@de ,
+                                                  "spray combustion"@en ;
+                                       skos:definition "A chemical reaction in which the atomised precursor solution burns with oxygen in the spray flame, so that the precursor decomposes and nanoparticles form in the gas phase as an aerosol."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000052
+<https://w3id.org/pmd/fsp/FSP_0000052> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0001035> ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "Düsenwinkel"@de ,
+                                                  "nozzle angle"@en ;
+                                       skos:definition "An angle between the axis of a nozzle and the vertical axis of a flame spray pyrolysis reactor; in multi-flame set-ups it describes how the nozzles are tilted towards each other."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000053
+<https://w3id.org/pmd/fsp/FSP_0000053> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:RO_0002233 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000023>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:RO_0002234 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020115>
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000037>
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "spray combustion"@en ;
-                                       skos:definition "A chemical reaction in which the atomised precursor solution burns with oxygen in the spray flame, so that the precursor decomposes and nanoparticles form in the gas phase as an aerosol."@en .
+                                       rdfs:label "Dispersionsgasdurchfluss"@de ,
+                                                  "dispersion gas flow rate"@en ;
+                                       skos:definition "A gas flow that is the volumetric flow rate of the dispersion gas in a dispersion gas flow process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000054
+<https://w3id.org/pmd/fsp/FSP_0000054> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "Sieb"@de ,
+                                                  "sieve"@en ;
+                                       skos:definition "A device with a mesh of defined opening size that separates a powder into fractions by particle size; used to sieve the nanoparticle powder collected from the filter."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000055
+<https://w3id.org/pmd/fsp/FSP_0000055> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0040001> ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "Siebmaschenweite"@de ,
+                                                  "sieving grid size"@en ;
+                                       skos:altLabel "sieve mesh size"@en ;
+                                       skos:definition "A length that is the opening size of the grid (mesh) of a sieve, i.e. the largest size of particles that pass through it."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000056
+<https://w3id.org/pmd/fsp/FSP_0000056> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:CHEBI_60003 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:BFO_0000051 ;
+                                                         owl:someValuesFrom obo:CHEBI_16183
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "Methanportion"@de ,
+                                                  "portion of methane"@en ;
+                                       skos:definition "A pure substance that consists of methane molecules (CHEBI:16183); e.g. the methane in the fuel gas of a flame spray pyrolysis process."@en .
 
 
 #################################################################
@@ -4615,6 +4850,14 @@ obo:UO_0000169 rdfs:label "parts per million" .
                 obo:BFO_0000011
                 obo:BFO_0000015
                 obo:BFO_0000035
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( obo:BFO_0000142
+                obo:BFO_0000146
+                obo:BFO_0000147
               )
 ] .
 
