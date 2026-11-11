@@ -94,6 +94,16 @@ import_group:
       # This prevents PMD Core entities from being treated as local entities
       base_iris:
         - https://w3id.org/pmd/co/
+    - id: obi
+      title: "Ontology for Biomedical Investigations"
+      # Needed for OBI classes that PMD Core does not contain (e.g. filtration)
+      mirror_from: "http://purl.obolibrary.org/obo/obi.owl"
+      # minimal: only the listed terms and their ancestors (slme pulls in large parts of OBI)
+      module_type: minimal
+      base_iris:
+        - http://purl.obolibrary.org/obo/OBI_
+        # keep the link material processing -> completely executed planned process (PMD Core)
+        - http://purl.obolibrary.org/obo/COB_0000110
 # ------------------------------------------------------------------------------
 # COMPONENTS
 # ------------------------------------------------------------------------------

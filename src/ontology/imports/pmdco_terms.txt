@@ -4,7 +4,7 @@ https://w3id.org/pmd/co/PMD_0000002 # engineered material
 https://w3id.org/pmd/co/PMD_0000602 # device
 https://w3id.org/pmd/co/PMD_0000833 # manufacturing process
 https://w3id.org/pmd/co/PMD_0000896 # pressure
-https://w3id.org/pmd/co/PMD_0020101 # proportion
+https://w3id.org/pmd/co/PMD_0020101 # fraction property
 https://w3id.org/pmd/co/PMD_0020113 # fluid (object)
 https://w3id.org/pmd/co/PMD_0020152 # component
 https://w3id.org/pmd/co/PMD_0020226 # flow rate
@@ -17,3 +17,27 @@ https://w3id.org/pmd/co/PMD_0000967 # temperature
 https://w3id.org/pmd/co/PMD_0020102 # mass ratio
 https://w3id.org/pmd/co/PMD_0020104 # volume ratio
 http://purl.obolibrary.org/obo/IAO_0020000 # identifier
+http://purl.obolibrary.org/obo/BFO_0000062 # preceded by
+http://purl.obolibrary.org/obo/BFO_0000063 # precedes
+http://purl.obolibrary.org/obo/RO_0002233 # has input
+http://purl.obolibrary.org/obo/OBI_0001938 # has value specification
+https://w3id.org/pmd/co/PMD_0060009 # specification datum
+http://purl.obolibrary.org/obo/IAO_0000136 # is about
+http://purl.obolibrary.org/obo/OBI_0001931 # scalar value specification
+http://purl.obolibrary.org/obo/OBI_0001937 # has specified numeric value
+http://purl.obolibrary.org/obo/IAO_0000039 # has measurement unit label
+https://w3id.org/pmd/co/PMD_0020289 # gas
+https://w3id.org/pmd/co/PMD_0020290 # liquid
+https://w3id.org/pmd/co/PMD_0020229 # solution
+https://w3id.org/pmd/co/PMD_0000001 # portion of matter
+https://w3id.org/pmd/co/PMD_0000141 # distance
+https://w3id.org/pmd/co/PMD_0020103 # molar fraction
+https://w3id.org/pmd/co/PMD_0020272 # count per volume
+https://w3id.org/pmd/co/PMD_0000008 # process attribute
+https://w3id.org/pmd/co/PMD_0000869 # chemical reaction
+https://w3id.org/pmd/co/PMD_0020115 # aerosol
+https://w3id.org/pmd/co/PMD_0000893 # powder
+https://w3id.org/pmd/co/PMD_0025006 # process attribute of
+https://w3id.org/pmd/co/PMD_0000009 # has process attribute
+http://purl.obolibrary.org/obo/RO_0002234 # has output
+http://purl.obolibrary.org/obo/RO_0000057 # has participant

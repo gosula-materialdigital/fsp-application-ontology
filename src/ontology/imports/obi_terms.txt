@@ -1,0 +1,3 @@
+http://purl.obolibrary.org/obo/OBI_0302885 # filtration
+http://purl.obolibrary.org/obo/OBI_0600014 # material component separation
+http://purl.obolibrary.org/obo/COB_0000110 # material processing

@@ -1,0 +1,209 @@
+Prefix(:=<https://w3id.org/pmd/fsp/imports/obi_import.owl#>)
+Prefix(dc:=<http://purl.org/dc/terms/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(prov:=<http://www.w3.org/ns/prov#>)
+Prefix(rdfa:=<http://www.w3.org/ns/rdfa#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(void:=<http://rdfs.org/ns/void#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<https://w3id.org/pmd/fsp/imports/obi_import.owl>
+<https://w3id.org/pmd/fsp/releases/2026-11-11/imports/obi_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/obi/2026-07-27/obi.owl>)
+Annotation(owl:versionInfo "2026-11-11")
+
+Declaration(Class(obo:BFO_0000017))
+Declaration(Class(obo:BFO_0000023))
+Declaration(Class(obo:BFO_0000040))
+Declaration(Class(obo:COB_0000035))
+Declaration(Class(obo:COB_0000110))
+Declaration(Class(obo:IAO_0000005))
+Declaration(Class(obo:IAO_0000027))
+Declaration(Class(obo:IAO_0000030))
+Declaration(Class(obo:IAO_0000104))
+Declaration(Class(obo:OBI_0000067))
+Declaration(Class(obo:OBI_0000070))
+Declaration(Class(obo:OBI_0000260))
+Declaration(Class(obo:OBI_0001931))
+Declaration(Class(obo:OBI_0001933))
+Declaration(Class(obo:OBI_0302885))
+Declaration(Class(obo:OBI_0600014))
+Declaration(ObjectProperty(obo:BFO_0000051))
+Declaration(ObjectProperty(obo:BFO_0000054))
+Declaration(ObjectProperty(obo:BFO_0000055))
+Declaration(ObjectProperty(obo:IAO_0000136))
+Declaration(ObjectProperty(obo:OBI_0000293))
+Declaration(ObjectProperty(obo:OBI_0000295))
+Declaration(ObjectProperty(obo:OBI_0000299))
+Declaration(ObjectProperty(obo:OBI_0000312))
+Declaration(ObjectProperty(obo:OBI_0000417))
+Declaration(ObjectProperty(obo:OBI_0000833))
+Declaration(ObjectProperty(obo:OBI_0001927))
+Declaration(ObjectProperty(obo:OBI_0001938))
+Declaration(ObjectProperty(obo:RO_0000052))
+Declaration(ObjectProperty(obo:RO_0000056))
+Declaration(ObjectProperty(obo:RO_0000057))
+Declaration(ObjectProperty(obo:RO_0000059))
+Declaration(ObjectProperty(obo:RO_0000087))
+Declaration(DataProperty(obo:OBI_0001937))
+Declaration(DataProperty(obo:OBI_0002135))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obo:OBI_0000293 (has specified input)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000293 "The inverse property of is specified input of")
+AnnotationAssertion(rdfs:label obo:OBI_0000293 "has specified input"@en)
+SubObjectPropertyOf(obo:OBI_0000293 obo:RO_0000057)
+InverseObjectProperties(obo:OBI_0000293 obo:OBI_0000295)
+ObjectPropertyDomain(obo:OBI_0000293 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000295 (is specified input of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000295 "A relation between a completely executed planned process and a continuant participating in that process that is not created during the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of.")
+AnnotationAssertion(rdfs:label obo:OBI_0000295 "is specified input of"@en)
+SubObjectPropertyOf(obo:OBI_0000295 obo:RO_0000056)
+ObjectPropertyRange(obo:OBI_0000295 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000299 (has specified output)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000299 "The inverse property of is specified output of")
+AnnotationAssertion(rdfs:label obo:OBI_0000299 "has specified output"@en)
+SubObjectPropertyOf(obo:OBI_0000299 obo:RO_0000057)
+InverseObjectProperties(obo:OBI_0000299 obo:OBI_0000312)
+ObjectPropertyDomain(obo:OBI_0000299 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000312 (is specified output of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000312 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000312 "is specified output of"@en)
+SubObjectPropertyOf(obo:OBI_0000312 obo:RO_0000056)
+ObjectPropertyRange(obo:OBI_0000312 obo:COB_0000035)
+
+# Object Property: obo:OBI_0000417 (achieves_planned_objective)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000417 "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000417 "achieves_planned_objective")
+InverseObjectProperties(obo:OBI_0000417 obo:OBI_0000833)
+ObjectPropertyDomain(obo:OBI_0000417 obo:COB_0000035)
+ObjectPropertyRange(obo:OBI_0000417 obo:IAO_0000005)
+
+# Object Property: obo:OBI_0000833 (objective_achieved_by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000833 "This relation obtains between an objective specification and a planned process when the criteria specified in the objective specification are met at the end of the planned process."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000833 "objective_achieved_by")
+ObjectPropertyDomain(obo:OBI_0000833 obo:IAO_0000005)
+ObjectPropertyRange(obo:OBI_0000833 obo:COB_0000035)
+
+# Object Property: obo:OBI_0001927 (specifies value of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001927 "A relation between a value specification and an entity which the specification is about."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001927 "specifies value of")
+SubObjectPropertyOf(obo:OBI_0001927 obo:IAO_0000136)
+ObjectPropertyDomain(obo:OBI_0001927 obo:OBI_0001933)
+
+# Object Property: obo:OBI_0001938 (has value specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001938 "A relation between an information content entity and a value specification that specifies its value."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001938 "has value specification")
+SubObjectPropertyOf(obo:OBI_0001938 obo:BFO_0000051)
+ObjectPropertyDomain(obo:OBI_0001938 obo:IAO_0000030)
+ObjectPropertyRange(obo:OBI_0001938 obo:OBI_0001933)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: obo:OBI_0001937 (has specified numeric value)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001937 "A relation between a value specification and a number that quantifies it."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001937 "has specified numeric value")
+SubDataPropertyOf(obo:OBI_0001937 obo:OBI_0002135)
+DataPropertyDomain(obo:OBI_0001937 obo:OBI_0001933)
+DataPropertyRange(obo:OBI_0001937 owl:real)
+
+# Data Property: obo:OBI_0002135 (has specified value)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0002135 "A relation between a value specification and a literal."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0002135 "has specified value"@en)
+DataPropertyDomain(obo:OBI_0002135 obo:OBI_0001933)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:COB_0000110 (material processing)
+
+AnnotationAssertion(obo:IAO_0000115 obo:COB_0000110 "A completely executed planned process that intends to output material entities from input material entities"@en)
+AnnotationAssertion(rdfs:label obo:COB_0000110 "material processing"@en)
+SubClassOf(obo:COB_0000110 obo:COB_0000035)
+SubClassOf(obo:COB_0000110 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040) ObjectSomeValuesFrom(obo:OBI_0000299 obo:BFO_0000040)))
+
+# Class: obo:OBI_0000067 (evaluant role)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000067 "a role that inheres in a material entity that is realized in an assay in which data is generated about the bearer of the evaluant role"@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000067 "evaluant role"@en)
+SubClassOf(obo:OBI_0000067 obo:BFO_0000023)
+SubClassOf(obo:OBI_0000067 ObjectSomeValuesFrom(obo:RO_0000052 obo:BFO_0000040))
+SubClassOf(obo:OBI_0000067 ObjectAllValuesFrom(obo:BFO_0000054 obo:OBI_0000070))
+
+# Class: obo:OBI_0000070 (assay)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000070 "A planned process that has the objective to produce information about a material entity (the evaluant) by examining it."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000070 "assay"@en)
+SubClassOf(obo:OBI_0000070 obo:COB_0000035)
+SubClassOf(obo:OBI_0000070 ObjectIntersectionOf(ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040) ObjectSomeValuesFrom(obo:OBI_0000299 obo:IAO_0000027)))
+SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:BFO_0000055 obo:OBI_0000067))
+SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:OBI_0000293 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000087 obo:OBI_0000067))))
+SubClassOf(obo:OBI_0000070 ObjectSomeValuesFrom(obo:OBI_0000299 ObjectIntersectionOf(obo:IAO_0000027 ObjectSomeValuesFrom(obo:IAO_0000136 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000087 obo:OBI_0000067))))))
+
+# Class: obo:OBI_0000260 (plan)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0000260 "A plan is a realizable entity that is the inheres in a bearer who is committed to realizing it as a completely executed planned process."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0000260 "plan"@en)
+SubClassOf(obo:OBI_0000260 obo:BFO_0000017)
+SubClassOf(obo:OBI_0000260 ObjectSomeValuesFrom(obo:RO_0000059 obo:IAO_0000104))
+
+# Class: obo:OBI_0001931 (scalar value specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001931 "A value specification that consists of two parts: a numeral and a unit label"@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001931 "scalar value specification")
+SubClassOf(obo:OBI_0001931 obo:OBI_0001933)
+SubClassOf(obo:OBI_0001931 DataMinCardinality(1 obo:OBI_0001937))
+
+# Class: obo:OBI_0001933 (value specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001933 "An information content entity that specifies a value within a classification scheme or on a quantitative scale."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001933 "value specification")
+SubClassOf(obo:OBI_0001933 obo:IAO_0000030)
+
+# Class: obo:OBI_0302885 (filtration)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0302885 "filtration is a process which separates components suspended in a fluid based on granularity properties relying on a filter device"@en)
+AnnotationAssertion(rdfs:label obo:OBI_0302885 "filtration"@en)
+SubClassOf(obo:OBI_0302885 obo:OBI_0600014)
+
+# Class: obo:OBI_0600014 (material component separation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0600014 "a material processing in which components of an input material become segregated in space"@en)
+AnnotationAssertion(rdfs:label obo:OBI_0600014 "material component separation"@en)
+SubClassOf(obo:OBI_0600014 obo:COB_0000110)
+SubClassOf(obo:OBI_0600014 ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040))
+SubClassOf(obo:OBI_0600014 ObjectSomeValuesFrom(obo:OBI_0000299 obo:BFO_0000040))
+
+
+)

@@ -15,9 +15,9 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<https://w3id.org/pmd/fsp/imports/pmdco_import.owl>
-<https://w3id.org/pmd/fsp/releases/2026-10-21/imports/pmdco_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/3.1.1>)
-Annotation(owl:versionInfo "2026-10-21")
+<https://w3id.org/pmd/fsp/releases/2026-11-11/imports/pmdco_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/3.1.2>)
+Annotation(owl:versionInfo "2026-11-11")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -64,6 +64,16 @@ Declaration(Class(obo:OBI_0000070))
 Declaration(Class(obo:OBI_0000260))
 Declaration(Class(obo:OBI_0001931))
 Declaration(Class(obo:OBI_0001933))
+Declaration(Class(obo:UO_0000000))
+Declaration(Class(obo:UO_0000061))
+Declaration(Class(obo:UO_0000067))
+Declaration(Class(obo:UO_0000076))
+Declaration(Class(obo:UO_0000163))
+Declaration(Class(obo:UO_0000164))
+Declaration(Class(obo:UO_0000169))
+Declaration(Class(obo:UO_1000076))
+Declaration(Class(obo:UO_1000163))
+Declaration(Class(obo:UO_1000180))
 Declaration(Class(<http://qudt.org/schema/qudt/Unit>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000000>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000001>))
@@ -72,7 +82,9 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000005>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000068>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000110>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000141>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000520>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000522>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000553>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000583>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000597>))
@@ -85,10 +97,12 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000790>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000833>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000848>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000868>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000869>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000877>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000882>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000888>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000891>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000893>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000896>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000899>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000907>))
@@ -97,11 +111,14 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000952>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000967>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0010026>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0010033>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020004>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020101>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020102>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020103>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020104>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020108>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020113>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020115>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020128>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020132>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020133>))
@@ -111,6 +128,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0020150>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020151>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020152>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020161>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020162>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020200>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020216>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020226>))
@@ -123,6 +141,13 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0020246>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020258>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020259>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020265>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020269>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020271>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020272>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020274>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020275>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020276>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0020277>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020287>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020288>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020289>))
@@ -154,20 +179,32 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0023003>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0023004>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0023007>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0023023>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023026>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0023027>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0023035>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0023036>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0023041>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0023043>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025001>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025018>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025019>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025036>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025037>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025039>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025040>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025997>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0040001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050004>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050118>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050133>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0050137>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0060008>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0060009>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080019>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080022>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0080050>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080069>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0080101>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0080116>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0090012>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0090014>))
@@ -176,9 +213,12 @@ Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000054))
 Declaration(ObjectProperty(obo:BFO_0000055))
+Declaration(ObjectProperty(obo:BFO_0000062))
+Declaration(ObjectProperty(obo:BFO_0000063))
 Declaration(ObjectProperty(obo:BFO_0000108))
 Declaration(ObjectProperty(obo:BFO_0000117))
 Declaration(ObjectProperty(obo:BFO_0000132))
+Declaration(ObjectProperty(obo:BFO_0000157))
 Declaration(ObjectProperty(obo:IAO_0000039))
 Declaration(ObjectProperty(obo:IAO_0000136))
 Declaration(ObjectProperty(obo:IAO_0000219))
@@ -189,6 +229,7 @@ Declaration(ObjectProperty(obo:OBI_0000299))
 Declaration(ObjectProperty(obo:OBI_0000312))
 Declaration(ObjectProperty(obo:OBI_0000417))
 Declaration(ObjectProperty(obo:OBI_0001927))
+Declaration(ObjectProperty(obo:OBI_0001938))
 Declaration(ObjectProperty(obo:RO_0000052))
 Declaration(ObjectProperty(obo:RO_0000053))
 Declaration(ObjectProperty(obo:RO_0000056))
@@ -203,11 +244,15 @@ Declaration(ObjectProperty(obo:RO_0000086))
 Declaration(ObjectProperty(obo:RO_0000087))
 Declaration(ObjectProperty(obo:RO_0000091))
 Declaration(ObjectProperty(obo:RO_0000092))
+Declaration(ObjectProperty(obo:RO_0002020))
+Declaration(ObjectProperty(obo:RO_0002233))
 Declaration(ObjectProperty(obo:RO_0002234))
 Declaration(ObjectProperty(obo:RO_0002328))
 Declaration(ObjectProperty(obo:RO_0002350))
 Declaration(ObjectProperty(obo:RO_0002351))
+Declaration(ObjectProperty(obo:RO_0002352))
 Declaration(ObjectProperty(obo:RO_0002353))
+Declaration(ObjectProperty(obo:RO_0002503))
 Declaration(ObjectProperty(obo:RO_0009006))
 Declaration(ObjectProperty(obo:RO_0009007))
 Declaration(ObjectProperty(obo:STATO_0000102))
@@ -217,12 +262,20 @@ Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000069>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000070>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000077>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0020127>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0020256>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0020257>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025006>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025998>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0025999>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0060001>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0060002>))
 Declaration(DataProperty(obo:OBI_0001937))
 Declaration(DataProperty(obo:OBI_0002135))
-Declaration(NamedIndividual(<http://qudt.org/vocab/unit/PER-MOL>))
+Declaration(NamedIndividual(obo:UO_0000076))
+Declaration(NamedIndividual(obo:UO_0000163))
+Declaration(NamedIndividual(obo:UO_0000164))
+Declaration(NamedIndividual(obo:UO_0000169))
+Declaration(NamedIndividual(<http://qudt.org/vocab/unit/MOL>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020217>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020218>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020219>))
@@ -297,10 +350,30 @@ AnnotationAssertion(skos:definition obo:BFO_0000055 "(Elucidation) realizes is a
 ObjectPropertyDomain(obo:BFO_0000055 obo:BFO_0000015)
 ObjectPropertyRange(obo:BFO_0000055 obo:BFO_0000017)
 
+# Object Property: obo:BFO_0000062 (preceded by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000062 "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000062 "preceded by"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000062 "b preceded by c =Def b precedes c"@en)
+InverseObjectProperties(obo:BFO_0000062 obo:BFO_0000063)
+TransitiveObjectProperty(obo:BFO_0000062)
+ObjectPropertyDomain(obo:BFO_0000062 obo:BFO_0000003)
+ObjectPropertyRange(obo:BFO_0000062 obo:BFO_0000003)
+
+# Object Property: obo:BFO_0000063 (precedes)
+
+AnnotationAssertion(obo:IAO_0000115 obo:BFO_0000063 "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."@en)
+AnnotationAssertion(rdfs:label obo:BFO_0000063 "precedes"@en)
+AnnotationAssertion(skos:definition obo:BFO_0000063 "(Elucidation) precedes is a relation between occurrents o, o' such that if t is the temporal extent of o & t' is the temporal extent of o' then either the last instant of o is before the first instant of o' or the last instant of o is the first instant of o' & neither o nor o' are temporal instants"@en)
+TransitiveObjectProperty(obo:BFO_0000063)
+ObjectPropertyDomain(obo:BFO_0000063 obo:BFO_0000003)
+ObjectPropertyRange(obo:BFO_0000063 obo:BFO_0000003)
+
 # Object Property: obo:BFO_0000108 (exists at)
 
 AnnotationAssertion(rdfs:label obo:BFO_0000108 "exists at"@en)
 AnnotationAssertion(skos:definition obo:BFO_0000108 "(Elucidation) exists at is a relation between a particular and some temporal region at which the particular exists"@en)
+InverseObjectProperties(obo:BFO_0000108 obo:BFO_0000157)
 ObjectPropertyDomain(obo:BFO_0000108 obo:BFO_0000001)
 ObjectPropertyRange(obo:BFO_0000108 obo:BFO_0000008)
 
@@ -322,6 +395,10 @@ SubObjectPropertyOf(obo:BFO_0000132 obo:BFO_0000050)
 TransitiveObjectProperty(obo:BFO_0000132)
 ObjectPropertyDomain(obo:BFO_0000132 obo:BFO_0000003)
 ObjectPropertyRange(obo:BFO_0000132 obo:BFO_0000003)
+
+# Object Property: obo:BFO_0000157 (during which exists)
+
+AnnotationAssertion(rdfs:label obo:BFO_0000157 "during which exists")
 
 # Object Property: obo:IAO_0000039 (has measurement unit label)
 
@@ -397,6 +474,14 @@ AnnotationAssertion(rdfs:label obo:OBI_0001927 "specifies value of")
 SubObjectPropertyOf(obo:OBI_0001927 obo:IAO_0000136)
 InverseObjectProperties(obo:OBI_0001927 <https://w3id.org/pmd/co/PMD_0000077>)
 ObjectPropertyDomain(obo:OBI_0001927 obo:OBI_0001933)
+
+# Object Property: obo:OBI_0001938 (has value specification)
+
+AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001938 "A relation between an information content entity and a value specification that specifies its value."@en)
+AnnotationAssertion(rdfs:label obo:OBI_0001938 "has value specification")
+SubObjectPropertyOf(obo:OBI_0001938 obo:BFO_0000051)
+ObjectPropertyDomain(obo:OBI_0001938 obo:IAO_0000030)
+ObjectPropertyRange(obo:OBI_0001938 obo:OBI_0001933)
 
 # Object Property: obo:RO_0000052 (characteristic of)
 
@@ -505,6 +590,19 @@ AnnotationAssertion(obo:IAO_0000115 obo:RO_0000092 "inverse of has disposition")
 AnnotationAssertion(rdfs:label obo:RO_0000092 "disposition of"@en)
 SubObjectPropertyOf(obo:RO_0000092 obo:RO_0000052)
 
+# Object Property: obo:RO_0002020 (transports)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002020 "Holds between p and c when p is a transport process or transporter activity and the outcome of this p is to move c from one location to another.")
+AnnotationAssertion(rdfs:label obo:RO_0002020 "transports")
+
+# Object Property: obo:RO_0002233 (has input)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002233 "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.")
+AnnotationAssertion(rdfs:label obo:RO_0002233 "has input"@en)
+SubObjectPropertyOf(obo:RO_0002233 obo:RO_0000057)
+InverseObjectProperties(obo:RO_0002233 obo:RO_0002352)
+ObjectPropertyDomain(obo:RO_0002233 obo:BFO_0000015)
+
 # Object Property: obo:RO_0002234 (has output)
 
 AnnotationAssertion(obo:IAO_0000115 obo:RO_0002234 "p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p.")
@@ -532,12 +630,24 @@ AnnotationAssertion(rdfs:label obo:RO_0002351 "has member"@en)
 SubObjectPropertyOf(obo:RO_0002351 obo:BFO_0000051)
 IrreflexiveObjectProperty(obo:RO_0002351)
 
+# Object Property: obo:RO_0002352 (input of)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002352 "inverse of has input")
+AnnotationAssertion(rdfs:label obo:RO_0002352 "input of"@en)
+SubObjectPropertyOf(obo:RO_0002352 obo:RO_0000056)
+SubObjectPropertyOf(obo:RO_0002352 obo:RO_0002328)
+
 # Object Property: obo:RO_0002353 (output of)
 
 AnnotationAssertion(obo:IAO_0000115 obo:RO_0002353 "inverse of has output")
 AnnotationAssertion(rdfs:label obo:RO_0002353 "output of"@en)
 SubObjectPropertyOf(obo:RO_0002353 obo:RO_0000056)
 SubObjectPropertyOf(obo:RO_0002353 obo:RO_0002328)
+
+# Object Property: obo:RO_0002503 (towards)
+
+AnnotationAssertion(obo:IAO_0000115 obo:RO_0002503 "q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2")
+AnnotationAssertion(rdfs:label obo:RO_0002503 "towards")
 
 # Object Property: obo:RO_0009006 (assay measures characteristic)
 
@@ -598,27 +708,56 @@ AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020127> "a rel
 ObjectPropertyDomain(<https://w3id.org/pmd/co/PMD_0020127> <https://w3id.org/pmd/co/PMD_0000008>)
 ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0020127> obo:BFO_0000020)
 
+# Object Property: <https://w3id.org/pmd/co/PMD_0020256> (has numerator)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020256> "has numerator"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020256> "points to a numerator of a quotient"@en)
+SubObjectPropertyOf(<https://w3id.org/pmd/co/PMD_0020256> obo:RO_0002328)
+FunctionalObjectProperty(<https://w3id.org/pmd/co/PMD_0020256>)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0020257> (has denominator)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020257> "has denominator"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020257> "points to a denominator of a quotient"@en)
+SubObjectPropertyOf(<https://w3id.org/pmd/co/PMD_0020257> obo:RO_0002328)
+FunctionalObjectProperty(<https://w3id.org/pmd/co/PMD_0020257>)
+
 # Object Property: <https://w3id.org/pmd/co/PMD_0025006> (process attribute of)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025006> "process attribute of"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025006> "A relation between a process attribute and a process, which \"bears\" the attribute."@en)
 
-# Object Property: <https://w3id.org/pmd/co/PMD_0025998> (hat relationale Qualität)
+# Object Property: <https://w3id.org/pmd/co/PMD_0025998> (hat relationale Eigenschaft)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025998> "has relational quality"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025998> "hat relationale Qualität"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025998> "has relational property"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025998> "hat relationale Eigenschaft"@de)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025998> "a relation between an independent continuant (the bearer) and a relational quality, in which the quality specifically depends on the bearer for its existence"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025998> "eine Beziehung zwischen einem unabhängigen Kontinuum (dem Träger) und einer relationalen Qualität, bei der die Qualität in ihrer Existenz speziell vom Träger abhängt"@de)
 InverseObjectProperties(<https://w3id.org/pmd/co/PMD_0025998> <https://w3id.org/pmd/co/PMD_0025999>)
 ObjectPropertyDomain(<https://w3id.org/pmd/co/PMD_0025998> obo:BFO_0000004)
-ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0025998> obo:BFO_0000145)
+ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0025998> <https://w3id.org/pmd/co/PMD_0020108>)
 
-# Object Property: <https://w3id.org/pmd/co/PMD_0025999> (relational quality of)
+# Object Property: <https://w3id.org/pmd/co/PMD_0025999> (relationale Eigenschaft von)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025999> "relational quality of"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025999> "relationale Qualität von"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025999> "relational property of"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025999> "relationale Eigenschaft von"@de)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025999> "a relation between a relational quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025999> "eine Beziehung zwischen einer relationalen Qualität und einem unabhängigen Kontinuum (dem Träger), bei der die Existenz der Qualität speziell vom Träger abhängt"@de)
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0060001> (represents value of)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0060001> "represents value of"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0060001> "A relation between an information content entity and an specifically dependent continuant or process attribute which the representation is about.")
+SubObjectPropertyOf(<https://w3id.org/pmd/co/PMD_0060001> obo:IAO_0000136)
+InverseObjectProperties(<https://w3id.org/pmd/co/PMD_0060001> <https://w3id.org/pmd/co/PMD_0060002>)
+ObjectPropertyDomain(<https://w3id.org/pmd/co/PMD_0060001> obo:IAO_0000030)
+ObjectPropertyRange(<https://w3id.org/pmd/co/PMD_0060001> ObjectUnionOf(obo:BFO_0000020 <https://w3id.org/pmd/co/PMD_0000008>))
+
+# Object Property: <https://w3id.org/pmd/co/PMD_0060002> (represented by value)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0060002> "represented by value"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0060002> "A relation between a specifically dependent continuant or process attribute and an information content entity which is about.")
+SubObjectPropertyOf(<https://w3id.org/pmd/co/PMD_0060002> <https://w3id.org/pmd/co/PMD_0000004>)
 
 
 ############################
@@ -962,6 +1101,60 @@ AnnotationAssertion(obo:IAO_0000115 obo:OBI_0001933 "An information content enti
 AnnotationAssertion(rdfs:label obo:OBI_0001933 "value specification")
 SubClassOf(obo:OBI_0001933 obo:IAO_0000030)
 
+# Class: obo:UO_0000000 (unit)
+
+AnnotationAssertion(rdfs:label obo:UO_0000000 "unit")
+SubClassOf(obo:UO_0000000 obo:IAO_0000003)
+
+# Class: obo:UO_0000061 (unit of molarity)
+
+AnnotationAssertion(rdfs:label obo:UO_0000061 "unit of molarity")
+SubClassOf(obo:UO_0000061 obo:UO_0000000)
+
+# Class: obo:UO_0000067 (unit of molality)
+
+AnnotationAssertion(rdfs:label obo:UO_0000067 "unit of molality")
+SubClassOf(obo:UO_0000067 obo:UO_0000000)
+
+# Class: obo:UO_0000076 (mole fraction)
+
+AnnotationAssertion(rdfs:label obo:UO_0000076 "mole fraction")
+EquivalentClasses(obo:UO_0000076 ObjectOneOf(obo:UO_0000076))
+SubClassOf(obo:UO_0000076 obo:UO_1000076)
+
+# Class: obo:UO_0000163 (mass percentage)
+
+AnnotationAssertion(rdfs:label obo:UO_0000163 "mass percentage")
+EquivalentClasses(obo:UO_0000163 ObjectOneOf(obo:UO_0000163))
+SubClassOf(obo:UO_0000163 obo:UO_1000163)
+
+# Class: obo:UO_0000164 (mass volume percentage)
+
+AnnotationAssertion(rdfs:label obo:UO_0000164 "mass volume percentage")
+EquivalentClasses(obo:UO_0000164 ObjectOneOf(obo:UO_0000164))
+SubClassOf(obo:UO_0000164 obo:UO_0000000)
+
+# Class: obo:UO_0000169 (parts per million)
+
+AnnotationAssertion(rdfs:label obo:UO_0000169 "parts per million")
+EquivalentClasses(obo:UO_0000169 ObjectOneOf(obo:UO_0000169))
+SubClassOf(obo:UO_0000169 obo:UO_0000000)
+
+# Class: obo:UO_1000076 (mole fraction based unit)
+
+AnnotationAssertion(rdfs:label obo:UO_1000076 "mole fraction based unit")
+SubClassOf(obo:UO_1000076 obo:UO_0000000)
+
+# Class: obo:UO_1000163 (mass percentage based unit)
+
+AnnotationAssertion(rdfs:label obo:UO_1000163 "mass percentage based unit")
+SubClassOf(obo:UO_1000163 obo:UO_0000000)
+
+# Class: obo:UO_1000180 (mass per unit volume based unit)
+
+AnnotationAssertion(rdfs:label obo:UO_1000180 "mass per unit volume based unit")
+SubClassOf(obo:UO_1000180 obo:UO_0000000)
+
 # Class: <http://qudt.org/schema/qudt/Unit> (Unit)
 
 AnnotationAssertion(rdfs:label <http://qudt.org/schema/qudt/Unit> "Unit")
@@ -1021,6 +1214,12 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000110> "geological
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000110> "A natural process that operates within the Earth system to transform, transport, or deform Earth materials, thereby changing Earth structures and landforms"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000110> obo:BFO_0000015)
 
+# Class: <https://w3id.org/pmd/co/PMD_0000141> (distance)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000141> "distance"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000141> "a relational quality that represents the magnitude of length of a path connecting two independent continuants"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000141> <https://w3id.org/pmd/co/PMD_0025018>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0000520> (heat flow)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000520> "Wärmefluss"@de)
@@ -1028,6 +1227,14 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000520> "heat flow"
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000520> "is a process in which transfer of thermal energy between or within material entities occurs"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000520> "ist ein Prozess, bei dem Wärmeenergie zwischen oder innerhalb materieller Einheiten übertragen wird"@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000520> obo:BFO_0000015)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000522> (mechanical process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000522> "mechanical process"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000522> "mechanischer Prozess"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000522> "is a process in which forces, moments, or imposed displacements to objects or object aggregates occur and/or the equivalent (stresses, strains) to materials or portions of matter"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000522> "ist ein Prozess, bei dem Kräfte, Momente oder auferlegte Verschiebungen auf Objekte oder Objektaggregate und/oder das Äquivalent (Spannungen, Dehnungen) auf Materialien oder Teile der Materie auftreten"@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000522> obo:BFO_0000015)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000553> (chemical potential)
 
@@ -1127,6 +1334,14 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000868> <https://w3id.org/pmd/co/PMD_00
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000868> ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0010026>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000868> ObjectSomeValuesFrom(obo:RO_0002353 ObjectUnionOf(obo:GO_0008150 <https://w3id.org/pmd/co/PMD_0000110>)))
 
+# Class: <https://w3id.org/pmd/co/PMD_0000869> (chemical reaction)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000869> "chemical reaction"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000869> "chemische Reaktion"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000869> "Das Auftreten einer chemischen Reaktion ist der Prozess, bei dem Substanzen interagieren, um neue chemische Verbindungen zu bilden oder ihre Molekülstruktur zu verändern."@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000869> "The occurrence of (a) chemical reaction is the process in which substances interact to form new chemical compounds or alter their molecular structure."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000869> obo:BFO_0000015)
+
 # Class: <https://w3id.org/pmd/co/PMD_0000877> (optical property)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000877> "optical property"@en)
@@ -1157,6 +1372,12 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000888> ObjectSomeValuesFrom(obo:RO_000
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000891> "disconnected material entity aggregate"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000891> "An object aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000891> obo:BFO_0000027)
+
+# Class: <https://w3id.org/pmd/co/PMD_0000893> (powder)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000893> "powder"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000893> "A powder is a dry, solid disconnected material entity aggregate composed of many very fine particles. These particles can flow freely when shaken or tilted."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000893> <https://w3id.org/pmd/co/PMD_0000891>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000896> (pressure)
 
@@ -1221,37 +1442,50 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0010033> "polymeriza
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0010033> "The chemical process of reacting monomers, oligomers, or reactive precursors together to form longer macromolecular chains or three-dimensional networks"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0010033> obo:BFO_0000015)
 
-# Class: <https://w3id.org/pmd/co/PMD_0020101> (proportion)
+# Class: <https://w3id.org/pmd/co/PMD_0020004> (composition data item)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020101> "Anteil"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020101> "proportion"@en)
-AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020101> "A proportion is a relational quality between two entities (the whole and the part) which quantifies the relation between the whole and its part."@en)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020101> <https://w3id.org/pmd/co/PMD_0020353>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(obo:RO_0002328 obo:BFO_0000001))
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020004> "composition data item"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020004> "Bei einem Zusammensetzungsdatenelement handelt es sich um eine Informationsinhaltseinheit, die sich mit der Zusammensetzung einer materiellen Einheit befasst. Es verfügt über Bruchwertspezifikationen für Mitglieder, die Werte von Anteilen von Verbindungen angeben, die Teile der materiellen Einheit sind."@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020004> "Composition data entity is an information content entity that is about composition of a material enity. It has members fraction value specifications which specifiy values of propotions of compounds, which are parts of the material enity."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020004> ObjectIntersectionOf(obo:IAO_0000027 ObjectSomeValuesFrom(obo:IAO_0000136 <https://w3id.org/pmd/co/PMD_0025001>)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020004> ObjectSomeValuesFrom(obo:RO_0002351 <https://w3id.org/pmd/co/PMD_0025997>))
 
-# Class: <https://w3id.org/pmd/co/PMD_0020102> (mass ratio)
+# Class: <https://w3id.org/pmd/co/PMD_0020101> (fraction property)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020102> "Massenverhältnis"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020102> "mass ratio"@en)
-AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020102> "Das Massenverhältnis bezeichnet eine relationale Qualität, die einen Massenwert im Verhältnis zu einem anderen ausdrückt und typischerweise eine dimensionslose Zahl ergibt"@de)
-AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020102> "Mass ratio denotes a relational quality expressing one mass value relative to another, typically producing a dimensionless number"@en)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020102> <https://w3id.org/pmd/co/PMD_0080069>)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020101> "fraction property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020101> "a property describing a quantitative relation between two entites where one entity represents the whole and the other entity represents a part of the whole"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020101> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0002503 ObjectIntersectionOf(obo:BFO_0000004 ObjectSomeValuesFrom(obo:BFO_0000050 obo:BFO_0000004))) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000004)))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020101> <https://w3id.org/pmd/co/PMD_0020108>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(obo:RO_0002503 ObjectIntersectionOf(obo:BFO_0000004 ObjectSomeValuesFrom(obo:BFO_0000050 obo:BFO_0000004))))
 
-# Class: <https://w3id.org/pmd/co/PMD_0020103> (Molverhältnis)
+# Class: <https://w3id.org/pmd/co/PMD_0020102> (mass fraction)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020103> "Molverhältnis"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020103> "molar ratio"@en)
-AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020103> "Der Molanteil ist der Anteil, der die Anzahl der Einheiten des Teils im Verhältnis zur Anzahl der Einheiten des Ganzen quantifiziert."@de)
-AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020103> "Molar proportion is the proportion which quantifies the entities count of the part in relation to the entities count of the whole."@en)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020103> <https://w3id.org/pmd/co/PMD_0080069>)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020102> "mass fraction"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020102> "a relational quality expressing a mass of a part in relation to the the mass of the whole"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020102> ObjectUnionOf(ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0060002> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectSomeValuesFrom(obo:IAO_0000039 obo:UO_1000163)))) ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020102> <https://w3id.org/pmd/co/PMD_0020101>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0020104> (volume ratio)
+# Class: <https://w3id.org/pmd/co/PMD_0020103> (molar fraction)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020104> "Volumenverhältnis"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020104> "volume ratio"@en)
-AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020104> "Volume ratio represents a relational quality expressing one volume value relative to another, typically resulting in a dimensionless number"@en)
-AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020104> "Volumenverhältnis stellt eine relationale Qualität dar, die einen Volumenwert im Verhältnis zu einem anderen ausdrückt, typischerweise resultierend in einer dimensionslosen Zahl"@de)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020104> <https://w3id.org/pmd/co/PMD_0080069>)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020103> "molar fraction"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020103> "Molar fraction is the fraction which quantifies the entities count of the part in relation to the entities count of the whole."@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020103> ObjectUnionOf(ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0060002> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectSomeValuesFrom(obo:IAO_0000039 obo:UO_1000076)))) ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020103> <https://w3id.org/pmd/co/PMD_0020101>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020104> (volume fraction)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020104> "volume fraction"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020104> "a relational quality expressing the volume of a part in relation to the volume of the whole"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020104> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020104> <https://w3id.org/pmd/co/PMD_0020101>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020104> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020104> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020108> (relational property)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020108> "relational property"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020108> "a facetted property that describes the relation between two  (maybe more) bearers."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020108> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0023002> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000004)))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020113> (fluid (object))
 
@@ -1259,6 +1493,14 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020113> "fluid (obj
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020113> "Fluid (object) is an object that consists of some portion of matter which bears an aggregate state that concretizes a liquid or gaseous aggregate state."@en)
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020113> ObjectIntersectionOf(obo:BFO_0000030 ObjectUnionOf(<https://w3id.org/pmd/co/PMD_0020289> <https://w3id.org/pmd/co/PMD_0020290>)))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020113> obo:BFO_0000030)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020115> (aerosol)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020115> "aerosol"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020115> "An aerosol is a disconnected material entity aggregate which:
+1. consists of some portion of matter whose aggregate state quality concretizes gaseous and 
+2. consists of some portion of matter whose aggregate state quality concretises solid or liquid (TODO: express that this portion is also a disconnected material entity aggregate)"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020115> <https://w3id.org/pmd/co/PMD_0000891>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0020128> (thermodynamic system)
 
@@ -1293,8 +1535,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020136> obo:BFO_0000015)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020142> "Energie"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020142> "energy"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020142> "an extensive quality of material entities which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)"@en)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020142> obo:BFO_0000019)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020142> <https://w3id.org/pmd/co/PMD_0020353>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020142> <https://w3id.org/pmd/co/PMD_0023000>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020142> ObjectSomeValuesFrom(obo:RO_0000080 ObjectUnionOf(obo:BFO_0000024 obo:BFO_0000027 obo:BFO_0000030)))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020150> (Volumen)
@@ -1313,7 +1554,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020151> "internal e
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020151> "Innere Energie ist eine universelle umfassende Qualität, die das Potenzial des Trägers zur Arbeit festlegt."@de)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020151> "Internal energy is a universal extensive quality that specifies the bearers potential to do work."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020151> <https://w3id.org/pmd/co/PMD_0020142>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020151> <https://w3id.org/pmd/co/PMD_0023000>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0020152> (component)
 
@@ -1332,12 +1572,21 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> <https://w3id.org/pmd/co/PMD_00
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> <https://w3id.org/pmd/co/PMD_0023004>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020161> ObjectSomeValuesFrom(obo:RO_0000080 ObjectIntersectionOf(obo:CHEBI_60003 ObjectSomeValuesFrom(obo:RO_0000087 <https://w3id.org/pmd/co/PMD_0020227>) ObjectSomeValuesFrom(obo:RO_0002350 <https://w3id.org/pmd/co/PMD_0020229>))))
 
+# Class: <https://w3id.org/pmd/co/PMD_0020162> (Aktivierungsenergie)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020162> "Aktivierungsenergie"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020162> "activation energy"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020162> "Activation energy (E_a) a process attribute characterizing the minimum amount of energy required to initiate a reaction, allowing educts to overcome an energy barrier to transform into products."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020162> <https://w3id.org/pmd/co/PMD_0000008>)
+
 # Class: <https://w3id.org/pmd/co/PMD_0020200> (force)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020200> "force"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020200> "A force is an entity that consists of a reciprocal interaction between two objects and is realized as equal and opposite influences capable of changing motion or causing deformation."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020200> obo:BFO_0000017)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020200> <https://w3id.org/pmd/co/PMD_0020311>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020200> <https://w3id.org/pmd/co/PMD_0020317>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020200> ObjectSomeValuesFrom(obo:BFO_0000054 <https://w3id.org/pmd/co/PMD_0000522>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020200> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000030))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020216> (DEPRECATED order scale value)
@@ -1393,7 +1642,9 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020230> <https://w3id.org/pmd/co/PMD_00
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020245> "transport"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020245> "is a process in which an entity being moved within or accross another entity"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020245> ObjectSomeValuesFrom(obo:RO_0002020 obo:BFO_0000001))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020245> obo:BFO_0000015)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020245> ObjectSomeValuesFrom(obo:RO_0002020 obo:BFO_0000001))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020246> (continous transport)
 
@@ -1418,6 +1669,61 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020259> <https://w3id.org/pmd/co/PMD_00
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020265> "property"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020265> "property is a collection class for entities that are either qualites (represent a state) or realizable entities (represent a behavior)"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020265> obo:BFO_0000020)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020269> (count per mass)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020269> "count per mass"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020269> "a relational quality expressing a count of a part in relation to the the mass of the whole"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020269> ObjectUnionOf(ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectIntersectionOf(ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))))) ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0060002> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectSomeValuesFrom(obo:IAO_0000039 obo:UO_0000067))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020269> <https://w3id.org/pmd/co/PMD_0020101>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020271> (volume per mass)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020271> "volume per mass"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020271> "a relational quality expressing the volume of a part in relation to the mass of the whole"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020271> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020271> <https://w3id.org/pmd/co/PMD_0020101>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020271> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020271> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020272> (count per volume)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020272> "count per volume"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020272> "a relational quality expressing a count of a part in relation to the volume of the whole"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020272> ObjectUnionOf(ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0060002> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectSomeValuesFrom(obo:IAO_0000039 obo:UO_0000061)))) ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020272> <https://w3id.org/pmd/co/PMD_0020101>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020274> (thermodynamic process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020274> "thermodynamic process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020274> "a process that has a participant with thermodynamic properties"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020274> ObjectSomeValuesFrom(obo:RO_0000057 <https://w3id.org/pmd/co/PMD_0020128>))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020274> obo:BFO_0000015)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020274> ObjectSomeValuesFrom(obo:RO_0000057 <https://w3id.org/pmd/co/PMD_0020128>))
+DisjointUnion(<https://w3id.org/pmd/co/PMD_0020274> <https://w3id.org/pmd/co/PMD_0020275> <https://w3id.org/pmd/co/PMD_0020276>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0020275> (isentropic process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020275> "isentropic process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020275> "a process which has a thermodyanamic system as participant where entropy remains constant, ΔS=0"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020275> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020277> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> ObjectIntersectionOf(obo:OBI_0001931 DataHasValue(obo:OBI_0001937 "0"^^xsd:integer))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020275> <https://w3id.org/pmd/co/PMD_0020274>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020275> ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000068> ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080050>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020275> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020277> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> ObjectIntersectionOf(obo:OBI_0001931 DataHasValue(obo:OBI_0001937 "0"^^xsd:integer))))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020276> (dissipative process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020276> "dissipative process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020276> "a process which has a thermodyanamic system as participant where entropy increases, ΔS>0"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020276> <https://w3id.org/pmd/co/PMD_0020274>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020276> ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000068> ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080050>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0020277> (entropy generation rate)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020277> "entropy generation rate"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020277> "average amount of generated entropy over a process duration"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020277> <https://w3id.org/pmd/co/PMD_0025019>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020277> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> <https://w3id.org/pmd/co/PMD_0020274>))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020287> (portion of matter in aggregate state)
 
@@ -1539,26 +1845,26 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020353> <https://w3id.org/pmd/co/PMD_00
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020364> "per count property"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020364> "a quotient with a denominator that has is a count"@en)
-EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020364> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0023001> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931)))))))
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020364> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931))))))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020364> <https://w3id.org/pmd/co/PMD_0023001>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020364> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020364> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931))))))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020365> (per volume property)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020365> "per volume property"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020365> "a quotient where the denominator is a volume"@en)
-EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020365> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020365> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020365> <https://w3id.org/pmd/co/PMD_0023001>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020365> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020365> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020150> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> obo:OBI_0001931))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020365> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020366> (per mass property)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020366> "per mass property"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020366> "a quotient where the denominator is the mass of the bearer"@en)
-EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020366> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))))
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020366> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020366> <https://w3id.org/pmd/co/PMD_0023001>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020366> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020366> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020367> (member count)
 
@@ -1571,9 +1877,9 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectAllValuesFrom(obo:RO_0000
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020369> "per mol property"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020369> "a per count with the count of Avogadro-number"@en)
-EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020369> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0023001> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectHasValue(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020368>)))))))
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0020369> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0023001> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectHasValue(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020368>)))))))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020369> <https://w3id.org/pmd/co/PMD_0020364>)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0020369> ObjectSomeValuesFrom(obo:RO_0002328 ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectHasValue(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020368>))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0020369> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020367> ObjectHasValue(<https://w3id.org/pmd/co/PMD_0000077> <https://w3id.org/pmd/co/PMD_0020368>))))))
 
 # Class: <https://w3id.org/pmd/co/PMD_0020370> (a mol of entites)
 
@@ -1631,6 +1937,20 @@ AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023023> "a 'pr
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0023023> ObjectUnionOf(ObjectSomeValuesFrom(obo:RO_0000052 <https://w3id.org/pmd/co/PMD_0020113>) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> <https://w3id.org/pmd/co/PMD_0020113>)))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0023023> <https://w3id.org/pmd/co/PMD_0023003>)
 
+# Class: <https://w3id.org/pmd/co/PMD_0023026> (spontaneous process)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023026> "spontaneous process"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023026> "a process that occurs due to favorable driving force and overcomming of activatgion energy of the participants"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023026> obo:BFO_0000015)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023026> ObjectIntersectionOf(ObjectSomeValuesFrom(obo:RO_0000057 obo:BFO_0000040) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/co/PMD_0020162>) ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/co/PMD_0023027>)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0023027> (driving force)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023027> "driving force"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0023027> "a process attribute expressed as a potential difference between participants that causes the participants to evolve (by changing their SDCs) towards an equilibrium"@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023027> <https://w3id.org/pmd/co/PMD_0000008>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0023027> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080116>))))))
+
 # Class: <https://w3id.org/pmd/co/PMD_0023035> (aggregated property)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0023035> "aggregated property"@en)
@@ -1661,12 +1981,75 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0023043> <https://w3id.org/pmd/co/PMD_00
 SubClassOf(<https://w3id.org/pmd/co/PMD_0023043> ObjectSomeValuesFrom(obo:RO_0000080 <https://w3id.org/pmd/co/PMD_0000001>))
 DisjointUnion(<https://w3id.org/pmd/co/PMD_0023043> <https://w3id.org/pmd/co/PMD_0000597> <https://w3id.org/pmd/co/PMD_0000896> <https://w3id.org/pmd/co/PMD_0000967>)
 
+# Class: <https://w3id.org/pmd/co/PMD_0025001> (Zusammensetzung)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025001> "Zusammensetzung"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025001> "composition"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025001> "Composition is an intensive quality which defines types and proportions of compounds present in a material entity and is subject of some composition data item."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025001> "Zusammensetzung ist eine intensive Qualität, die Arten und Anteile von Verbindungen definiert, die in einer materiellen Einheit vorhanden sind, und Gegenstand einiger Zusammensetzungsdatenelemente ist."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> obo:BFO_0000019)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> <https://w3id.org/pmd/co/PMD_0020335>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> <https://w3id.org/pmd/co/PMD_0023004>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> ObjectSomeValuesFrom(obo:RO_0000080 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000001> ObjectSomeValuesFrom(obo:BFO_0000051 <https://w3id.org/pmd/co/PMD_0000001>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0025018> (geometric relational quality)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025018> "geometric relational quality"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025018> "geometrische relationale Qualität"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025018> "Geometric relational quality is a relational quality describing the geometric relation between two or more independent continuants."@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025018> "Geometrische Beziehungsqualität ist eine Beziehungsqualität, die die geometrische Beziehung zwischen zwei oder mehr unabhängigen Kontinuen beschreibt."@de)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025018> obo:BFO_0000145)
+
 # Class: <https://w3id.org/pmd/co/PMD_0025019> (rate)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025019> "rate"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025019> "process attribute which describes the change of some quality of some of the participants in a process over time"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025019> <https://w3id.org/pmd/co/PMD_0000008>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025019> ObjectIntersectionOf(ObjectAllValuesFrom(<https://w3id.org/pmd/co/PMD_0020127> obo:BFO_0000019) ObjectAllValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(ObjectUnionOf(obo:BFO_0000004 <https://w3id.org/pmd/co/PMD_0000068>) ObjectSomeValuesFrom(obo:RO_0000086 obo:BFO_0000019)))))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0025036> (area fraction)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025036> "area fraction"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025036> "a relational quality expressing the area of a part in relation to the area of the whole"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0025036> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025036> <https://w3id.org/pmd/co/PMD_0020101>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025036> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025036> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0025037> (length fraction)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025037> "length fraction"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025037> "a relational quality expressing the length of a part in relation to the length of the whole"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0025037> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025037> <https://w3id.org/pmd/co/PMD_0020101>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025037> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025037> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0025039> (area number density)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025039> "area number density"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025039> "a relational quality expressing a count of a part in relation to the area of the whole")
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0025039> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025039> <https://w3id.org/pmd/co/PMD_0020101>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025039> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025039> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0080019>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0025040> (length number density)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025040> "length number density"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025040> "a relational quality expressing a count of a part in relation to the length of the whole"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0025040> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0040001>)))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025040> <https://w3id.org/pmd/co/PMD_0020101>)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025040> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020367>))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025040> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0040001>))))
+
+# Class: <https://w3id.org/pmd/co/PMD_0025997> (concentration value specification)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025997> "concentration value specification"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0025997> "a value specification that contains information about quantitative share of a part relative to a specified whole."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025997> obo:OBI_0001931)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectSomeValuesFrom(obo:OBI_0001927 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025999> ObjectIntersectionOf(obo:BFO_0000040 ObjectSomeValuesFrom(obo:BFO_0000050 obo:BFO_0000040))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectAllValuesFrom(obo:RO_0002350 <https://w3id.org/pmd/co/PMD_0020004>))
 
 # Class: <https://w3id.org/pmd/co/PMD_0040001> (Länge)
 
@@ -1712,6 +2095,12 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0060008> "recipe"@en
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0060008> "A plan specification that outlines the ingredients, proportions, and procedural steps required to prepare a specific product, typically in cooking, manufacturing, or chemical processes."@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0060008> obo:IAO_0000104)
 
+# Class: <https://w3id.org/pmd/co/PMD_0060009> (specification datum)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0060009> "specification datum"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0060009> "A directive information entity that provides information of a setpoint of some value, i.e., it is an intended value."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0060009> obo:IAO_0000033)
+
 # Class: <https://w3id.org/pmd/co/PMD_0080019> (Fläche)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080019> "Fläche"@de)
@@ -1728,13 +2117,25 @@ AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080022> "Elect
 SubClassOf(<https://w3id.org/pmd/co/PMD_0080022> obo:BFO_0000019)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0080022> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020312> ObjectSomeValuesFrom(obo:RO_0000080 ObjectUnionOf(obo:BFO_0000027 obo:BFO_0000030))))
 
-# Class: <https://w3id.org/pmd/co/PMD_0080069> (physisch relative Qualität)
+# Class: <https://w3id.org/pmd/co/PMD_0080050> (entropy)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080069> "physical relational quality"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080069> "physisch relative Qualität"@de)
-AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080069> "Die physische Beziehungsqualität bezieht sich auf Eigenschaften oder Merkmale einer Entität, die von ihrer Beziehung zu anderen Entitäten abhängig sind"@de)
-AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080069> "Physical relational quality pertains to properties or characteristics of an entity dependent on its relation to other entities"@en)
-SubClassOf(<https://w3id.org/pmd/co/PMD_0080069> <https://w3id.org/pmd/co/PMD_0020353>)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080050> "entropy"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080050> "Entropy is a measure of the disorder or randomness of a system — more precisely, the number of microscopic arrangements (microstates) consistent with the system's macroscopic state."@en)
+SubClassOf(<https://w3id.org/pmd/co/PMD_0080050> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020142> ObjectSomeValuesFrom(obo:RO_0000080 <https://w3id.org/pmd/co/PMD_0020128>)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0080069> (DEPRECATED physisch relative Qualität)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080069> "DEPRECATED physical relational quality"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080069> "DEPRECATED physisch relative Qualität"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080069> "DEPRECATED Die physische Beziehungsqualität bezieht sich auf Eigenschaften oder Merkmale einer Entität, die von ihrer Beziehung zu anderen Entitäten abhängig sind"@de)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080069> "DEPRECATED Physical relational quality pertains to properties or characteristics of an entity dependent on its relation to other entities"@en)
+
+# Class: <https://w3id.org/pmd/co/PMD_0080101> (mass concentration)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0080101> "mass concentration"@en)
+AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0080101> "Mass concentration links mass of a mixture component to the total volume in quantitative description, frequently used in solutions"@en)
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0080101> ObjectUnionOf(ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0060002> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0025997> ObjectSomeValuesFrom(obo:IAO_0000039 obo:UO_1000180)))) ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0020101> ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020256> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020133>))) ObjectExactCardinality(1 <https://w3id.org/pmd/co/PMD_0020257> ObjectIntersectionOf(obo:BFO_0000001 ObjectSomeValuesFrom(obo:RO_0000086 <https://w3id.org/pmd/co/PMD_0020150>))))))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0080101> <https://w3id.org/pmd/co/PMD_0020101>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0080116> (potential)
 
@@ -1772,9 +2173,9 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0090016> ObjectSomeValuesFrom(obo:RO_000
 #   Named Individuals
 ############################
 
-# Individual: <http://qudt.org/vocab/unit/PER-MOL> (<http://qudt.org/vocab/unit/PER-MOL>)
+# Individual: <http://qudt.org/vocab/unit/MOL> (<http://qudt.org/vocab/unit/MOL>)
 
-ClassAssertion(<http://qudt.org/schema/qudt/Unit> <http://qudt.org/vocab/unit/PER-MOL>)
+ClassAssertion(<http://qudt.org/schema/qudt/Unit> <http://qudt.org/vocab/unit/MOL>)
 
 # Individual: <https://w3id.org/pmd/co/PMD_0020217> (DEPRECATED short range order)
 
@@ -1809,21 +2210,20 @@ ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PM
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020368> "avogadro number"@en)
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0020368> "The Avogadro number"@en)
 ClassAssertion(obo:OBI_0001931 <https://w3id.org/pmd/co/PMD_0020368>)
-ObjectPropertyAssertion(obo:IAO_0000039 <https://w3id.org/pmd/co/PMD_0020368> <http://qudt.org/vocab/unit/PER-MOL>)
+ObjectPropertyAssertion(obo:IAO_0000039 <https://w3id.org/pmd/co/PMD_0020368> <http://qudt.org/vocab/unit/MOL>)
 DataPropertyAssertion(obo:OBI_0001937 <https://w3id.org/pmd/co/PMD_0020368> "602214086000000000000000"^^xsd:decimal)
 
 
 DisjointClasses(obo:BFO_0000004 obo:BFO_0000020 obo:BFO_0000031)
 DisjointClasses(obo:BFO_0000006 obo:BFO_0000029 obo:BFO_0000140)
 DisjointClasses(obo:BFO_0000008 obo:BFO_0000011 obo:BFO_0000015 obo:BFO_0000035)
+DisjointClasses(obo:COB_0000082 obo:GO_0008150 <https://w3id.org/pmd/co/PMD_0023026>)
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0000553> <https://w3id.org/pmd/co/PMD_0000619> <https://w3id.org/pmd/co/PMD_0020132> <https://w3id.org/pmd/co/PMD_0020133> <https://w3id.org/pmd/co/PMD_0020142> <https://w3id.org/pmd/co/PMD_0020161>)
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0020102> <https://w3id.org/pmd/co/PMD_0020103> <https://w3id.org/pmd/co/PMD_0020104>)
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0020288> <https://w3id.org/pmd/co/PMD_0020289> <https://w3id.org/pmd/co/PMD_0020290> <https://w3id.org/pmd/co/PMD_0020291> <https://w3id.org/pmd/co/PMD_0020292> <https://w3id.org/pmd/co/PMD_0020293> <https://w3id.org/pmd/co/PMD_0020294> <https://w3id.org/pmd/co/PMD_0020295> <https://w3id.org/pmd/co/PMD_0020296>)
 DisjointClasses(<https://w3id.org/pmd/co/PMD_0020364> <https://w3id.org/pmd/co/PMD_0020365> <https://w3id.org/pmd/co/PMD_0020366>)
 SubObjectPropertyOf(ObjectPropertyChain(obo:BFO_0000051 obo:RO_0000057) obo:RO_0000057)
-SubObjectPropertyOf(ObjectPropertyChain(obo:BFO_0000051 <https://w3id.org/pmd/co/PMD_0025998>) <https://w3id.org/pmd/co/PMD_0025998>)
 SubObjectPropertyOf(ObjectPropertyChain(obo:BFO_0000055 obo:RO_0000059) obo:STATO_0000102)
-SubObjectPropertyOf(ObjectPropertyChain(<https://w3id.org/pmd/co/PMD_0025999> obo:BFO_0000050) <https://w3id.org/pmd/co/PMD_0025999>)
 DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000016 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000091 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
 DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000019 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000086 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
 DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000023 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000087 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
