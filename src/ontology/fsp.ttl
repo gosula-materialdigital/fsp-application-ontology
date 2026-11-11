@@ -19,12 +19,12 @@
 @base <https://w3id.org/pmd/fsp.ttl> .
 
 <https://w3id.org/pmd/fsp.ttl> rdf:type owl:Ontology ;
-                                owl:versionIRI <https://w3id.org/pmd/fsp/releases/2026-10-21/fsp.ttl> ;
+                                owl:versionIRI <https://w3id.org/pmd/fsp/releases/2026-11-11/fsp.ttl> ;
                                 dcterms:creator "Divya Gosula" ;
                                 dcterms:description "Application ontology for the flame spray pyrolysis (FSP) process for manufacturing nanoparticles, aligned with the PMD Core Ontology (PMDco)." ;
                                 dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                 dcterms:title "Flame Spray Pyrolysis Ontology" ;
-                                owl:versionInfo "2026-10-21" .
+                                owl:versionInfo "2026-11-11" .
 
 #################################################################
 #    Annotation properties
@@ -120,8 +120,30 @@ obo:BFO_0000055 rdf:type owl:ObjectProperty ;
                 skos:definition "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000062
+obo:BFO_0000062 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000063 ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:domain obo:BFO_0000003 ;
+                rdfs:range obo:BFO_0000003 ;
+                obo:IAO_0000115 "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."@en ;
+                rdfs:label "preceded by"@en ;
+                skos:definition "b preceded by c =Def b precedes c"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000063
+obo:BFO_0000063 rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                rdfs:domain obo:BFO_0000003 ;
+                rdfs:range obo:BFO_0000003 ;
+                obo:IAO_0000115 "x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point."@en ;
+                rdfs:label "precedes"@en ;
+                skos:definition "(Elucidation) precedes is a relation between occurrents o, o' such that if t is the temporal extent of o & t' is the temporal extent of o' then either the last instant of o is before the first instant of o' or the last instant of o is the first instant of o' & neither o nor o' are temporal instants"@en .
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000108
 obo:BFO_0000108 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:BFO_0000157 ;
                 rdfs:domain obo:BFO_0000001 ;
                 rdfs:range obo:BFO_0000008 ;
                 rdfs:label "exists at"@en ;
@@ -147,6 +169,11 @@ obo:BFO_0000132 rdf:type owl:ObjectProperty ;
                 rdfs:range obo:BFO_0000003 ;
                 rdfs:label "occurrent part of"@en ;
                 skos:definition "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000157
+obo:BFO_0000157 rdf:type owl:ObjectProperty ;
+                rdfs:label "during which exists" .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000039
@@ -219,10 +246,19 @@ obo:OBI_0000312 rdf:type owl:ObjectProperty ;
 
 ###  http://purl.obolibrary.org/obo/OBI_0000417
 obo:OBI_0000417 rdf:type owl:ObjectProperty ;
+                owl:inverseOf obo:OBI_0000833 ;
                 rdfs:domain obo:COB_0000035 ;
                 rdfs:range obo:IAO_0000005 ;
                 obo:IAO_0000115 "This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process."@en ;
                 rdfs:label "achieves_planned_objective" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000833
+obo:OBI_0000833 rdf:type owl:ObjectProperty ;
+                rdfs:domain obo:IAO_0000005 ;
+                rdfs:range obo:COB_0000035 ;
+                obo:IAO_0000115 "This relation obtains between an objective specification and a planned process when the criteria specified in the objective specification are met at the end of the planned process."@en ;
+                rdfs:label "objective_achieved_by" .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0001927
@@ -232,6 +268,15 @@ obo:OBI_0001927 rdf:type owl:ObjectProperty ;
                 rdfs:domain obo:OBI_0001933 ;
                 obo:IAO_0000115 "A relation between a value specification and an entity which the specification is about."@en ;
                 rdfs:label "specifies value of" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001938
+obo:OBI_0001938 rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf obo:BFO_0000051 ;
+                rdfs:domain obo:IAO_0000030 ;
+                rdfs:range obo:OBI_0001933 ;
+                obo:IAO_0000115 "A relation between an information content entity and a value specification that specifies its value."@en ;
+                rdfs:label "has value specification" .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000052
@@ -372,6 +417,21 @@ obo:RO_0000092 rdf:type owl:ObjectProperty ;
                rdfs:label "disposition of"@en .
 
 
+###  http://purl.obolibrary.org/obo/RO_0002020
+obo:RO_0002020 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000115 "Holds between p and c when p is a transport process or transporter activity and the outcome of this p is to move c from one location to another." ;
+               rdfs:label "transports" .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002233
+obo:RO_0002233 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000057 ;
+               owl:inverseOf obo:RO_0002352 ;
+               rdfs:domain obo:BFO_0000015 ;
+               obo:IAO_0000115 "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p." ;
+               rdfs:label "has input"@en .
+
+
 ###  http://purl.obolibrary.org/obo/RO_0002234
 obo:RO_0002234 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000057 ;
@@ -403,12 +463,26 @@ obo:RO_0002351 rdf:type owl:ObjectProperty ;
                rdfs:label "has member"@en .
 
 
+###  http://purl.obolibrary.org/obo/RO_0002352
+obo:RO_0002352 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf obo:RO_0000056 ,
+                                  obo:RO_0002328 ;
+               obo:IAO_0000115 "inverse of has input" ;
+               rdfs:label "input of"@en .
+
+
 ###  http://purl.obolibrary.org/obo/RO_0002353
 obo:RO_0002353 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000056 ,
                                   obo:RO_0002328 ;
                obo:IAO_0000115 "inverse of has output" ;
                rdfs:label "output of"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0002503
+obo:RO_0002503 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000115 "q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2" ;
+               rdfs:label "towards" .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0009006
@@ -488,6 +562,22 @@ obo:STATO_0000102 rdf:type owl:ObjectProperty ;
                                       skos:definition "a relation between a process attribute and an SDC of some participant in a process"@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0020256
+<https://w3id.org/pmd/co/PMD_0020256> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf obo:RO_0002328 ;
+                                      rdf:type owl:FunctionalProperty ;
+                                      rdfs:label "has numerator"@en ;
+                                      skos:definition "points to a numerator of a quotient"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020257
+<https://w3id.org/pmd/co/PMD_0020257> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf obo:RO_0002328 ;
+                                      rdf:type owl:FunctionalProperty ;
+                                      rdfs:label "has denominator"@en ;
+                                      skos:definition "points to a denominator of a quotient"@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0025006
 <https://w3id.org/pmd/co/PMD_0025006> rdf:type owl:ObjectProperty ;
                                       rdfs:label "process attribute of"@en ;
@@ -498,25 +588,40 @@ obo:STATO_0000102 rdf:type owl:ObjectProperty ;
 <https://w3id.org/pmd/co/PMD_0025998> rdf:type owl:ObjectProperty ;
                                       owl:inverseOf <https://w3id.org/pmd/co/PMD_0025999> ;
                                       rdfs:domain obo:BFO_0000004 ;
-                                      rdfs:range obo:BFO_0000145 ;
-                                      owl:propertyChainAxiom ( obo:BFO_0000051
-                                                               <https://w3id.org/pmd/co/PMD_0025998>
-                                                             ) ;
-                                      rdfs:label "has relational quality"@en ,
-                                                 "hat relationale Qualität"@de ;
+                                      rdfs:range <https://w3id.org/pmd/co/PMD_0020108> ;
+                                      rdfs:label "has relational property"@en ,
+                                                 "hat relationale Eigenschaft"@de ;
                                       skos:definition "a relation between an independent continuant (the bearer) and a relational quality, in which the quality specifically depends on the bearer for its existence"@en ,
                                                       "eine Beziehung zwischen einem unabhängigen Kontinuum (dem Träger) und einer relationalen Qualität, bei der die Qualität in ihrer Existenz speziell vom Träger abhängt"@de .
 
 
 ###  https://w3id.org/pmd/co/PMD_0025999
 <https://w3id.org/pmd/co/PMD_0025999> rdf:type owl:ObjectProperty ;
-                                      owl:propertyChainAxiom ( <https://w3id.org/pmd/co/PMD_0025999>
-                                                               obo:BFO_0000050
-                                                             ) ;
-                                      rdfs:label "relational quality of"@en ,
-                                                 "relationale Qualität von"@de ;
+                                      rdfs:label "relational property of"@en ,
+                                                 "relationale Eigenschaft von"@de ;
                                       skos:definition "a relation between a relational quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ,
                                                       "eine Beziehung zwischen einer relationalen Qualität und einem unabhängigen Kontinuum (dem Träger), bei der die Existenz der Qualität speziell vom Träger abhängt"@de .
+
+
+###  https://w3id.org/pmd/co/PMD_0060001
+<https://w3id.org/pmd/co/PMD_0060001> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf obo:IAO_0000136 ;
+                                      owl:inverseOf <https://w3id.org/pmd/co/PMD_0060002> ;
+                                      rdfs:domain obo:IAO_0000030 ;
+                                      rdfs:range [ rdf:type owl:Class ;
+                                                   owl:unionOf ( obo:BFO_0000020
+                                                                 <https://w3id.org/pmd/co/PMD_0000008>
+                                                               )
+                                                 ] ;
+                                      rdfs:label "represents value of"@en ;
+                                      skos:definition "A relation between an information content entity and an specifically dependent continuant or process attribute which the representation is about." .
+
+
+###  https://w3id.org/pmd/co/PMD_0060002
+<https://w3id.org/pmd/co/PMD_0060002> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <https://w3id.org/pmd/co/PMD_0000004> ;
+                                      rdfs:label "represented by value"@en ;
+                                      skos:definition "A relation between a specifically dependent continuant or process attribute and an information content entity which is about." .
 
 
 #################################################################
@@ -527,6 +632,7 @@ obo:STATO_0000102 rdf:type owl:ObjectProperty ;
 obo:OBI_0001937 rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf obo:OBI_0002135 ;
                 rdfs:domain obo:OBI_0001933 ;
+                rdfs:range owl:real ;
                 obo:IAO_0000115 "A relation between a value specification and a number that quantifies it."@en ;
                 rdfs:label "has specified numeric value" .
 
@@ -829,6 +935,24 @@ obo:COB_0000082 rdf:type owl:Class ;
                 rdfs:label "planned process"@en .
 
 
+###  http://purl.obolibrary.org/obo/COB_0000110
+obo:COB_0000110 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000035 ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom obo:BFO_0000040
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000299 ;
+                                                         owl:someValuesFrom obo:BFO_0000040
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                obo:IAO_0000115 "A completely executed planned process that intends to output material entities from input material entities"@en ;
+                rdfs:label "material processing"@en .
+
+
 ###  http://purl.obolibrary.org/obo/GO_0008150
 obo:GO_0008150 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000015 ,
@@ -1068,6 +1192,92 @@ obo:OBI_0001933 rdf:type owl:Class ;
                 rdfs:label "value specification" .
 
 
+###  http://purl.obolibrary.org/obo/OBI_0302885
+obo:OBI_0302885 rdf:type owl:Class ;
+                rdfs:subClassOf obo:OBI_0600014 ;
+                obo:IAO_0000115 "filtration is a process which separates components suspended in a fluid based on granularity properties relying on a filter device"@en ;
+                rdfs:label "filtration"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0600014
+obo:OBI_0600014 rdf:type owl:Class ;
+                rdfs:subClassOf obo:COB_0000110 ;
+                obo:IAO_0000115 "a material processing in which components of an input material become segregated in space"@en ;
+                rdfs:label "material component separation"@en .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000000
+obo:UO_0000000 rdf:type owl:Class ;
+               rdfs:subClassOf obo:IAO_0000003 ;
+               rdfs:label "unit" .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000061
+obo:UO_0000061 rdf:type owl:Class ;
+               rdfs:subClassOf obo:UO_0000000 ;
+               rdfs:label "unit of molarity" .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000067
+obo:UO_0000067 rdf:type owl:Class ;
+               rdfs:subClassOf obo:UO_0000000 ;
+               rdfs:label "unit of molality" .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000076
+obo:UO_0000076 rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:oneOf ( obo:UO_0000076
+                                               )
+                                   ] ;
+               rdfs:subClassOf obo:UO_1000076 .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000163
+obo:UO_0000163 rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:oneOf ( obo:UO_0000163
+                                               )
+                                   ] ;
+               rdfs:subClassOf obo:UO_1000163 .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000164
+obo:UO_0000164 rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:oneOf ( obo:UO_0000164
+                                               )
+                                   ] ;
+               rdfs:subClassOf obo:UO_0000000 .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000169
+obo:UO_0000169 rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:oneOf ( obo:UO_0000169
+                                               )
+                                   ] ;
+               rdfs:subClassOf obo:UO_0000000 .
+
+
+###  http://purl.obolibrary.org/obo/UO_1000076
+obo:UO_1000076 rdf:type owl:Class ;
+               rdfs:subClassOf obo:UO_0000000 ;
+               rdfs:label "mole fraction based unit" .
+
+
+###  http://purl.obolibrary.org/obo/UO_1000163
+obo:UO_1000163 rdf:type owl:Class ;
+               rdfs:subClassOf obo:UO_0000000 ;
+               rdfs:label "mass percentage based unit" .
+
+
+###  http://purl.obolibrary.org/obo/UO_1000180
+obo:UO_1000180 rdf:type owl:Class ;
+               rdfs:subClassOf obo:UO_0000000 ;
+               rdfs:label "mass per unit volume based unit" .
+
+
 ###  http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
                                    rdfs:label "Unit" ;
@@ -1202,6 +1412,13 @@ More formally, the value of a physical quantity Q with respect to a unit (U) is 
                                       skos:definition "A natural process that operates within the Earth system to transform, transport, or deform Earth materials, thereby changing Earth structures and landforms"@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0000141
+<https://w3id.org/pmd/co/PMD_0000141> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0025018> ;
+                                      rdfs:label "distance"@en ;
+                                      skos:definition "a relational quality that represents the magnitude of length of a path connecting two independent continuants"@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000520
 <https://w3id.org/pmd/co/PMD_0000520> rdf:type owl:Class ;
                                       rdfs:subClassOf obo:BFO_0000015 ;
@@ -1209,6 +1426,15 @@ More formally, the value of a physical quantity Q with respect to a unit (U) is 
                                                  "heat flow"@en ;
                                       skos:definition "is a process in which transfer of thermal energy between or within material entities occurs"@en ,
                                                       "ist ein Prozess, bei dem Wärmeenergie zwischen oder innerhalb materieller Einheiten übertragen wird"@de .
+
+
+###  https://w3id.org/pmd/co/PMD_0000522
+<https://w3id.org/pmd/co/PMD_0000522> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "mechanical process"@en ,
+                                                 "mechanischer Prozess"@de ;
+                                      skos:definition "is a process in which forces, moments, or imposed displacements to objects or object aggregates occur and/or the equivalent (stresses, strains) to materials or portions of matter"@en ,
+                                                      "ist ein Prozess, bei dem Kräfte, Momente oder auferlegte Verschiebungen auf Objekte oder Objektaggregate und/oder das Äquivalent (Spannungen, Dehnungen) auf Materialien oder Teile der Materie auftreten"@de .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000553
@@ -1419,6 +1645,15 @@ A manufacturing process is always a transformative process."""@en ,
                                       skos:definition "material derived from natural biological sources or processes"@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0000869
+<https://w3id.org/pmd/co/PMD_0000869> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      rdfs:label "chemical reaction"@en ,
+                                                 "chemische Reaktion"@de ;
+                                      skos:definition "Das Auftreten einer chemischen Reaktion ist der Prozess, bei dem Substanzen interagieren, um neue chemische Verbindungen zu bilden oder ihre Molekülstruktur zu verändern."@de ,
+                                                      "The occurrence of (a) chemical reaction is the process in which substances interact to form new chemical compounds or alter their molecular structure."@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000877
 <https://w3id.org/pmd/co/PMD_0000877> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020265> ;
@@ -1465,6 +1700,13 @@ A manufacturing process is always a transformative process."""@en ,
                                       rdfs:subClassOf obo:BFO_0000027 ;
                                       rdfs:label "disconnected material entity aggregate"@en ;
                                       skos:definition "An object aggregate that is a mereological sum of scattered (i.e. spatially separated) material entities, which do not adhere to one another through chemical bonds or physical junctions but, instead, relate to one another merely on grounds of metric proximity. The material entities are separated from one another through space or through other material entities that do not belong to the group."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000893
+<https://w3id.org/pmd/co/PMD_0000893> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000891> ;
+                                      rdfs:label "powder"@en ;
+                                      skos:definition "A powder is a dry, solid disconnected material entity aggregate composed of many very fine particles. These particles can flow freely when shaken or tilted."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000896
@@ -1585,43 +1827,226 @@ A manufacturing process is always a transformative process."""@en ,
                                       skos:definition "The chemical process of reacting monomers, oligomers, or reactive precursors together to form longer macromolecular chains or three-dimensional networks"@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0020004
+<https://w3id.org/pmd/co/PMD_0020004> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ owl:intersectionOf ( obo:IAO_0000027
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty obo:IAO_0000136 ;
+                                                                               owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0025001>
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0002351 ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0025997>
+                                                      ] ;
+                                      rdfs:label "composition data item"@en ;
+                                      skos:definition "Bei einem Zusammensetzungsdatenelement handelt es sich um eine Informationsinhaltseinheit, die sich mit der Zusammensetzung einer materiellen Einheit befasst. Es verfügt über Bruchwertspezifikationen für Mitglieder, die Werte von Anteilen von Verbindungen angeben, die Teile der materiellen Einheit sind."@de ,
+                                                      "Composition data entity is an information content entity that is about composition of a material enity. It has members fraction value specifications which specifiy values of propotions of compounds, which are parts of the material enity."@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0020101
 <https://w3id.org/pmd/co/PMD_0020101> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020353> ,
+                                      owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty obo:RO_0002503 ;
+                                                                                   owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000004
+                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                               owl:onProperty obo:BFO_0000050 ;
+                                                                                                                               owl:someValuesFrom obo:BFO_0000004
+                                                                                                                             ]
+                                                                                                                           ) ;
+                                                                                                        rdf:type owl:Class
+                                                                                                      ]
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0025999> ;
+                                                                                   owl:someValuesFrom obo:BFO_0000004
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020108> ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty obo:RO_0002328 ;
-                                                        owl:someValuesFrom obo:BFO_0000001
+                                                        owl:onProperty obo:RO_0002503 ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000004
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:BFO_0000050 ;
+                                                                                                    owl:someValuesFrom obo:BFO_0000004
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
                                                       ] ;
-                                      rdfs:label "Anteil"@de ,
-                                                 "proportion"@en ;
-                                      skos:definition "A proportion is a relational quality between two entities (the whole and the part) which quantifies the relation between the whole and its part."@en .
+                                      rdfs:label "fraction property"@en ;
+                                      skos:definition "a property describing a quantitative relation between two entites where one entity represents the whole and the other entity represents a part of the whole"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020102
 <https://w3id.org/pmd/co/PMD_0020102> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0080069> ;
-                                      rdfs:label "Massenverhältnis"@de ,
-                                                 "mass ratio"@en ;
-                                      skos:definition "Das Massenverhältnis bezeichnet eine relationale Qualität, die einen Massenwert im Verhältnis zu einem anderen ausdrückt und typischerweise eine dimensionslose Zahl ergibt"@de ,
-                                                      "Mass ratio denotes a relational quality expressing one mass value relative to another, typically producing a dimensionless number"@en .
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:unionOf ( [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0060002> ;
+                                                                                                   owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0025997>
+                                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                                               owl:onProperty obo:IAO_0000039 ;
+                                                                                                                                               owl:someValuesFrom obo:UO_1000163
+                                                                                                                                             ]
+                                                                                                                                           ) ;
+                                                                                                                        rdf:type owl:Class
+                                                                                                                      ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                          [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020133>
+                                                                                                                                      ]
+                                                                                                                                    ) ;
+                                                                                                                 rdf:type owl:Class
+                                                                                                               ]
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020133>
+                                                                                                                                      ]
+                                                                                                                                    ) ;
+                                                                                                                 rdf:type owl:Class
+                                                                                                               ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                        )
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
+                                      rdfs:label "mass fraction"@en ;
+                                      skos:definition "a relational quality expressing a mass of a part in relation to the the mass of the whole"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020103
 <https://w3id.org/pmd/co/PMD_0020103> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0080069> ;
-                                      rdfs:label "Molverhältnis"@de ,
-                                                 "molar ratio"@en ;
-                                      skos:definition "Der Molanteil ist der Anteil, der die Anzahl der Einheiten des Teils im Verhältnis zur Anzahl der Einheiten des Ganzen quantifiziert."@de ,
-                                                      "Molar proportion is the proportion which quantifies the entities count of the part in relation to the entities count of the whole."@en .
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:unionOf ( [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0060002> ;
+                                                                                                   owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0025997>
+                                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                                               owl:onProperty obo:IAO_0000039 ;
+                                                                                                                                               owl:someValuesFrom obo:UO_1000076
+                                                                                                                                             ]
+                                                                                                                                           ) ;
+                                                                                                                        rdf:type owl:Class
+                                                                                                                      ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                          [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020367>
+                                                                                                                                      ]
+                                                                                                                                    ) ;
+                                                                                                                 rdf:type owl:Class
+                                                                                                               ]
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020367>
+                                                                                                                                      ]
+                                                                                                                                    ) ;
+                                                                                                                 rdf:type owl:Class
+                                                                                                               ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                        )
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
+                                      rdfs:label "molar fraction"@en ;
+                                      skos:definition "Molar fraction is the fraction which quantifies the entities count of the part in relation to the entities count of the whole."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020104
 <https://w3id.org/pmd/co/PMD_0020104> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0080069> ;
-                                      rdfs:label "Volumenverhältnis"@de ,
-                                                 "volume ratio"@en ;
-                                      skos:definition "Volume ratio represents a relational quality expressing one volume value relative to another, typically resulting in a dimensionless number"@en ,
-                                                      "Volumenverhältnis stellt eine relationale Qualität dar, die einen Volumenwert im Verhältnis zu einem anderen ausdrückt, typischerweise resultierend in einer dimensionslosen Zahl"@de .
+                                      owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020150>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020150>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ,
+                                                      <https://w3id.org/pmd/co/PMD_0020365> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020150>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "volume fraction"@en ;
+                                      skos:definition "a relational quality expressing the volume of a part in relation to the volume of the whole"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020108
+<https://w3id.org/pmd/co/PMD_0020108> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0023002>
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/pmd/co/PMD_0025999> ;
+                                                                               owl:someValuesFrom obo:BFO_0000004
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                      rdfs:label "relational property"@en ;
+                                      skos:definition "a facetted property that describes the relation between two  (maybe more) bearers."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020113
@@ -1638,6 +2063,15 @@ A manufacturing process is always a transformative process."""@en ,
                                       rdfs:subClassOf obo:BFO_0000030 ;
                                       rdfs:label "fluid (object)"@en ;
                                       skos:definition "Fluid (object) is an object that consists of some portion of matter which bears an aggregate state that concretizes a liquid or gaseous aggregate state."@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020115
+<https://w3id.org/pmd/co/PMD_0020115> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000891> ;
+                                      rdfs:label "aerosol"@en ;
+                                      skos:definition """An aerosol is a disconnected material entity aggregate which:
+1. consists of some portion of matter whose aggregate state quality concretizes gaseous and 
+2. consists of some portion of matter whose aggregate state quality concretises solid or liquid (TODO: express that this portion is also a disconnected material entity aggregate)"""@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020128
@@ -1706,8 +2140,7 @@ A manufacturing process is always a transformative process."""@en ,
 
 ###  https://w3id.org/pmd/co/PMD_0020142
 <https://w3id.org/pmd/co/PMD_0020142> rdf:type owl:Class ;
-                                      rdfs:subClassOf obo:BFO_0000019 ,
-                                                      <https://w3id.org/pmd/co/PMD_0020353> ,
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0023000> ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty obo:RO_0000080 ;
                                                         owl:someValuesFrom [ rdf:type owl:Class ;
@@ -1734,8 +2167,7 @@ A manufacturing process is always a transformative process."""@en ,
 
 ###  https://w3id.org/pmd/co/PMD_0020151
 <https://w3id.org/pmd/co/PMD_0020151> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020142> ,
-                                                      <https://w3id.org/pmd/co/PMD_0023000> ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020142> ;
                                       rdfs:label "innere Energie"@de ,
                                                  "internal energy"@en ;
                                       skos:definition "Innere Energie ist eine universelle umfassende Qualität, die das Potenzial des Trägers zur Arbeit festlegt."@de ,
@@ -1775,10 +2207,23 @@ A manufacturing process is always a transformative process."""@en ,
                                                       "Thermodynamische Aktivität ist eine Beziehungsqualität, die zwischen einer chemischen Spezies und einer nicht idealen Lösung innewohnt und die effektive Konzentration der Spezies darstellt, die für Partikelwechselwirkungen verantwortlich ist."@de .
 
 
+###  https://w3id.org/pmd/co/PMD_0020162
+<https://w3id.org/pmd/co/PMD_0020162> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                      rdfs:label "Aktivierungsenergie"@de ,
+                                                 "activation energy"@en ;
+                                      skos:definition "Activation energy (E_a) a process attribute characterizing the minimum amount of energy required to initiate a reaction, allowing educts to overcome an energy barrier to transform into products."@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0020200
 <https://w3id.org/pmd/co/PMD_0020200> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020311> ,
+                                      rdfs:subClassOf obo:BFO_0000017 ,
+                                                      <https://w3id.org/pmd/co/PMD_0020311> ,
                                                       <https://w3id.org/pmd/co/PMD_0020317> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:BFO_0000054 ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000522>
+                                                      ] ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025999> ;
                                                         owl:someValuesFrom obo:BFO_0000030
@@ -1916,7 +2361,15 @@ A manufacturing process is always a transformative process."""@en ,
 
 ###  https://w3id.org/pmd/co/PMD_0020245
 <https://w3id.org/pmd/co/PMD_0020245> rdf:type owl:Class ;
-                                      rdfs:subClassOf obo:BFO_0000015 ;
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0002020 ;
+                                                            owl:someValuesFrom obo:BFO_0000001
+                                                          ] ;
+                                      rdfs:subClassOf obo:BFO_0000015 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0002020 ;
+                                                        owl:someValuesFrom obo:BFO_0000001
+                                                      ] ;
                                       rdfs:label "transport"@en ;
                                       skos:definition "is a process in which an entity being moved within or accross another entity"@en .
 
@@ -1947,6 +2400,263 @@ A manufacturing process is always a transformative process."""@en ,
                                       rdfs:subClassOf obo:BFO_0000020 ;
                                       rdfs:label "property"@en ;
                                       skos:definition "property is a collection class for entities that are either qualites (represent a state) or realizable entities (represent a behavior)"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020269
+<https://w3id.org/pmd/co/PMD_0020269> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:unionOf ( [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                          owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                                                               owl:onProperty obo:RO_0000086 ;
+                                                                                                                                                               owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020367>
+                                                                                                                                                             ]
+                                                                                                                                                           ) ;
+                                                                                                                                        rdf:type owl:Class
+                                                                                                                                      ]
+                                                                                                                        ]
+                                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                                          owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                          owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                                                               owl:onProperty obo:RO_0000086 ;
+                                                                                                                                                               owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020133>
+                                                                                                                                                             ]
+                                                                                                                                                           ) ;
+                                                                                                                                        rdf:type owl:Class
+                                                                                                                                      ]
+                                                                                                                        ]
+                                                                                                                      ) ;
+                                                                                                   rdf:type owl:Class
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                          [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0060002> ;
+                                                                                                   owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0025997>
+                                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                                               owl:onProperty obo:IAO_0000039 ;
+                                                                                                                                               owl:someValuesFrom obo:UO_0000067
+                                                                                                                                             ]
+                                                                                                                                           ) ;
+                                                                                                                        rdf:type owl:Class
+                                                                                                                      ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                        )
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
+                                      rdfs:label "count per mass"@en ;
+                                      skos:definition "a relational quality expressing a count of a part in relation to the the mass of the whole"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020271
+<https://w3id.org/pmd/co/PMD_0020271> rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020150>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020133>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ,
+                                                      <https://w3id.org/pmd/co/PMD_0020366> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020150>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "volume per mass"@en ;
+                                      skos:definition "a relational quality expressing the volume of a part in relation to the mass of the whole"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020272
+<https://w3id.org/pmd/co/PMD_0020272> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:unionOf ( [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0060002> ;
+                                                                                                   owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0025997>
+                                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                                               owl:onProperty obo:IAO_0000039 ;
+                                                                                                                                               owl:someValuesFrom obo:UO_0000061
+                                                                                                                                             ]
+                                                                                                                                           ) ;
+                                                                                                                        rdf:type owl:Class
+                                                                                                                      ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                          [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020367>
+                                                                                                                                      ]
+                                                                                                                                    ) ;
+                                                                                                                 rdf:type owl:Class
+                                                                                                               ]
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020150>
+                                                                                                                                      ]
+                                                                                                                                    ) ;
+                                                                                                                 rdf:type owl:Class
+                                                                                                               ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                        )
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
+                                      rdfs:label "count per volume"@en ;
+                                      skos:definition "a relational quality expressing a count of a part in relation to the volume of the whole"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020274
+<https://w3id.org/pmd/co/PMD_0020274> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0000057 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020128>
+                                                          ] ;
+                                      rdfs:subClassOf obo:BFO_0000015 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0000057 ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020128>
+                                                      ] ;
+                                      owl:disjointUnionOf ( <https://w3id.org/pmd/co/PMD_0020275>
+                                                            <https://w3id.org/pmd/co/PMD_0020276>
+                                                          ) ;
+                                      rdfs:label "thermodynamic process"@en ;
+                                      skos:definition "a process that has a participant with thermodynamic properties"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020275
+<https://w3id.org/pmd/co/PMD_0020275> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                            owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020277>
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:OBI_0001931
+                                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                                    owl:onProperty obo:OBI_0001937 ;
+                                                                                                                                                    owl:hasValue 0
+                                                                                                                                                  ]
+                                                                                                                                                ) ;
+                                                                                                                             rdf:type owl:Class
+                                                                                                                           ]
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020274> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0000057 ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000068>
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080050>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020277>
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                                                                    owl:someValuesFrom [ owl:intersectionOf ( obo:OBI_0001931
+                                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                                owl:onProperty obo:OBI_0001937 ;
+                                                                                                                                                owl:hasValue 0
+                                                                                                                                              ]
+                                                                                                                                            ) ;
+                                                                                                                         rdf:type owl:Class
+                                                                                                                       ]
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "isentropic process"@en ;
+                                      skos:definition "a process which has a thermodyanamic system as participant where entropy remains constant, ΔS=0"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020276
+<https://w3id.org/pmd/co/PMD_0020276> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020274> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0000057 ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000068>
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080050>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "dissipative process"@en ;
+                                      skos:definition "a process which has a thermodyanamic system as participant where entropy increases, ΔS>0"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020277
+<https://w3id.org/pmd/co/PMD_0020277> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0025019> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020274>
+                                                      ] ;
+                                      rdfs:label "entropy generation rate"@en ;
+                                      skos:definition "average amount of generated entropy over a process duration"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020287
@@ -2177,31 +2887,27 @@ A manufacturing process is always a transformative process."""@en ,
 
 ###  https://w3id.org/pmd/co/PMD_0020364
 <https://w3id.org/pmd/co/PMD_0020364> rdf:type owl:Class ;
-                                      owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0023001>
-                                                                                 [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty obo:RO_0002328 ;
-                                                                                   owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
-                                                                                                                             [ rdf:type owl:Restriction ;
-                                                                                                                               owl:onProperty obo:RO_0000086 ;
-                                                                                                                               owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020367>
-                                                                                                                                                                         [ rdf:type owl:Restriction ;
-                                                                                                                                                                           owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
-                                                                                                                                                                           owl:someValuesFrom obo:OBI_0001931
-                                                                                                                                                                         ]
-                                                                                                                                                                       ) ;
-                                                                                                                                                    rdf:type owl:Class
+                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                            owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                        owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020367>
+                                                                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                                                                    owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                                                                                                                    owl:someValuesFrom obo:OBI_0001931
                                                                                                                                                   ]
-                                                                                                                             ]
-                                                                                                                           ) ;
-                                                                                                        rdf:type owl:Class
+                                                                                                                                                ) ;
+                                                                                                                             rdf:type owl:Class
+                                                                                                                           ]
                                                                                                       ]
-                                                                                 ]
-                                                                               ) ;
-                                                            rdf:type owl:Class
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
                                                           ] ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0023001> ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty obo:RO_0002328 ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
                                                         owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
                                                                                                   [ rdf:type owl:Restriction ;
                                                                                                     owl:onProperty obo:RO_0000086 ;
@@ -2225,7 +2931,7 @@ A manufacturing process is always a transformative process."""@en ,
 ###  https://w3id.org/pmd/co/PMD_0020365
 <https://w3id.org/pmd/co/PMD_0020365> rdf:type owl:Class ;
                                       owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                            owl:onProperty obo:RO_0002328 ;
+                                                            owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
                                                             owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
                                                                                                       [ rdf:type owl:Restriction ;
                                                                                                         owl:onProperty obo:RO_0000086 ;
@@ -2238,21 +2944,21 @@ A manufacturing process is always a transformative process."""@en ,
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0023001> ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty obo:RO_0002328 ;
-                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                        owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020150>
                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty obo:RO_0000086 ;
-                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020150>
+                                                                                                    owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                                                                    owl:someValuesFrom obo:OBI_0001931
                                                                                                   ]
                                                                                                 ) ;
                                                                              rdf:type owl:Class
                                                                            ]
                                                       ] ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty obo:RO_0002328 ;
-                                                        owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020150>
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
-                                                                                                    owl:someValuesFrom obo:OBI_0001931
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020150>
                                                                                                   ]
                                                                                                 ) ;
                                                                              rdf:type owl:Class
@@ -2265,7 +2971,7 @@ A manufacturing process is always a transformative process."""@en ,
 ###  https://w3id.org/pmd/co/PMD_0020366
 <https://w3id.org/pmd/co/PMD_0020366> rdf:type owl:Class ;
                                       owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                            owl:onProperty obo:RO_0002328 ;
+                                                            owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
                                                             owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
                                                                                                       [ rdf:type owl:Restriction ;
                                                                                                         owl:onProperty obo:RO_0000086 ;
@@ -2277,7 +2983,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                           ] ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0023001> ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty obo:RO_0002328 ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
                                                         owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
                                                                                                   [ rdf:type owl:Restriction ;
                                                                                                     owl:onProperty obo:RO_0000086 ;
@@ -2306,7 +3012,7 @@ A manufacturing process is always a transformative process."""@en ,
 <https://w3id.org/pmd/co/PMD_0020369> rdf:type owl:Class ;
                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0023001>
                                                                                  [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty obo:RO_0002328 ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
                                                                                    owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
                                                                                                                              [ rdf:type owl:Restriction ;
                                                                                                                                owl:onProperty obo:RO_0000086 ;
@@ -2328,7 +3034,7 @@ A manufacturing process is always a transformative process."""@en ,
                                                           ] ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020364> ,
                                                       [ rdf:type owl:Restriction ;
-                                                        owl:onProperty obo:RO_0002328 ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
                                                         owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
                                                                                                   [ rdf:type owl:Restriction ;
                                                                                                     owl:onProperty obo:RO_0000086 ;
@@ -2473,6 +3179,53 @@ A manufacturing process is always a transformative process."""@en ,
                                       skos:definition "a 'property by bearer' that indicates that its bearer is a fluid"@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0023026
+<https://w3id.org/pmd/co/PMD_0023026> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000015 ,
+                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty obo:RO_0000057 ;
+                                                                               owl:someValuesFrom obo:BFO_0000040
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                                               owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020162>
+                                                                             ]
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                                               owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0023027>
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                      rdfs:label "spontaneous process"@en ;
+                                      skos:definition "a process that occurs due to favorable driving force and overcomming of activatgion energy of the participants"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0023027
+<https://w3id.org/pmd/co/PMD_0023027> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000015
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000057 ;
+                                                                                                    owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                                owl:onProperty obo:RO_0000086 ;
+                                                                                                                                                owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080116>
+                                                                                                                                              ]
+                                                                                                                                            ) ;
+                                                                                                                         rdf:type owl:Class
+                                                                                                                       ]
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "driving force"@en ;
+                                      skos:definition "a process attribute expressed as a potential difference between participants that causes the participants to evolve (by changing their SDCs) towards an equilibrium"@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0023035
 <https://w3id.org/pmd/co/PMD_0023035> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0023002> ;
@@ -2593,6 +3346,37 @@ A manufacturing process is always a transformative process."""@en ,
                                       skos:definition "a quality that is quality of every portion of matter"@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0025001
+<https://w3id.org/pmd/co/PMD_0025001> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000019 ,
+                                                      <https://w3id.org/pmd/co/PMD_0020335> ,
+                                                      <https://w3id.org/pmd/co/PMD_0023004> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0000080 ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000001>
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:BFO_0000051 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000001>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "Zusammensetzung"@de ,
+                                                 "composition"@en ;
+                                      skos:definition "Composition is an intensive quality which defines types and proportions of compounds present in a material entity and is subject of some composition data item."@en ,
+                                                      "Zusammensetzung ist eine intensive Qualität, die Arten und Anteile von Verbindungen definiert, die in einer materiellen Einheit vorhanden sind, und Gegenstand einiger Zusammensetzungsdatenelemente ist."@de .
+
+
+###  https://w3id.org/pmd/co/PMD_0025018
+<https://w3id.org/pmd/co/PMD_0025018> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000145 ;
+                                      rdfs:label "geometric relational quality"@en ,
+                                                 "geometrische relationale Qualität"@de ;
+                                      skos:definition "Geometric relational quality is a relational quality describing the geometric relation between two or more independent continuants."@en ,
+                                                      "Geometrische Beziehungsqualität ist eine Beziehungsqualität, die die geometrische Beziehung zwischen zwei oder mehr unabhängigen Kontinuen beschreibt."@de .
+
+
 ###  https://w3id.org/pmd/co/PMD_0025019
 <https://w3id.org/pmd/co/PMD_0025019> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ,
@@ -2627,6 +3411,263 @@ A manufacturing process is always a transformative process."""@en ,
                                                       ] ;
                                       rdfs:label "rate"@en ;
                                       skos:definition "process attribute which describes the change of some quality of some of the participants in a process over time"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025036
+<https://w3id.org/pmd/co/PMD_0025036> rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "area fraction"@en ;
+                                      skos:definition "a relational quality expressing the area of a part in relation to the area of the whole"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025037
+<https://w3id.org/pmd/co/PMD_0025037> rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "length fraction"@en ;
+                                      skos:definition "a relational quality expressing the length of a part in relation to the length of the whole"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025039
+<https://w3id.org/pmd/co/PMD_0025039> rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020367>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020367>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0080019>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "area number density"@en ;
+                                      skos:definition "a relational quality expressing a count of a part in relation to the area of the whole" .
+
+
+###  https://w3id.org/pmd/co/PMD_0025040
+<https://w3id.org/pmd/co/PMD_0025040> rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020367>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0040001>
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020367>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty obo:RO_0000086 ;
+                                                                                                    owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0040001>
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ;
+                                      rdfs:label "length number density"@en ;
+                                      skos:definition "a relational quality expressing a count of a part in relation to the length of the whole"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0025997
+<https://w3id.org/pmd/co/PMD_0025997> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:OBI_0001931 ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:OBI_0001927 ;
+                                                        owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty <https://w3id.org/pmd/co/PMD_0025999> ;
+                                                                                                    owl:someValuesFrom [ owl:intersectionOf ( obo:BFO_0000040
+                                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                                owl:onProperty obo:BFO_0000050 ;
+                                                                                                                                                owl:someValuesFrom obo:BFO_0000040
+                                                                                                                                              ]
+                                                                                                                                            ) ;
+                                                                                                                         rdf:type owl:Class
+                                                                                                                       ]
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ]
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty obo:RO_0002350 ;
+                                                        owl:allValuesFrom <https://w3id.org/pmd/co/PMD_0020004>
+                                                      ] ;
+                                      rdfs:label "concentration value specification"@en ;
+                                      skos:definition "a value specification that contains information about quantitative share of a part relative to a specified whole."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0040001
@@ -2713,6 +3754,13 @@ A manufacturing process is always a transformative process."""@en ,
                                       skos:definition "A plan specification that outlines the ingredients, proportions, and procedural steps required to prepare a specific product, typically in cooking, manufacturing, or chemical processes."@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0060009
+<https://w3id.org/pmd/co/PMD_0060009> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:IAO_0000033 ;
+                                      rdfs:label "specification datum"@en ;
+                                      skos:definition "A directive information entity that provides information of a setpoint of some value, i.e., it is an intended value."@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0080019
 <https://w3id.org/pmd/co/PMD_0080019> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020132> ;
@@ -2742,13 +3790,79 @@ A manufacturing process is always a transformative process."""@en ,
                                       skos:definition "Electric charge refers to the physical property of matter causing it to experience a force when placed in an electromagnetic field"@en .
 
 
+###  https://w3id.org/pmd/co/PMD_0080050
+<https://w3id.org/pmd/co/PMD_0080050> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020142>
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty obo:RO_0000080 ;
+                                                                               owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020128>
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                      rdfs:label "entropy"@en ;
+                                      skos:definition "Entropy is a measure of the disorder or randomness of a system — more precisely, the number of microscopic arrangements (microstates) consistent with the system's macroscopic state."@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0080069
 <https://w3id.org/pmd/co/PMD_0080069> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020353> ;
-                                      rdfs:label "physical relational quality"@en ,
-                                                 "physisch relative Qualität"@de ;
-                                      skos:definition "Die physische Beziehungsqualität bezieht sich auf Eigenschaften oder Merkmale einer Entität, die von ihrer Beziehung zu anderen Entitäten abhängig sind"@de ,
-                                                      "Physical relational quality pertains to properties or characteristics of an entity dependent on its relation to other entities"@en .
+                                      rdfs:label "DEPRECATED physical relational quality"@en ,
+                                                 "DEPRECATED physisch relative Qualität"@de ;
+                                      skos:definition "DEPRECATED Die physische Beziehungsqualität bezieht sich auf Eigenschaften oder Merkmale einer Entität, die von ihrer Beziehung zu anderen Entitäten abhängig sind"@de ,
+                                                      "DEPRECATED Physical relational quality pertains to properties or characteristics of an entity dependent on its relation to other entities"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0080101
+<https://w3id.org/pmd/co/PMD_0080101> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:unionOf ( [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0060002> ;
+                                                                                                   owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0025997>
+                                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                                               owl:onProperty obo:IAO_0000039 ;
+                                                                                                                                               owl:someValuesFrom obo:UO_1000180
+                                                                                                                                             ]
+                                                                                                                                           ) ;
+                                                                                                                        rdf:type owl:Class
+                                                                                                                      ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                          [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0020101>
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020256> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020133>
+                                                                                                                                      ]
+                                                                                                                                    ) ;
+                                                                                                                 rdf:type owl:Class
+                                                                                                               ]
+                                                                                                 ]
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty <https://w3id.org/pmd/co/PMD_0020257> ;
+                                                                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onClass [ owl:intersectionOf ( obo:BFO_0000001
+                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                        owl:onProperty obo:RO_0000086 ;
+                                                                                                                                        owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020150>
+                                                                                                                                      ]
+                                                                                                                                    ) ;
+                                                                                                                 rdf:type owl:Class
+                                                                                                               ]
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                                        )
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
+                                      rdfs:label "mass concentration"@en ;
+                                      skos:definition "Mass concentration links mass of a mixture component to the total volume in quantitative description, frequently used in solutions"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0080116
@@ -2834,12 +3948,24 @@ A manufacturing process is always a transformative process."""@en ,
                                       skos:definition "material intentionally processed from materials derived from living (or once-living) organisms"@en .
 
 
+###  https://w3id.org/pmd/fsp/FSP_0000000
+<https://w3id.org/pmd/fsp/FSP_0000000> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000037>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "dispersion gas flow rate"@en ;
+                                       skos:definition "A gas flow that is the volumetric flow rate of the dispersion gas in a dispersion gas flow process."@en .
+
+
 ###  https://w3id.org/pmd/fsp/FSP_0000001
 <https://w3id.org/pmd/fsp/FSP_0000001> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000896> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "pressure drop"@en ;
-                                       skos:definition "A significant change in pressure measured over a time span or in a direction." .
+                                       skos:definition "A process attribute of a fluid flow process that is the difference between the static pressure of the fluid upstream and downstream of a flow-restricting component, e.g. the nozzle gap or the filter."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000002
@@ -2847,7 +3973,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "reactor"@en ;
-                                       skos:definition "An entity which contains and controls a process." .
+                                       skos:definition "A device that encloses a space in which a chemical reaction is carried out under controlled conditions."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000003
@@ -2855,39 +3981,39 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000002> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "flame spray pyrolysis reactor"@en ;
-                                       skos:definition "static experimental set-up of the flame spray pyrolysis process, including nozzle and deposition specifications" .
+                                       skos:definition "A reactor in which flame spray pyrolysis is carried out; it comprises at least one nozzle, a nanoparticle filter and a vacuum pump, and optionally an enclosure."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000004
 <https://w3id.org/pmd/fsp/FSP_0000004> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020113> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020289> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "sheath gas"@en ;
-                                       skos:definition "Gas which protects an entity from ambient influences, e.g. oxygen entrainment." .
+                                       skos:definition "A gas that is supplied around the flame of a flame spray pyrolysis reactor to shield it from ambient influences (e.g. entrainment of ambient air) and to stabilise it."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000005
 <https://w3id.org/pmd/fsp/FSP_0000005> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020113> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020289> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "oxidation gas"@en ;
-                                       skos:definition "Educt gas which contributes as an oxygen source in a combustion process." .
+                                       skos:definition "A gas (typically oxygen) that is premixed with the fuel gas and supplies the oxidant for its combustion in the pilot flame."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000006
 <https://w3id.org/pmd/fsp/FSP_0000006> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020113> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020289> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "fuel gas"@en ;
-                                       skos:definition "Educt gas taking part in a combustion process." .
+                                       skos:definition "A combustible gas (typically methane) that is burned together with the oxidation gas in the pilot flame to ignite and stabilise the spray flame."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000007
 <https://w3id.org/pmd/fsp/FSP_0000007> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020113> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020289> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "dispersion gas"@en ;
-                                       skos:definition "Gas which is used to disperse a liquid into droplets." .
+                                       skos:definition "A gas (typically oxygen) that flows through the annular gap of the nozzle and atomises the precursor solution into a spray; it also supplies oxygen for the spray combustion."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000008
@@ -2895,7 +4021,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000833> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "nanoparticle synthesis"@en ;
-                                       skos:definition "A manufacturing process with the intend to synthesize nanoparticles." .
+                                       skos:definition "A manufacturing process that has nanoparticles as its specified output."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000009
@@ -2904,30 +4030,31 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "Flammensprühpyrolyse"@de ,
                                                   "flame spray pyrolysis"@en ;
-                                       skos:definition "A manufacturing process with the intend to synthesize aggregated nanoparticles in the gas phase through the controlled combustion of a dispersed liquid precursor solution." .
+                                       skos:definition "A nanoparticle synthesis in which a precursor solution is atomised by a dispersion gas into a spray and combusted in a flame, so that nanoparticles form in the gas phase."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000010
 <https://w3id.org/pmd/fsp/FSP_0000010> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000002> ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "nanoparticle"@en ;
-                                       skos:definition "A nanoscale particle" .
+                                       skos:definition "An engineered material that is a particle with all three external dimensions in the nanoscale (approx. 1-100 nm, cf. ISO/TS 80004-1)."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000011
 <https://w3id.org/pmd/fsp/FSP_0000011> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0040001> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000141> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "nozzle nozzle distance"@en ;
-                                       skos:definition "Euclidean distance between  the annular gaps of two nozzles." .
+                                       skos:definition "A distance between the outlets (annular gaps) of two nozzles in a multi-flame flame spray pyrolysis reactor."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000012
 <https://w3id.org/pmd/fsp/FSP_0000012> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0040001> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000141> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "nozzle filter distance"@en ;
-                                       skos:definition "Distance bewtween the annular gap of a nozzle and a filter medium." .
+                                       skos:definition "A distance between the outlet (annular gap) of a nozzle and the filter medium."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000013
@@ -2935,7 +4062,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020152> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "deposition component"@en ;
-                                       skos:definition "The component used to separate an entity from a gas flow, e.g. a filter." .
+                                       skos:definition "A component that separates particles from a gas flow and collects them, e.g. a filter."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000014
@@ -2943,7 +4070,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000013> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "nanoparticle filter"@en ;
-                                       skos:definition "A component used for retrieving nanoparticles from the gas flow. Nanoparticles will accumulate on the filter and can later be scraped off." .
+                                       skos:definition "A deposition component on which nanoparticles from the off-gas accumulate and from which they can later be scraped off."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000015
@@ -2951,7 +4078,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000014> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "GD/F filter"@en ;
-                                       skos:definition "Filter class, made of amorphous silicon dioxide." .
+                                       skos:definition "A nanoparticle filter made of glass microfibre (amorphous silicon dioxide)."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000016
@@ -2959,7 +4086,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020152> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "enclosure"@en ;
-                                       skos:definition "Physical hollow body which surrounds an entitiy with the purpose to protect it from ambient influences." .
+                                       skos:definition "A component that is a hollow body surrounding the flame of a flame spray pyrolysis reactor to protect the process from ambient influences (closed reactor)."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000017
@@ -2967,7 +4094,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020152> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "nozzle"@en ;
-                                       skos:definition "A short tube with a taper or constriction used (as on a hose) to speed up or direct a flow of fluid." .
+                                       skos:definition "A component of a flame spray pyrolysis reactor that comprises a capillary for the precursor solution, an annular gap for the dispersion gas and a pilot flame ring, and forms the spray and the flame."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000018
@@ -2975,7 +4102,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000017> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "spray syn nozzle"@en ;
-                                       skos:definition "A standard for a free-jet type burner that offers well-defined and simulation-friendly boundary conditions and geometries as well as accessibility for optical diagnostics." .
+                                       skos:definition "A nozzle built to the SpraySyn standard burner design, a free-jet spray flame burner with well-defined, simulation-friendly boundary conditions and geometry and optical access for diagnostics."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000019
@@ -2991,44 +4118,48 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020152> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "vacuum pump"@en ;
-                                       skos:definition "A piece of equipment for removing air or gas from a container, creating a vacuum inside." .
+                                       skos:definition "A device that removes gas from an enclosed volume; in a flame spray pyrolysis reactor it draws the off-gas with the particles through the nanoparticle filter."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000021
 <https://w3id.org/pmd/fsp/FSP_0000021> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020101> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020272> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "molarity"@en ;
-                                       skos:definition "Molarity is a unit of concentration expressed as the number of moles of dissolved solute per liter of solution." .
+                                       skos:definition "A count per volume of a solution that is the amount of substance (moles) of a solute per volume of the solution, usually expressed in mol/L."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000022
 <https://w3id.org/pmd/fsp/FSP_0000022> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:BFO_0000145 ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020103> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "Reinheit"@de ,
                                                   "purity"@en ;
-                                       skos:definition "The quality or state of being pure" .
+                                       skos:definition "A molar fraction of a gas that is the proportion of its main substance in it; usually given as a purity grade, e.g. grade 5.0 = at least 99.999 %."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000023
 <https://w3id.org/pmd/fsp/FSP_0000023> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020113> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020229> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "precursor"@en ;
-                                       skos:definition "Liquid solution composed of solvent and solute that is dispersed and combusted in a flame spray pyrolysis process." .
+                                       skos:definition "A solution of one or more metal-containing solutes in a solvent that is fed to a flame spray pyrolysis process and combusted to form nanoparticles."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000024
 <https://w3id.org/pmd/fsp/FSP_0000024> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020113> ;
-                                       rdfs:label "solvent"@en .
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020290> ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "solvent"@en ;
+                                       skos:definition "A liquid that bears a solvent role in a precursor solution; it dissolves the solutes and is the main fuel of the spray flame (e.g. xylene, ethanol, 2-ethylhexanoic acid)."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000025
 <https://w3id.org/pmd/fsp/FSP_0000025> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:BFO_0000030 ;
-                                       rdfs:label "solute"@en .
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000001> ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "solute"@en ;
+                                       skos:definition "A portion of matter that bears a solute role in a precursor solution and supplies the metal of the product nanoparticles (e.g. a metal-organic compound or metal salt)."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000026
@@ -3036,7 +4167,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020226> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "feed rate"@en ;
-                                       skos:definition "Temporal rate with which a defined volume of a species is fed into a process." .
+                                       skos:definition "A flow rate that is the volume of a liquid fed into a process per unit time."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000027
@@ -3044,58 +4175,362 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020226> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "gas flow"@en ;
-                                       skos:definition "The volume flow of a gas." .
+                                       skos:definition "A flow rate that is the volume of a gas supplied per unit time."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000028
 <https://w3id.org/pmd/fsp/FSP_0000028> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020246> ;
-                                       rdfs:label "precursor feeding process"@en .
+                                       rdfs:subClassOf obo:COB_0000035 ,
+                                                       <https://w3id.org/pmd/co/PMD_0020246> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000023>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000042>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "precursor feeding process"@en ;
+                                       skos:definition "A continuous transport in which the precursor solution is fed at a controlled feed rate through the capillary of the nozzle."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000029
 <https://w3id.org/pmd/fsp/FSP_0000029> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020246> ;
-                                       rdfs:label "gas flow process"@en .
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "gas flow process"@en ;
+                                       skos:definition "A continuous transport in which a gas is supplied at a controlled flow rate to a flame spray pyrolysis reactor."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000030
 <https://w3id.org/pmd/fsp/FSP_0000030> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
-                                       rdfs:label "mass flow controller"@en .
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "mass flow controller"@en ;
+                                       skos:definition "A device that measures the mass flow of a gas and controls it to a set point."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000031
 <https://w3id.org/pmd/fsp/FSP_0000031> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
-                                       rdfs:label "syringe pump"@en .
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "syringe pump"@en ;
+                                       skos:definition "A device that delivers a liquid at a constant, set volumetric flow rate by advancing the plunger of a syringe."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000032
 <https://w3id.org/pmd/fsp/FSP_0000032> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
-                                       rdfs:label "pipette"@en .
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "pipette"@en ;
+                                       skos:definition "A device for transferring a defined volume of liquid; used to dose solute and solvent when preparing a precursor solution."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000033
 <https://w3id.org/pmd/fsp/FSP_0000033> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
-                                       rdfs:label "mixing recipe"@en .
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "mixing recipe"@en ;
+                                       skos:definition "A recipe that specifies the solutes, solvents and their amounts for preparing a precursor solution."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000034
 <https://w3id.org/pmd/fsp/FSP_0000034> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
-                                       rdfs:label "flame spray pyrolysis recipe"@en .
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "flame spray pyrolysis recipe"@en ;
+                                       skos:definition "A recipe that specifies the set points of a flame spray pyrolysis process, such as gas flow rates, precursor feed rate and nozzle settings."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000035
+<https://w3id.org/pmd/fsp/FSP_0000035> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:COB_0000035 ,
+                                                       <https://w3id.org/pmd/fsp/FSP_0000029> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000005>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000040>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "oxygen gas flow process"@en ;
+                                       skos:definition "A gas flow process in which oxygen is supplied to the pilot flame as the oxidation gas for the fuel gas."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000036
+<https://w3id.org/pmd/fsp/FSP_0000036> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:COB_0000035 ,
+                                                       <https://w3id.org/pmd/fsp/FSP_0000029> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000006>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000039>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "fuel gas flow process"@en ;
+                                       skos:definition "A gas flow process in which the fuel gas (e.g. methane) is supplied to the pilot flame of the nozzle."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000037
+<https://w3id.org/pmd/fsp/FSP_0000037> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:COB_0000035 ,
+                                                       <https://w3id.org/pmd/fsp/FSP_0000029> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000007>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000000>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "dispersion gas flow process"@en ;
+                                       skos:definition "A gas flow process in which the dispersion gas is supplied through the annular gap around the capillary of the nozzle to atomise the precursor solution into a spray."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000038
+<https://w3id.org/pmd/fsp/FSP_0000038> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:COB_0000035 ,
+                                                       <https://w3id.org/pmd/fsp/FSP_0000029> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000004>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000041>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "sheath gas flow process"@en ;
+                                       skos:definition "A gas flow process in which the sheath gas is supplied around the flame to shield and stabilise it."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000039
+<https://w3id.org/pmd/fsp/FSP_0000039> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000036>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "fuel gas flow rate"@en ;
+                                       skos:definition "A gas flow that is the volumetric flow rate of the fuel gas in a fuel gas flow process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000040
+<https://w3id.org/pmd/fsp/FSP_0000040> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000035>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "oxygen gas flow rate"@en ;
+                                       skos:definition "A gas flow that is the volumetric flow rate of the oxygen supplied to the pilot flame in an oxygen gas flow process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000041
+<https://w3id.org/pmd/fsp/FSP_0000041> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000038>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "sheath gas flow rate"@en ;
+                                       skos:definition "A gas flow that is the volumetric flow rate of the sheath gas in a sheath gas flow process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000042
+<https://w3id.org/pmd/fsp/FSP_0000042> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000026> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000028>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "precursor feed rate"@en ;
+                                       skos:definition "A feed rate that is the volumetric flow rate of the precursor solution in a precursor feeding process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000043
+<https://w3id.org/pmd/fsp/FSP_0000043> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000042>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0001938 ;
+                                                         owl:someValuesFrom obo:OBI_0001931
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "specified precursor feed rate datum"@en ;
+                                       skos:definition "A specification datum that specifies the intended (set point) precursor feed rate of a precursor feeding process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000044
+<https://w3id.org/pmd/fsp/FSP_0000044> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000041>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0001938 ;
+                                                         owl:someValuesFrom obo:OBI_0001931
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "specified sheath gas flow rate datum"@en ;
+                                       skos:definition "A specification datum that specifies the intended (set point) sheath gas flow rate of a sheath gas flow process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000045
+<https://w3id.org/pmd/fsp/FSP_0000045> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000040>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0001938 ;
+                                                         owl:someValuesFrom obo:OBI_0001931
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "specified oxygen gas flow rate datum"@en ;
+                                       skos:definition "A specification datum that specifies the intended (set point) oxygen gas flow rate of an oxygen gas flow process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000046
+<https://w3id.org/pmd/fsp/FSP_0000046> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000039>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0001938 ;
+                                                         owl:someValuesFrom obo:OBI_0001931
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "specified fuel gas flow rate datum"@en ;
+                                       skos:definition "A specification datum that specifies the intended (set point) fuel gas flow rate of a fuel gas flow process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000047
+<https://w3id.org/pmd/fsp/FSP_0000047> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000000>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0001938 ;
+                                                         owl:someValuesFrom obo:OBI_0001931
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "specified dispersion gas flow rate datum"@en ;
+                                       skos:definition "A specification datum that specifies the intended (set point) dispersion gas flow rate of a dispersion gas flow process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000048
+<https://w3id.org/pmd/fsp/FSP_0000048> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000001> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000037>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "nozzle pressure drop"@en ;
+                                       skos:definition "A pressure drop of the dispersion gas across the annular gap of the nozzle; it determines the gas exit velocity and thus the atomisation of the precursor solution."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000049
+<https://w3id.org/pmd/fsp/FSP_0000049> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000001> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000050>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "filter pressure drop"@en ;
+                                       skos:definition "A pressure drop of the off-gas across the nanoparticle filter, which increases during the process as nanoparticles accumulate on the filter."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000050
+<https://w3id.org/pmd/fsp/FSP_0000050> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:OBI_0302885 ,
+                                                       <https://w3id.org/pmd/co/PMD_0000833> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000293 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020115>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0000299 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000893>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0000057 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000014>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0000057 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000020>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000049>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "particle filtration"@en ;
+                                       skos:definition "A filtration in which the aerosol leaving the flame of a flame spray pyrolysis process is drawn by a vacuum pump through a nanoparticle filter, on which the nanoparticles are collected while the gas passes through."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000051
+<https://w3id.org/pmd/fsp/FSP_0000051> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000869> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0002233 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000023>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0002234 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0020115>
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "spray combustion"@en ;
+                                       skos:definition "A chemical reaction in which the atomised precursor solution burns with oxygen in the spray flame, so that the precursor decomposes and nanoparticles form in the gas phase as an aerosol."@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://qudt.org/vocab/unit/PER-MOL
-<http://qudt.org/vocab/unit/PER-MOL> rdf:type owl:NamedIndividual ,
-                                              <http://qudt.org/schema/qudt/Unit> .
+###  http://purl.obolibrary.org/obo/UO_0000076
+obo:UO_0000076 rdf:type owl:NamedIndividual .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000163
+obo:UO_0000163 rdf:type owl:NamedIndividual .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000164
+obo:UO_0000164 rdf:type owl:NamedIndividual .
+
+
+###  http://purl.obolibrary.org/obo/UO_0000169
+obo:UO_0000169 rdf:type owl:NamedIndividual .
+
+
+###  http://qudt.org/vocab/unit/MOL
+<http://qudt.org/vocab/unit/MOL> rdf:type owl:NamedIndividual ,
+                                          <http://qudt.org/schema/qudt/Unit> .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020217
@@ -3133,10 +4568,26 @@ A manufacturing process is always a transformative process."""@en ,
 ###  https://w3id.org/pmd/co/PMD_0020368
 <https://w3id.org/pmd/co/PMD_0020368> rdf:type owl:NamedIndividual ,
                                                obo:OBI_0001931 ;
-                                      obo:IAO_0000039 <http://qudt.org/vocab/unit/PER-MOL> ;
+                                      obo:IAO_0000039 <http://qudt.org/vocab/unit/MOL> ;
                                       obo:OBI_0001937 602214086000000000000000 ;
                                       rdfs:label "avogadro number"@en ;
                                       skos:definition "The Avogadro number"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+obo:UO_0000076 rdfs:label "mole fraction" .
+
+
+obo:UO_0000163 rdfs:label "mass percentage" .
+
+
+obo:UO_0000164 rdfs:label "mass volume percentage" .
+
+
+obo:UO_0000169 rdfs:label "parts per million" .
 
 
 #################################################################
@@ -3164,6 +4615,14 @@ A manufacturing process is always a transformative process."""@en ,
                 obo:BFO_0000011
                 obo:BFO_0000015
                 obo:BFO_0000035
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( obo:COB_0000082
+                obo:GO_0008150
+                <https://w3id.org/pmd/co/PMD_0023026>
               )
 ] .
 

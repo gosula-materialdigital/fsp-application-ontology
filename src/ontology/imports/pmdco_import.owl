@@ -1014,7 +1014,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000009 "A label is a symbol that is
 AnnotationAssertion(rdfs:label obo:IAO_0000009 "datum label"@en)
 SubClassOf(obo:IAO_0000009 obo:IAO_0000030)
 
-# Class: obo:IAO_0000027 (data item)
+# Class: obo:IAO_0000027 (data entity)
 
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
 AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000027 "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en)
@@ -1992,7 +1992,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> <https://w3id.org/pmd/co/PMD_00
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> <https://w3id.org/pmd/co/PMD_0023004>)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0025001> ObjectSomeValuesFrom(obo:RO_0000080 ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000001> ObjectSomeValuesFrom(obo:BFO_0000051 <https://w3id.org/pmd/co/PMD_0000001>))))
 
-# Class: <https://w3id.org/pmd/co/PMD_0025018> (geometric relational quality)
+# Class: <https://w3id.org/pmd/co/PMD_0025018> (geometrische relationale Qualität)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025018> "geometric relational quality"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0025018> "geometrische relationale Qualität"@de)
