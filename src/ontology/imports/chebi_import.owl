@@ -1,0 +1,172 @@
+Prefix(:=<https://w3id.org/pmd/fsp/imports/chebi_import.owl#>)
+Prefix(dc:=<http://purl.org/dc/terms/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(prov:=<http://www.w3.org/ns/prov#>)
+Prefix(rdfa:=<http://www.w3.org/ns/rdfa#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(void:=<http://rdfs.org/ns/void#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
+
+Ontology(<https://w3id.org/pmd/fsp/imports/chebi_import.owl>
+<https://w3id.org/pmd/fsp/releases/2026-11-11/imports/chebi_import.owl>
+Annotation(owl:versionInfo "2026-11-11")
+
+Declaration(Class(obo:CHEBI_138675))
+Declaration(Class(obo:CHEBI_16183))
+Declaration(Class(obo:CHEBI_18310))
+Declaration(Class(obo:CHEBI_23367))
+Declaration(Class(obo:CHEBI_24632))
+Declaration(Class(obo:CHEBI_33245))
+Declaration(Class(obo:CHEBI_33579))
+Declaration(Class(obo:CHEBI_33582))
+Declaration(Class(obo:CHEBI_33608))
+Declaration(Class(obo:CHEBI_33653))
+Declaration(Class(obo:CHEBI_33674))
+Declaration(Class(obo:CHEBI_33675))
+Declaration(Class(obo:CHEBI_33692))
+Declaration(Class(obo:CHEBI_36357))
+Declaration(Class(obo:CHEBI_37175))
+Declaration(Class(obo:CHEBI_37176))
+Declaration(Class(obo:CHEBI_37577))
+Declaration(Class(obo:CHEBI_50860))
+Declaration(Class(obo:CHEBI_64708))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(rdfs:label))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: obo:IAO_0000115 (definition)
+
+AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:CHEBI_138675 (gas molecular entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_138675 "Any main group molecular entity that is gaseous at standard temperature and pressure (STP; 0°C and 100 kPa).")
+AnnotationAssertion(rdfs:label obo:CHEBI_138675 "gas molecular entity")
+SubClassOf(obo:CHEBI_138675 obo:CHEBI_33579)
+
+# Class: obo:CHEBI_16183 (methane)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_16183 "A one-carbon compound in which the carbon is attached by single bonds to four hydrogen atoms. It is a colourless, odourless, non-toxic but flammable gas (b.p. −161°C).")
+AnnotationAssertion(rdfs:label obo:CHEBI_16183 "methane")
+SubClassOf(obo:CHEBI_16183 obo:CHEBI_138675)
+SubClassOf(obo:CHEBI_16183 obo:CHEBI_18310)
+SubClassOf(obo:CHEBI_16183 obo:CHEBI_37176)
+SubClassOf(obo:CHEBI_16183 obo:CHEBI_64708)
+
+# Class: obo:CHEBI_18310 (alkane)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_18310 "An acyclic branched or unbranched hydrocarbon having the general formula C<small><sub><em>n</em></sub></small>H<small><sub>2<em>n</em>+2</sub></small>, and therefore consisting entirely of hydrogen atoms and saturated carbon atoms.")
+AnnotationAssertion(rdfs:label obo:CHEBI_18310 "alkane")
+SubClassOf(obo:CHEBI_18310 obo:CHEBI_24632)
+SubClassOf(obo:CHEBI_18310 obo:CHEBI_33653)
+
+# Class: obo:CHEBI_23367 (molecular entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_23367 "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.")
+AnnotationAssertion(rdfs:label obo:CHEBI_23367 "molecular entity")
+
+# Class: obo:CHEBI_24632 (hydrocarbon)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_24632 "A compound consisting of carbon and hydrogen only.")
+AnnotationAssertion(rdfs:label obo:CHEBI_24632 "hydrocarbon")
+SubClassOf(obo:CHEBI_24632 obo:CHEBI_33245)
+
+# Class: obo:CHEBI_33245 (organic fundamental parent)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_33245 "An organic fundamental parent is a structure used as a basis for substitutive names in organic nomenclature, containing, in addition to one or more hydrogen atoms, a single atom of an element, a number of atoms (alike or different) linked together to form an unbranched chain, a monocyclic or polycyclic ring system, or a ring assembly or ring/chain system.")
+AnnotationAssertion(rdfs:label obo:CHEBI_33245 "organic fundamental parent")
+SubClassOf(obo:CHEBI_33245 obo:CHEBI_37175)
+SubClassOf(obo:CHEBI_33245 obo:CHEBI_50860)
+
+# Class: obo:CHEBI_33579 (main group molecular entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_33579 "A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table.")
+AnnotationAssertion(rdfs:label obo:CHEBI_33579 "main group molecular entity")
+SubClassOf(obo:CHEBI_33579 obo:CHEBI_23367)
+
+# Class: obo:CHEBI_33582 (carbon group molecular entity)
+
+AnnotationAssertion(rdfs:label obo:CHEBI_33582 "carbon group molecular entity")
+SubClassOf(obo:CHEBI_33582 obo:CHEBI_33675)
+
+# Class: obo:CHEBI_33608 (hydrogen molecular entity)
+
+AnnotationAssertion(rdfs:label obo:CHEBI_33608 "hydrogen molecular entity")
+SubClassOf(obo:CHEBI_33608 obo:CHEBI_33674)
+
+# Class: obo:CHEBI_33653 (aliphatic compound)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_33653 "Any acyclic or cyclic, saturated or unsaturated carbon compound, excluding aromatic compounds.")
+AnnotationAssertion(rdfs:label obo:CHEBI_33653 "aliphatic compound")
+SubClassOf(obo:CHEBI_33653 obo:CHEBI_50860)
+
+# Class: obo:CHEBI_33674 (s-block molecular entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_33674 "An s-block molecular entity is a molecular entity containing one or more atoms of an s-block element.")
+AnnotationAssertion(rdfs:label obo:CHEBI_33674 "s-block molecular entity")
+SubClassOf(obo:CHEBI_33674 obo:CHEBI_33579)
+
+# Class: obo:CHEBI_33675 (p-block molecular entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_33675 "A main group molecular entity that contains one or more atoms of a p-block element.")
+AnnotationAssertion(rdfs:label obo:CHEBI_33675 "p-block molecular entity")
+SubClassOf(obo:CHEBI_33675 obo:CHEBI_33579)
+
+# Class: obo:CHEBI_33692 (hydrides)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_33692 "Hydrides are chemical compounds of hydrogen with other chemical elements.")
+AnnotationAssertion(rdfs:label obo:CHEBI_33692 "hydrides")
+SubClassOf(obo:CHEBI_33692 obo:CHEBI_33608)
+SubClassOf(obo:CHEBI_33692 obo:CHEBI_37577)
+
+# Class: obo:CHEBI_36357 (polyatomic entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_36357 "Any molecular entity consisting of more than one atom.")
+AnnotationAssertion(rdfs:label obo:CHEBI_36357 "polyatomic entity")
+SubClassOf(obo:CHEBI_36357 obo:CHEBI_23367)
+
+# Class: obo:CHEBI_37175 (organic hydride)
+
+AnnotationAssertion(rdfs:label obo:CHEBI_37175 "organic hydride")
+SubClassOf(obo:CHEBI_37175 obo:CHEBI_33692)
+
+# Class: obo:CHEBI_37176 (mononuclear parent hydride)
+
+AnnotationAssertion(rdfs:label obo:CHEBI_37176 "mononuclear parent hydride")
+SubClassOf(obo:CHEBI_37176 obo:CHEBI_33692)
+
+# Class: obo:CHEBI_37577 (heteroatomic molecular entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_37577 "A molecular entity consisting of two or more chemical elements.")
+AnnotationAssertion(rdfs:label obo:CHEBI_37577 "heteroatomic molecular entity")
+SubClassOf(obo:CHEBI_37577 obo:CHEBI_36357)
+
+# Class: obo:CHEBI_50860 (organic molecular entity)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_50860 "Any molecular entity that contains carbon.")
+AnnotationAssertion(rdfs:label obo:CHEBI_50860 "organic molecular entity")
+SubClassOf(obo:CHEBI_50860 obo:CHEBI_33582)
+
+# Class: obo:CHEBI_64708 (one-carbon compound)
+
+AnnotationAssertion(obo:IAO_0000115 obo:CHEBI_64708 "An organic molecular entity containing a single carbon atom (C<small><sub>1</sub></small>).")
+AnnotationAssertion(rdfs:label obo:CHEBI_64708 "one-carbon compound")
+SubClassOf(obo:CHEBI_64708 obo:CHEBI_50860)
+
+
+)

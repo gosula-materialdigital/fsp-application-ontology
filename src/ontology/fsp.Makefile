@@ -27,3 +27,28 @@ $(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms.txt $(I
 		        --select "classes individuals annotation-properties" \
 		 $(ANNOTATE_CONVERT_FILE)
 endif
+
+## ChEBI import (custom module, no mirror): imports/chebi_import.owl is a small fixed
+## file and is NOT rebuilt by normal builds (ChEBI is several hundred MB).
+## To add ChEBI terms: list them in imports/chebi_terms.txt, then run
+##   sh run.sh make build-chebi-import
+## It takes the listed terms and their ChEBI ancestors up to 'molecular entity'
+## (CHEBI_23367, which PMD Core already contains).
+ifeq ($(IMP),true)
+$(IMPORTDIR)/chebi_import.owl:
+	@test -f $@ || { echo "ERROR: $@ is missing; run 'make build-chebi-import'"; false; }
+endif
+
+.PHONY: build-chebi-import
+build-chebi-import: | $(TMPDIR)
+	curl -sSL http://purl.obolibrary.org/obo/chebi/chebi_lite.owl.gz -o $(TMPDIR)/chebi_lite.owl.gz
+	$(ROBOT) extract --input $(TMPDIR)/chebi_lite.owl.gz --method MIREOT \
+		 --lower-terms $(IMPORTDIR)/chebi_terms.txt \
+		 --upper-term http://purl.obolibrary.org/obo/CHEBI_23367 \
+		 --intermediates all \
+		 remove --term rdfs:label --term IAO:0000115 --select complement --select annotation-properties \
+		 annotate --ontology-iri $(URIBASE)/fsp/imports/chebi_import.owl \
+		          --version-iri $(URIBASE)/fsp/releases/$(TODAY)/imports/chebi_import.owl \
+		          --annotation owl:versionInfo $(TODAY) \
+		 convert -f ofn --output $(IMPORTDIR)/chebi_import.owl
+	rm -f $(TMPDIR)/chebi_lite.owl.gz

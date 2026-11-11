@@ -104,6 +104,15 @@ import_group:
         - http://purl.obolibrary.org/obo/OBI_
         # keep the link material processing -> completely executed planned process (PMD Core)
         - http://purl.obolibrary.org/obo/COB_0000110
+    - id: chebi
+      title: "Chemical Entities of Biological Interest"
+      # custom, no mirror: imports/chebi_import.owl is a small fixed module (methane and its
+      # ChEBI ancestors up to 'molecular entity'), created once with ROBOT MIREOT from chebi_lite.
+      # This avoids downloading ChEBI (several hundred MB) on every build.
+      module_type: custom
+      mirror_type: no_mirror
+      base_iris:
+        - http://purl.obolibrary.org/obo/CHEBI_
 # ------------------------------------------------------------------------------
 # COMPONENTS
 # ------------------------------------------------------------------------------

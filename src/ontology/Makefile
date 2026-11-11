@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                093ea2803ad1854ce95ba0a486edb63ab39463b1f5270bd232488882dc0644dd
+CONFIG_HASH=                f1248488ac4812ef3d7f773ea0aa50676c95387d001d469634faba10c24007cb
 
 
 # ----------------------------------------
@@ -188,7 +188,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  pmdco obi
+IMPORTS =  pmdco obi chebi
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -431,6 +431,12 @@ $(IMPORTDIR)/obi_import.owl: $(MIRRORDIR)/obi.owl $(IMPORTDIR)/obi_terms.txt $(I
 		        --select "classes individual annotation-properties" \
 		 $(ANNOTATE_CONVERT_FILE)
 
+## Module for ontology: chebi (custom)
+$(IMPORTDIR)/chebi_import.owl: 
+	@echo "ERROR: You have configured chebi as a custom module;"
+	@echo "       This rule needs to be overwritten in fsp.Makefile!"
+	@false
+
 endif # IMP=true
 
 .PHONY: refresh-imports
@@ -518,6 +524,10 @@ mirror-pmdco: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/obi.owl
 mirror-obi: | $(TMPDIR)
 	$(ROBOT) convert -I http://purl.obolibrary.org/obo/obi.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: chebi
+## You have configured your default mirror type to no_mirror.
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)

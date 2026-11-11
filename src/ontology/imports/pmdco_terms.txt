@@ -41,3 +41,5 @@ https://w3id.org/pmd/co/PMD_0025006 # process attribute of
 https://w3id.org/pmd/co/PMD_0000009 # has process attribute
 http://purl.obolibrary.org/obo/RO_0002234 # has output
 http://purl.obolibrary.org/obo/RO_0000057 # has participant
+https://w3id.org/pmd/co/PMD_0001035 # angle
+http://purl.obolibrary.org/obo/CHEBI_60003 # pure substance

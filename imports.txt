@@ -34,3 +34,4 @@
 # Add your imports below this line
 # ==============================================================================
 obi|http://purl.obolibrary.org/obo/obi.owl
+chebi|http://purl.obolibrary.org/obo/chebi/chebi_lite.owl.gz (custom module, built once)
