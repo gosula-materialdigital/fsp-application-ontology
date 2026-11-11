@@ -117,7 +117,7 @@ AnnotationAssertion(rdfs:label :FSP_0000001 "pressure drop"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000001 "A process attribute of a fluid flow process that is the difference between the static pressure of the fluid upstream and downstream of a flow-restricting component, e.g. the nozzle gap or the filter."@en)
 SubClassOf(:FSP_0000001 <https://w3id.org/pmd/co/PMD_0000008>)
 
-# Class: :FSP_0000002 (Reaktor)
+# Class: :FSP_0000002 (reactor)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000002 <https://w3id.org/pmd/fsp/>)
 AnnotationAssertion(rdfs:label :FSP_0000002 "Reaktor"@de)
@@ -326,7 +326,7 @@ AnnotationAssertion(rdfs:label :FSP_0000027 "gas flow"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000027 "A flow rate that is the volume of a gas supplied per unit time."@en)
 SubClassOf(:FSP_0000027 <https://w3id.org/pmd/co/PMD_0020226>)
 
-# Class: :FSP_0000028 (precursor feeding process)
+# Class: :FSP_0000028 (Präkursorzufuhr)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000028 <https://w3id.org/pmd/fsp/>)
 AnnotationAssertion(rdfs:label :FSP_0000028 "Präkursorzufuhr"@de)
