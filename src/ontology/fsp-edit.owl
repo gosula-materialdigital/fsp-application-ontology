@@ -60,28 +60,19 @@ Declaration(Class(:FSP_0000031))
 Declaration(Class(:FSP_0000032))
 Declaration(Class(:FSP_0000033))
 Declaration(Class(:FSP_0000034))
-Declaration(Class(:FSP_0000035))
-Declaration(Class(:FSP_0000036))
-Declaration(Class(:FSP_0000037))
-Declaration(Class(:FSP_0000038))
-Declaration(Class(:FSP_0000039))
-Declaration(Class(:FSP_0000040))
-Declaration(Class(:FSP_0000041))
 Declaration(Class(:FSP_0000042))
 Declaration(Class(:FSP_0000043))
-Declaration(Class(:FSP_0000044))
-Declaration(Class(:FSP_0000045))
-Declaration(Class(:FSP_0000046))
-Declaration(Class(:FSP_0000047))
 Declaration(Class(:FSP_0000048))
 Declaration(Class(:FSP_0000049))
 Declaration(Class(:FSP_0000050))
 Declaration(Class(:FSP_0000051))
 Declaration(Class(:FSP_0000052))
-Declaration(Class(:FSP_0000053))
 Declaration(Class(:FSP_0000054))
 Declaration(Class(:FSP_0000055))
 Declaration(Class(:FSP_0000056))
+Declaration(Class(:FSP_0000057))
+Declaration(Class(:FSP_0000059))
+Declaration(Class(:FSP_0000060))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
@@ -173,7 +164,7 @@ AnnotationAssertion(rdfs:label :FSP_0000008 "nanoparticle synthesis"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000008 "A manufacturing process that has nanoparticles as its specified output."@en)
 SubClassOf(:FSP_0000008 <https://w3id.org/pmd/co/PMD_0000833>)
 
-# Class: :FSP_0000009 (Flammensprühpyrolyse)
+# Class: :FSP_0000009 (flame spray pyrolysis)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000009 <https://w3id.org/pmd/fsp/>)
 AnnotationAssertion(rdfs:label :FSP_0000009 "Flammensprühpyrolyse"@de)
@@ -326,7 +317,7 @@ AnnotationAssertion(rdfs:label :FSP_0000027 "gas flow"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000027 "A flow rate that is the volume of a gas supplied per unit time."@en)
 SubClassOf(:FSP_0000027 <https://w3id.org/pmd/co/PMD_0020226>)
 
-# Class: :FSP_0000028 (Präkursorzufuhr)
+# Class: :FSP_0000028 (precursor feeding process)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000028 <https://w3id.org/pmd/fsp/>)
 AnnotationAssertion(rdfs:label :FSP_0000028 "Präkursorzufuhr"@de)
@@ -382,65 +373,6 @@ AnnotationAssertion(rdfs:label :FSP_0000034 "flame spray pyrolysis recipe"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000034 "A recipe that specifies the set points of a flame spray pyrolysis process, such as gas flow rates, precursor feed rate and nozzle settings."@en)
 SubClassOf(:FSP_0000034 <https://w3id.org/pmd/co/PMD_0060008>)
 
-# Class: :FSP_0000035 (oxygen gas flow process)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000035 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000035 "Sauerstoffzufuhr"@de)
-AnnotationAssertion(rdfs:label :FSP_0000035 "oxygen gas flow process"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000035 "A gas flow process in which oxygen is supplied to the pilot flame as the oxidation gas for the fuel gas."@en)
-SubClassOf(:FSP_0000035 :FSP_0000029)
-
-# Class: :FSP_0000036 (fuel gas flow process)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000036 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000036 "Brenngaszufuhr"@de)
-AnnotationAssertion(rdfs:label :FSP_0000036 "fuel gas flow process"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000036 "A gas flow process in which the fuel gas (e.g. methane) is supplied to the pilot flame of the nozzle."@en)
-SubClassOf(:FSP_0000036 :FSP_0000029)
-
-# Class: :FSP_0000037 (dispersion gas flow process)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000037 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000037 "Dispersionsgaszufuhr"@de)
-AnnotationAssertion(rdfs:label :FSP_0000037 "dispersion gas flow process"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000037 "A gas flow process in which the dispersion gas is supplied through the annular gap around the capillary of the nozzle to atomise the precursor solution into a spray."@en)
-SubClassOf(:FSP_0000037 :FSP_0000029)
-
-# Class: :FSP_0000038 (sheath gas flow process)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000038 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000038 "Hüllgaszufuhr"@de)
-AnnotationAssertion(rdfs:label :FSP_0000038 "sheath gas flow process"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000038 "A gas flow process in which the sheath gas is supplied around the flame to shield and stabilise it."@en)
-SubClassOf(:FSP_0000038 :FSP_0000029)
-
-# Class: :FSP_0000039 (Brenngasdurchfluss)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000039 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000039 "Brenngasdurchfluss"@de)
-AnnotationAssertion(rdfs:label :FSP_0000039 "fuel gas flow rate"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000039 "A gas flow that is the volumetric flow rate of the fuel gas in a fuel gas flow process."@en)
-SubClassOf(:FSP_0000039 :FSP_0000027)
-SubClassOf(:FSP_0000039 ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> :FSP_0000036))
-
-# Class: :FSP_0000040 (Sauerstoffdurchfluss)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000040 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000040 "Sauerstoffdurchfluss"@de)
-AnnotationAssertion(rdfs:label :FSP_0000040 "oxygen gas flow rate"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000040 "A gas flow that is the volumetric flow rate of the oxygen supplied to the pilot flame in an oxygen gas flow process."@en)
-SubClassOf(:FSP_0000040 :FSP_0000027)
-SubClassOf(:FSP_0000040 ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> :FSP_0000035))
-
-# Class: :FSP_0000041 (sheath gas flow rate)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000041 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000041 "Hüllgasdurchfluss"@de)
-AnnotationAssertion(rdfs:label :FSP_0000041 "sheath gas flow rate"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000041 "A gas flow that is the volumetric flow rate of the sheath gas in a sheath gas flow process."@en)
-SubClassOf(:FSP_0000041 :FSP_0000027)
-SubClassOf(:FSP_0000041 ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> :FSP_0000038))
-
 # Class: :FSP_0000042 (precursor feed rate)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000042 <https://w3id.org/pmd/fsp/>)
@@ -460,46 +392,6 @@ SubClassOf(:FSP_0000043 <https://w3id.org/pmd/co/PMD_0060009>)
 SubClassOf(:FSP_0000043 ObjectSomeValuesFrom(obo:IAO_0000136 :FSP_0000042))
 SubClassOf(:FSP_0000043 ObjectSomeValuesFrom(obo:OBI_0001938 obo:OBI_0001931))
 
-# Class: :FSP_0000044 (Sollwert des Hüllgasdurchflusses)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000044 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000044 "Sollwert des Hüllgasdurchflusses"@de)
-AnnotationAssertion(rdfs:label :FSP_0000044 "specified sheath gas flow rate datum"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000044 "A specification datum that specifies the intended (set point) sheath gas flow rate of a sheath gas flow process."@en)
-SubClassOf(:FSP_0000044 <https://w3id.org/pmd/co/PMD_0060009>)
-SubClassOf(:FSP_0000044 ObjectSomeValuesFrom(obo:IAO_0000136 :FSP_0000041))
-SubClassOf(:FSP_0000044 ObjectSomeValuesFrom(obo:OBI_0001938 obo:OBI_0001931))
-
-# Class: :FSP_0000045 (Sollwert des Sauerstoffdurchflusses)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000045 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000045 "Sollwert des Sauerstoffdurchflusses"@de)
-AnnotationAssertion(rdfs:label :FSP_0000045 "specified oxygen gas flow rate datum"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000045 "A specification datum that specifies the intended (set point) oxygen gas flow rate of an oxygen gas flow process."@en)
-SubClassOf(:FSP_0000045 <https://w3id.org/pmd/co/PMD_0060009>)
-SubClassOf(:FSP_0000045 ObjectSomeValuesFrom(obo:IAO_0000136 :FSP_0000040))
-SubClassOf(:FSP_0000045 ObjectSomeValuesFrom(obo:OBI_0001938 obo:OBI_0001931))
-
-# Class: :FSP_0000046 (Sollwert des Brenngasdurchflusses)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000046 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000046 "Sollwert des Brenngasdurchflusses"@de)
-AnnotationAssertion(rdfs:label :FSP_0000046 "specified fuel gas flow rate datum"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000046 "A specification datum that specifies the intended (set point) fuel gas flow rate of a fuel gas flow process."@en)
-SubClassOf(:FSP_0000046 <https://w3id.org/pmd/co/PMD_0060009>)
-SubClassOf(:FSP_0000046 ObjectSomeValuesFrom(obo:IAO_0000136 :FSP_0000039))
-SubClassOf(:FSP_0000046 ObjectSomeValuesFrom(obo:OBI_0001938 obo:OBI_0001931))
-
-# Class: :FSP_0000047 (specified dispersion gas flow rate datum)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000047 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000047 "Sollwert des Dispersionsgasdurchflusses"@de)
-AnnotationAssertion(rdfs:label :FSP_0000047 "specified dispersion gas flow rate datum"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000047 "A specification datum that specifies the intended (set point) dispersion gas flow rate of a dispersion gas flow process."@en)
-SubClassOf(:FSP_0000047 <https://w3id.org/pmd/co/PMD_0060009>)
-SubClassOf(:FSP_0000047 ObjectSomeValuesFrom(obo:IAO_0000136 :FSP_0000053))
-SubClassOf(:FSP_0000047 ObjectSomeValuesFrom(obo:OBI_0001938 obo:OBI_0001931))
-
 # Class: :FSP_0000048 (nozzle pressure drop)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000048 <https://w3id.org/pmd/fsp/>)
@@ -507,7 +399,7 @@ AnnotationAssertion(rdfs:label :FSP_0000048 "Düsendruckverlust"@de)
 AnnotationAssertion(rdfs:label :FSP_0000048 "nozzle pressure drop"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000048 "A pressure drop of the dispersion gas across the annular gap of the nozzle; it determines the gas exit velocity and thus the atomisation of the precursor solution."@en)
 SubClassOf(:FSP_0000048 :FSP_0000001)
-SubClassOf(:FSP_0000048 ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> :FSP_0000037))
+SubClassOf(:FSP_0000048 ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> :FSP_0000029))
 
 # Class: :FSP_0000049 (Filterdruckverlust)
 
@@ -542,15 +434,6 @@ AnnotationAssertion(rdfs:label :FSP_0000052 "nozzle angle"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000052 "An angle between the axis of a nozzle and the vertical axis of a flame spray pyrolysis reactor; in multi-flame set-ups it describes how the nozzles are tilted towards each other."@en)
 SubClassOf(:FSP_0000052 <https://w3id.org/pmd/co/PMD_0001035>)
 
-# Class: :FSP_0000053 (dispersion gas flow rate)
-
-AnnotationAssertion(rdfs:isDefinedBy :FSP_0000053 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000053 "Dispersionsgasdurchfluss"@de)
-AnnotationAssertion(rdfs:label :FSP_0000053 "dispersion gas flow rate"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000053 "A gas flow that is the volumetric flow rate of the dispersion gas in a dispersion gas flow process."@en)
-SubClassOf(:FSP_0000053 :FSP_0000027)
-SubClassOf(:FSP_0000053 ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0025006> :FSP_0000037))
-
 # Class: :FSP_0000054 (Sieb)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000054 <https://w3id.org/pmd/fsp/>)
@@ -576,6 +459,32 @@ AnnotationAssertion(rdfs:label :FSP_0000056 "portion of methane"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000056 "A pure substance that consists of methane molecules (CHEBI:16183); e.g. the methane in the fuel gas of a flame spray pyrolysis process."@en)
 SubClassOf(:FSP_0000056 obo:CHEBI_60003)
 SubClassOf(:FSP_0000056 ObjectSomeValuesFrom(obo:BFO_0000051 obo:CHEBI_16183))
+
+# Class: :FSP_0000057 (specified gas flow rate datum)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000057 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000057 "Sollwert des Gasdurchflusses"@de)
+AnnotationAssertion(rdfs:label :FSP_0000057 "specified gas flow rate datum"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000057 "A specification datum that specifies the intended (set point) flow rate of a gas in a gas flow process, e.g. of the dispersion gas, the fuel gas or the oxygen for the pilot flame."@en)
+SubClassOf(:FSP_0000057 <https://w3id.org/pmd/co/PMD_0060009>)
+SubClassOf(:FSP_0000057 ObjectSomeValuesFrom(obo:IAO_0000136 :FSP_0000027))
+SubClassOf(:FSP_0000057 ObjectSomeValuesFrom(obo:OBI_0001938 obo:OBI_0001931))
+
+# Class: :FSP_0000059 (vacuum pump power)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000059 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000059 "Leistung der Vakuumpumpe"@de)
+AnnotationAssertion(rdfs:label :FSP_0000059 "vacuum pump power"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000059 "A quality of a vacuum pump that is its power setting, given as a percentage of its maximum power."@en)
+SubClassOf(:FSP_0000059 obo:BFO_0000019)
+
+# Class: :FSP_0000060 (ultrasonic bath)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000060 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000060 "Ultraschallbad"@de)
+AnnotationAssertion(rdfs:label :FSP_0000060 "ultrasonic bath"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000060 "A device with a liquid-filled tank through which ultrasound generated by transducers is transmitted to containers placed in the liquid; used to dissolve the solutes in the solvent and mix them into the precursor solution."@en)
+SubClassOf(:FSP_0000060 <https://w3id.org/pmd/co/PMD_0000602>)
 
 
 )
