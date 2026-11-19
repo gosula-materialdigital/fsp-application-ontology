@@ -17,10 +17,15 @@ Import(<https://w3id.org/pmd/fsp/imports/chebi_import.owl>)
 Import(<https://w3id.org/pmd/fsp/imports/obi_import.owl>)
 Import(<https://w3id.org/pmd/fsp/imports/pmdco_import.owl>)
 Annotation(dcterms:creator "Divya Gosula")
-Annotation(dcterms:description "Application ontology for the flame spray pyrolysis (FSP) process for manufacturing nanoparticles, aligned with the PMD Core Ontology (PMDco).")
+Annotation(dcterms:creator "Keno Krieger")
+Annotation(dcterms:creator "Manuel Vollbrecht")
+Annotation(dcterms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers the flame spray pyrolysis (FSP) process for manufacturing nanoparticles: the precursor preparation, the FSP reactor with its nozzles and devices, the process parameters and set points, and the particle filtration. It is aligned with the PMD Core Ontology (PMDco). This is version 3 of the PMD FSP ontology; it builds on version 2.0 (https://github.com/Leibniz-IWT/PMD-FSP-Ontology)."@en)
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
-Annotation(dcterms:title "Flame Spray Pyrolysis Ontology")
+Annotation(owl:priorVersion <https://w3id.org/pmd/fsp/2.0>)
+Annotation(dcterms:title "Platform Material Digital Application Ontology (PMDao) - Flame Spray Pyrolysis Module"@en)
+Annotation(<http://usefulinc.com/ns/doap#repository> <https://github.com/gosula-materialdigital/fsp-application-ontology>)
 
+Declaration(Class(obo:OBI_0400100))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020101>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020152>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020226>))
@@ -60,19 +65,32 @@ Declaration(Class(:FSP_0000031))
 Declaration(Class(:FSP_0000032))
 Declaration(Class(:FSP_0000033))
 Declaration(Class(:FSP_0000034))
+Declaration(Class(:FSP_0000035))
+Declaration(Class(:FSP_0000036))
+Declaration(Class(:FSP_0000037))
+Declaration(Class(:FSP_0000038))
+Declaration(Class(:FSP_0000039))
+Declaration(Class(:FSP_0000040))
+Declaration(Class(:FSP_0000041))
 Declaration(Class(:FSP_0000042))
 Declaration(Class(:FSP_0000043))
+Declaration(Class(:FSP_0000044))
+Declaration(Class(:FSP_0000045))
+Declaration(Class(:FSP_0000046))
+Declaration(Class(:FSP_0000047))
 Declaration(Class(:FSP_0000048))
 Declaration(Class(:FSP_0000049))
 Declaration(Class(:FSP_0000050))
 Declaration(Class(:FSP_0000051))
 Declaration(Class(:FSP_0000052))
+Declaration(Class(:FSP_0000053))
 Declaration(Class(:FSP_0000054))
 Declaration(Class(:FSP_0000055))
 Declaration(Class(:FSP_0000056))
 Declaration(Class(:FSP_0000057))
 Declaration(Class(:FSP_0000059))
 Declaration(Class(:FSP_0000060))
+Declaration(AnnotationProperty(obo:IAO_0100001))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
@@ -99,6 +117,10 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 ############################
 #   Classes
 ############################
+
+# Class: obo:OBI_0400100 (syringe pump)
+
+SubClassOf(obo:OBI_0400100 <https://w3id.org/pmd/co/PMD_0000602>)
 
 # Class: :FSP_0000001 (pressure drop)
 
@@ -341,13 +363,14 @@ AnnotationAssertion(rdfs:label :FSP_0000030 "mass flow controller"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000030 "A device that measures the mass flow of a gas and controls it to a set point."@en)
 SubClassOf(:FSP_0000030 <https://w3id.org/pmd/co/PMD_0000602>)
 
-# Class: :FSP_0000031 (Spritzenpumpe)
+# Class: :FSP_0000031 (obsolete syringe pump)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000031 <https://w3id.org/pmd/fsp/>)
-AnnotationAssertion(rdfs:label :FSP_0000031 "Spritzenpumpe"@de)
-AnnotationAssertion(rdfs:label :FSP_0000031 "syringe pump"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000031 "A device that delivers a liquid at a constant, set volumetric flow rate by advancing the plunger of a syringe."@en)
-SubClassOf(:FSP_0000031 <https://w3id.org/pmd/co/PMD_0000602>)
+AnnotationAssertion(rdfs:label :FSP_0000031 "obsolet Spritzenpumpe"@de)
+AnnotationAssertion(rdfs:label :FSP_0000031 "obsolete syringe pump"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000031 "OBSOLETE. A device that delivers a liquid at a constant, set volumetric flow rate by advancing the plunger of a syringe."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000031 obo:OBI_0400100)
+AnnotationAssertion(owl:deprecated :FSP_0000031 "true"^^xsd:boolean)
 
 # Class: :FSP_0000032 (Pipette)
 
@@ -373,6 +396,69 @@ AnnotationAssertion(rdfs:label :FSP_0000034 "flame spray pyrolysis recipe"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000034 "A recipe that specifies the set points of a flame spray pyrolysis process, such as gas flow rates, precursor feed rate and nozzle settings."@en)
 SubClassOf(:FSP_0000034 <https://w3id.org/pmd/co/PMD_0060008>)
 
+# Class: :FSP_0000035 (obsolete oxygen gas flow process)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000035 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000035 "obsolet Sauerstoffzufuhr"@de)
+AnnotationAssertion(rdfs:label :FSP_0000035 "obsolete oxygen gas flow process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000035 "OBSOLETE. A gas flow process in which oxygen is supplied to the pilot flame as the oxidation gas for the fuel gas."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000035 :FSP_0000029)
+AnnotationAssertion(owl:deprecated :FSP_0000035 "true"^^xsd:boolean)
+
+# Class: :FSP_0000036 (obsolete fuel gas flow process)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000036 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000036 "obsolet Brenngaszufuhr"@de)
+AnnotationAssertion(rdfs:label :FSP_0000036 "obsolete fuel gas flow process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000036 "OBSOLETE. A gas flow process in which the fuel gas (e.g. methane) is supplied to the pilot flame of the nozzle."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000036 :FSP_0000029)
+AnnotationAssertion(owl:deprecated :FSP_0000036 "true"^^xsd:boolean)
+
+# Class: :FSP_0000037 (obsolete dispersion gas flow process)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000037 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000037 "obsolet Dispersionsgaszufuhr"@de)
+AnnotationAssertion(rdfs:label :FSP_0000037 "obsolete dispersion gas flow process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000037 "OBSOLETE. A gas flow process in which the dispersion gas is supplied through the annular gap around the capillary of the nozzle to atomise the precursor solution into a spray."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000037 :FSP_0000029)
+AnnotationAssertion(owl:deprecated :FSP_0000037 "true"^^xsd:boolean)
+
+# Class: :FSP_0000038 (obsolete sheath gas flow process)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000038 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000038 "obsolet Hüllgaszufuhr"@de)
+AnnotationAssertion(rdfs:label :FSP_0000038 "obsolete sheath gas flow process"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000038 "OBSOLETE. A gas flow process in which the sheath gas is supplied around the flame to shield and stabilise it."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000038 :FSP_0000029)
+AnnotationAssertion(owl:deprecated :FSP_0000038 "true"^^xsd:boolean)
+
+# Class: :FSP_0000039 (obsolete fuel gas flow rate)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000039 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000039 "obsolet Brenngasdurchfluss"@de)
+AnnotationAssertion(rdfs:label :FSP_0000039 "obsolete fuel gas flow rate"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000039 "OBSOLETE. A gas flow that is the volumetric flow rate of the fuel gas in a fuel gas flow process."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000039 :FSP_0000027)
+AnnotationAssertion(owl:deprecated :FSP_0000039 "true"^^xsd:boolean)
+
+# Class: :FSP_0000040 (obsolete oxygen gas flow rate)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000040 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000040 "obsolet Sauerstoffdurchfluss"@de)
+AnnotationAssertion(rdfs:label :FSP_0000040 "obsolete oxygen gas flow rate"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000040 "OBSOLETE. A gas flow that is the volumetric flow rate of the oxygen supplied to the pilot flame in an oxygen gas flow process."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000040 :FSP_0000027)
+AnnotationAssertion(owl:deprecated :FSP_0000040 "true"^^xsd:boolean)
+
+# Class: :FSP_0000041 (obsolete sheath gas flow rate)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000041 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000041 "obsolet Hüllgasdurchfluss"@de)
+AnnotationAssertion(rdfs:label :FSP_0000041 "obsolete sheath gas flow rate"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000041 "OBSOLETE. A gas flow that is the volumetric flow rate of the sheath gas in a sheath gas flow process."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000041 :FSP_0000027)
+AnnotationAssertion(owl:deprecated :FSP_0000041 "true"^^xsd:boolean)
+
 # Class: :FSP_0000042 (precursor feed rate)
 
 AnnotationAssertion(rdfs:isDefinedBy :FSP_0000042 <https://w3id.org/pmd/fsp/>)
@@ -391,6 +477,42 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_000004
 SubClassOf(:FSP_0000043 <https://w3id.org/pmd/co/PMD_0060009>)
 SubClassOf(:FSP_0000043 ObjectSomeValuesFrom(obo:IAO_0000136 :FSP_0000042))
 SubClassOf(:FSP_0000043 ObjectSomeValuesFrom(obo:OBI_0001938 obo:OBI_0001931))
+
+# Class: :FSP_0000044 (obsolete specified sheath gas flow rate datum)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000044 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000044 "obsolet Sollwert des Hüllgasdurchflusses"@de)
+AnnotationAssertion(rdfs:label :FSP_0000044 "obsolete specified sheath gas flow rate datum"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000044 "OBSOLETE. A specification datum that specifies the intended (set point) sheath gas flow rate of a sheath gas flow process."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000044 :FSP_0000057)
+AnnotationAssertion(owl:deprecated :FSP_0000044 "true"^^xsd:boolean)
+
+# Class: :FSP_0000045 (obsolete specified oxygen gas flow rate datum)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000045 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000045 "obsolet Sollwert des Sauerstoffdurchflusses"@de)
+AnnotationAssertion(rdfs:label :FSP_0000045 "obsolete specified oxygen gas flow rate datum"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000045 "OBSOLETE. A specification datum that specifies the intended (set point) oxygen gas flow rate of an oxygen gas flow process."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000045 :FSP_0000057)
+AnnotationAssertion(owl:deprecated :FSP_0000045 "true"^^xsd:boolean)
+
+# Class: :FSP_0000046 (obsolete specified fuel gas flow rate datum)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000046 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000046 "obsolet Sollwert des Brenngasdurchflusses"@de)
+AnnotationAssertion(rdfs:label :FSP_0000046 "obsolete specified fuel gas flow rate datum"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000046 "OBSOLETE. A specification datum that specifies the intended (set point) fuel gas flow rate of a fuel gas flow process."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000046 :FSP_0000057)
+AnnotationAssertion(owl:deprecated :FSP_0000046 "true"^^xsd:boolean)
+
+# Class: :FSP_0000047 (obsolete specified dispersion gas flow rate datum)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000047 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000047 "obsolet Sollwert des Dispersionsgasdurchflusses"@de)
+AnnotationAssertion(rdfs:label :FSP_0000047 "obsolete specified dispersion gas flow rate datum"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000047 "OBSOLETE. A specification datum that specifies the intended (set point) dispersion gas flow rate of a dispersion gas flow process."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000047 :FSP_0000057)
+AnnotationAssertion(owl:deprecated :FSP_0000047 "true"^^xsd:boolean)
 
 # Class: :FSP_0000048 (nozzle pressure drop)
 
@@ -433,6 +555,15 @@ AnnotationAssertion(rdfs:label :FSP_0000052 "Düsenwinkel"@de)
 AnnotationAssertion(rdfs:label :FSP_0000052 "nozzle angle"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000052 "An angle between the axis of a nozzle and the vertical axis of a flame spray pyrolysis reactor; in multi-flame set-ups it describes how the nozzles are tilted towards each other."@en)
 SubClassOf(:FSP_0000052 <https://w3id.org/pmd/co/PMD_0001035>)
+
+# Class: :FSP_0000053 (obsolete dispersion gas flow rate)
+
+AnnotationAssertion(rdfs:isDefinedBy :FSP_0000053 <https://w3id.org/pmd/fsp/>)
+AnnotationAssertion(rdfs:label :FSP_0000053 "obsolet Dispersionsgasdurchfluss"@de)
+AnnotationAssertion(rdfs:label :FSP_0000053 "obsolete dispersion gas flow rate"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> :FSP_0000053 "OBSOLETE. A gas flow that is the volumetric flow rate of the dispersion gas in a dispersion gas flow process."@en)
+AnnotationAssertion(obo:IAO_0100001 :FSP_0000053 :FSP_0000027)
+AnnotationAssertion(owl:deprecated :FSP_0000053 "true"^^xsd:boolean)
 
 # Class: :FSP_0000054 (Sieb)
 
