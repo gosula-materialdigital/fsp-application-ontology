@@ -6,6 +6,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfa: <http://www.w3.org/ns/rdfa#> .
@@ -19,12 +20,16 @@
 @base <https://w3id.org/pmd/fsp.ttl> .
 
 <https://w3id.org/pmd/fsp.ttl> rdf:type owl:Ontology ;
-                                owl:versionIRI <https://w3id.org/pmd/fsp/releases/2026-11-11/fsp.ttl> ;
-                                dcterms:creator "Divya Gosula" ;
-                                dcterms:description "Application ontology for the flame spray pyrolysis (FSP) process for manufacturing nanoparticles, aligned with the PMD Core Ontology (PMDco)." ;
+                                owl:versionIRI <https://w3id.org/pmd/fsp/releases/2026-11-19/fsp.ttl> ;
+                                dcterms:creator "Divya Gosula" ,
+                                                "Keno Krieger" ,
+                                                "Manuel Vollbrecht" ;
+                                dcterms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers the flame spray pyrolysis (FSP) process for manufacturing nanoparticles: the precursor preparation, the FSP reactor with its nozzles and devices, the process parameters and set points, and the particle filtration. It is aligned with the PMD Core Ontology (PMDco). This is version 3 of the PMD FSP ontology; it builds on version 2.0 (https://github.com/Leibniz-IWT/PMD-FSP-Ontology)."@en ;
                                 dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                dcterms:title "Flame Spray Pyrolysis Ontology" ;
-                                owl:versionInfo "2026-11-11" .
+                                dcterms:title "Platform Material Digital Application Ontology (PMDao) - Flame Spray Pyrolysis Module"@en ;
+                                doap:repository <https://github.com/gosula-materialdigital/fsp-application-ontology> ;
+                                owl:priorVersion <https://w3id.org/pmd/fsp/2.0> ;
+                                owl:versionInfo "2026-11-19" .
 
 #################################################################
 #    Annotation properties
@@ -40,6 +45,12 @@ obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
                 rdfs:label "definition" ,
                            "definition"@en ,
                            "textual definition" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0100001
+obo:IAO_0100001 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "Use on obsolete terms, relating the term to another term that can be used as a substitute"@en ;
+                rdfs:label "term replaced by"@en .
 
 
 ###  http://purl.org/dc/elements/1.1/source
@@ -66,6 +77,10 @@ dcterms:license rdf:type owl:AnnotationProperty ;
 ###  http://purl.org/dc/terms/title
 dcterms:title rdf:type owl:AnnotationProperty ;
               rdfs:label "title" .
+
+
+###  http://usefulinc.com/ns/doap#repository
+doap:repository rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#label
@@ -1364,6 +1379,13 @@ obo:OBI_0302885 rdf:type owl:Class ;
                 rdfs:subClassOf obo:OBI_0600014 ;
                 obo:IAO_0000115 "filtration is a process which separates components suspended in a fluid based on granularity properties relying on a filter device"@en ;
                 rdfs:label "filtration"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0400100
+obo:OBI_0400100 rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
+                obo:IAO_0000115 "Part of the fluidics system. A syringe pump can be used to inject the sample fluid and cells into the sheath fluid in the flow chamber. Syringe pumps are useful for creating stable flow rates."@en ;
+                rdfs:label "syringe pump" .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0600014
@@ -4438,11 +4460,12 @@ A manufacturing process is always a transformative process."""@en ,
 
 ###  https://w3id.org/pmd/fsp/FSP_0000031
 <https://w3id.org/pmd/fsp/FSP_0000031> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
+                                       obo:IAO_0100001 obo:OBI_0400100 ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Spritzenpumpe"@de ,
-                                                  "syringe pump"@en ;
-                                       skos:definition "A device that delivers a liquid at a constant, set volumetric flow rate by advancing the plunger of a syringe."@en .
+                                       rdfs:label "obsolet Spritzenpumpe"@de ,
+                                                  "obsolete syringe pump"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A device that delivers a liquid at a constant, set volumetric flow rate by advancing the plunger of a syringe."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000032
@@ -4474,77 +4497,72 @@ A manufacturing process is always a transformative process."""@en ,
 
 ###  https://w3id.org/pmd/fsp/FSP_0000035
 <https://w3id.org/pmd/fsp/FSP_0000035> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000029> ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000029> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Sauerstoffzufuhr"@de ,
-                                                  "oxygen gas flow process"@en ;
-                                       skos:definition "A gas flow process in which oxygen is supplied to the pilot flame as the oxidation gas for the fuel gas."@en .
+                                       rdfs:label "obsolet Sauerstoffzufuhr"@de ,
+                                                  "obsolete oxygen gas flow process"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A gas flow process in which oxygen is supplied to the pilot flame as the oxidation gas for the fuel gas."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000036
 <https://w3id.org/pmd/fsp/FSP_0000036> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000029> ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000029> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Brenngaszufuhr"@de ,
-                                                  "fuel gas flow process"@en ;
-                                       skos:definition "A gas flow process in which the fuel gas (e.g. methane) is supplied to the pilot flame of the nozzle."@en .
+                                       rdfs:label "obsolet Brenngaszufuhr"@de ,
+                                                  "obsolete fuel gas flow process"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A gas flow process in which the fuel gas (e.g. methane) is supplied to the pilot flame of the nozzle."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000037
 <https://w3id.org/pmd/fsp/FSP_0000037> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000029> ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000029> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Dispersionsgaszufuhr"@de ,
-                                                  "dispersion gas flow process"@en ;
-                                       skos:definition "A gas flow process in which the dispersion gas is supplied through the annular gap around the capillary of the nozzle to atomise the precursor solution into a spray."@en .
+                                       rdfs:label "obsolet Dispersionsgaszufuhr"@de ,
+                                                  "obsolete dispersion gas flow process"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A gas flow process in which the dispersion gas is supplied through the annular gap around the capillary of the nozzle to atomise the precursor solution into a spray."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000038
 <https://w3id.org/pmd/fsp/FSP_0000038> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000029> ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000029> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Hüllgaszufuhr"@de ,
-                                                  "sheath gas flow process"@en ;
-                                       skos:definition "A gas flow process in which the sheath gas is supplied around the flame to shield and stabilise it."@en .
+                                       rdfs:label "obsolet Hüllgaszufuhr"@de ,
+                                                  "obsolete sheath gas flow process"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A gas flow process in which the sheath gas is supplied around the flame to shield and stabilise it."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000039
 <https://w3id.org/pmd/fsp/FSP_0000039> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000036>
-                                                       ] ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000027> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Brenngasdurchfluss"@de ,
-                                                  "fuel gas flow rate"@en ;
-                                       skos:definition "A gas flow that is the volumetric flow rate of the fuel gas in a fuel gas flow process."@en .
+                                       rdfs:label "obsolet Brenngasdurchfluss"@de ,
+                                                  "obsolete fuel gas flow rate"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A gas flow that is the volumetric flow rate of the fuel gas in a fuel gas flow process."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000040
 <https://w3id.org/pmd/fsp/FSP_0000040> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000035>
-                                                       ] ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000027> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Sauerstoffdurchfluss"@de ,
-                                                  "oxygen gas flow rate"@en ;
-                                       skos:definition "A gas flow that is the volumetric flow rate of the oxygen supplied to the pilot flame in an oxygen gas flow process."@en .
+                                       rdfs:label "obsolet Sauerstoffdurchfluss"@de ,
+                                                  "obsolete oxygen gas flow rate"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A gas flow that is the volumetric flow rate of the oxygen supplied to the pilot flame in an oxygen gas flow process."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000041
 <https://w3id.org/pmd/fsp/FSP_0000041> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000038>
-                                                       ] ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000027> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Hüllgasdurchfluss"@de ,
-                                                  "sheath gas flow rate"@en ;
-                                       skos:definition "A gas flow that is the volumetric flow rate of the sheath gas in a sheath gas flow process."@en .
+                                       rdfs:label "obsolet Hüllgasdurchfluss"@de ,
+                                                  "obsolete sheath gas flow rate"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A gas flow that is the volumetric flow rate of the sheath gas in a sheath gas flow process."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000042
@@ -4579,70 +4597,42 @@ A manufacturing process is always a transformative process."""@en ,
 
 ###  https://w3id.org/pmd/fsp/FSP_0000044
 <https://w3id.org/pmd/fsp/FSP_0000044> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:IAO_0000136 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000041>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0001938 ;
-                                                         owl:someValuesFrom obo:OBI_0001931
-                                                       ] ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000057> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Sollwert des Hüllgasdurchflusses"@de ,
-                                                  "specified sheath gas flow rate datum"@en ;
-                                       skos:definition "A specification datum that specifies the intended (set point) sheath gas flow rate of a sheath gas flow process."@en .
+                                       rdfs:label "obsolet Sollwert des Hüllgasdurchflusses"@de ,
+                                                  "obsolete specified sheath gas flow rate datum"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A specification datum that specifies the intended (set point) sheath gas flow rate of a sheath gas flow process."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000045
 <https://w3id.org/pmd/fsp/FSP_0000045> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:IAO_0000136 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000040>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0001938 ;
-                                                         owl:someValuesFrom obo:OBI_0001931
-                                                       ] ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000057> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Sollwert des Sauerstoffdurchflusses"@de ,
-                                                  "specified oxygen gas flow rate datum"@en ;
-                                       skos:definition "A specification datum that specifies the intended (set point) oxygen gas flow rate of an oxygen gas flow process."@en .
+                                       rdfs:label "obsolet Sollwert des Sauerstoffdurchflusses"@de ,
+                                                  "obsolete specified oxygen gas flow rate datum"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A specification datum that specifies the intended (set point) oxygen gas flow rate of an oxygen gas flow process."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000046
 <https://w3id.org/pmd/fsp/FSP_0000046> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:IAO_0000136 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000039>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0001938 ;
-                                                         owl:someValuesFrom obo:OBI_0001931
-                                                       ] ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000057> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Sollwert des Brenngasdurchflusses"@de ,
-                                                  "specified fuel gas flow rate datum"@en ;
-                                       skos:definition "A specification datum that specifies the intended (set point) fuel gas flow rate of a fuel gas flow process."@en .
+                                       rdfs:label "obsolet Sollwert des Brenngasdurchflusses"@de ,
+                                                  "obsolete specified fuel gas flow rate datum"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A specification datum that specifies the intended (set point) fuel gas flow rate of a fuel gas flow process."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000047
 <https://w3id.org/pmd/fsp/FSP_0000047> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:IAO_0000136 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000053>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:OBI_0001938 ;
-                                                         owl:someValuesFrom obo:OBI_0001931
-                                                       ] ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000057> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Sollwert des Dispersionsgasdurchflusses"@de ,
-                                                  "specified dispersion gas flow rate datum"@en ;
-                                       skos:definition "A specification datum that specifies the intended (set point) dispersion gas flow rate of a dispersion gas flow process."@en .
+                                       rdfs:label "obsolet Sollwert des Dispersionsgasdurchflusses"@de ,
+                                                  "obsolete specified dispersion gas flow rate datum"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A specification datum that specifies the intended (set point) dispersion gas flow rate of a dispersion gas flow process."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000048
@@ -4650,7 +4640,7 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000001> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000037>
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000029>
                                                        ] ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
                                        rdfs:label "Düsendruckverlust"@de ,
@@ -4700,15 +4690,12 @@ A manufacturing process is always a transformative process."""@en ,
 
 ###  https://w3id.org/pmd/fsp/FSP_0000053
 <https://w3id.org/pmd/fsp/FSP_0000053> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/fsp/FSP_0000027> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0025006> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000037>
-                                                       ] ;
+                                       obo:IAO_0100001 <https://w3id.org/pmd/fsp/FSP_0000027> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
-                                       rdfs:label "Dispersionsgasdurchfluss"@de ,
-                                                  "dispersion gas flow rate"@en ;
-                                       skos:definition "A gas flow that is the volumetric flow rate of the dispersion gas in a dispersion gas flow process."@en .
+                                       rdfs:label "obsolet Dispersionsgasdurchfluss"@de ,
+                                                  "obsolete dispersion gas flow rate"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE. A gas flow that is the volumetric flow rate of the dispersion gas in a dispersion gas flow process."@en .
 
 
 ###  https://w3id.org/pmd/fsp/FSP_0000054
@@ -4741,6 +4728,41 @@ A manufacturing process is always a transformative process."""@en ,
                                        rdfs:label "Methanportion"@de ,
                                                   "portion of methane"@en ;
                                        skos:definition "A pure substance that consists of methane molecules (CHEBI:16183); e.g. the methane in the fuel gas of a flame spray pyrolysis process."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000057
+<https://w3id.org/pmd/fsp/FSP_0000057> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/fsp/FSP_0000027>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0001938 ;
+                                                         owl:someValuesFrom obo:OBI_0001931
+                                                       ] ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "Sollwert des Gasdurchflusses"@de ,
+                                                  "specified gas flow rate datum"@en ;
+                                       skos:definition "A specification datum that specifies the intended (set point) flow rate of a gas in a gas flow process, e.g. of the dispersion gas, the fuel gas or the oxygen for the pilot flame."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000059
+<https://w3id.org/pmd/fsp/FSP_0000059> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:BFO_0000019 ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "Leistung der Vakuumpumpe"@de ,
+                                                  "vacuum pump power"@en ;
+                                       skos:definition "A quality of a vacuum pump that is its power setting, given as a percentage of its maximum power."@en .
+
+
+###  https://w3id.org/pmd/fsp/FSP_0000060
+<https://w3id.org/pmd/fsp/FSP_0000060> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
+                                       rdfs:isDefinedBy <https://w3id.org/pmd/fsp/> ;
+                                       rdfs:label "Ultraschallbad"@de ,
+                                                  "ultrasonic bath"@en ;
+                                       skos:definition "A device with a liquid-filled tank through which ultrasound generated by transducers is transmitted to containers placed in the liquid; used to dissolve the solutes in the solvent and mix them into the precursor solution."@en .
 
 
 #################################################################
@@ -4928,56 +4950,6 @@ obo:UO_0000169 rdfs:label "parts per million" .
                          ] ;
                rdf:rest [ rdf:type swrl:AtomList ;
                           rdf:first [ rdf:type swrl:ClassAtom ;
-                                      swrl:classPredicate obo:BFO_0000016 ;
-                                      swrl:argument1 <urn:swrl:var#d>
-                                    ] ;
-                          rdf:rest rdf:nil
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate obo:RO_0000091 ;
-                           swrl:argument1 <urn:swrl:var#e> ;
-                           swrl:argument2 <urn:swrl:var#d>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
- ] .
-
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate obo:RO_0000053 ;
-                           swrl:argument1 <urn:swrl:var#e> ;
-                           swrl:argument2 <urn:swrl:var#d>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:ClassAtom ;
-                                      swrl:classPredicate obo:BFO_0000019 ;
-                                      swrl:argument1 <urn:swrl:var#d>
-                                    ] ;
-                          rdf:rest rdf:nil
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate obo:RO_0000086 ;
-                           swrl:argument1 <urn:swrl:var#e> ;
-                           swrl:argument2 <urn:swrl:var#d>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
- ] .
-
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                           swrl:propertyPredicate obo:RO_0000053 ;
-                           swrl:argument1 <urn:swrl:var#e> ;
-                           swrl:argument2 <urn:swrl:var#d>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:ClassAtom ;
                                       swrl:classPredicate obo:BFO_0000023 ;
                                       swrl:argument1 <urn:swrl:var#d>
                                     ] ;
@@ -5012,6 +4984,56 @@ obo:UO_0000169 rdfs:label "parts per million" .
    swrl:head [ rdf:type swrl:AtomList ;
                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                            swrl:propertyPredicate obo:RO_0000085 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000016 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000091 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000053 ;
+                           swrl:argument1 <urn:swrl:var#e> ;
+                           swrl:argument2 <urn:swrl:var#d>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate obo:BFO_0000019 ;
+                                      swrl:argument1 <urn:swrl:var#d>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate obo:RO_0000086 ;
                            swrl:argument1 <urn:swrl:var#e> ;
                            swrl:argument2 <urn:swrl:var#d>
                          ] ;

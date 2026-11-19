@@ -15,9 +15,9 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<https://w3id.org/pmd/fsp/imports/pmdco_import.owl>
-<https://w3id.org/pmd/fsp/releases/2026-11-11/imports/pmdco_import.owl>
+<https://w3id.org/pmd/fsp/releases/2026-11-19/imports/pmdco_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/3.1.2>)
-Annotation(owl:versionInfo "2026-11-11")
+Annotation(owl:versionInfo "2026-11-19")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -288,11 +288,13 @@ Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020219>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020242>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/co/PMD_0020368>))
 Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(obo:IAO_0100001))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 Declaration(AnnotationProperty(dc:creator))
 Declaration(AnnotationProperty(dc:description))
 Declaration(AnnotationProperty(dc:license))
 Declaration(AnnotationProperty(dc:title))
+Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#repository>))
 Declaration(AnnotationProperty(rdfs:label))
 Declaration(AnnotationProperty(skos:altLabel))
 Declaration(AnnotationProperty(skos:definition))
@@ -311,6 +313,11 @@ AnnotationAssertion(obo:IAO_0000115 obo:IAO_0000115 "The official definition.")
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition")
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "definition"@en)
 AnnotationAssertion(rdfs:label obo:IAO_0000115 "textual definition")
+
+# Annotation Property: obo:IAO_0100001 (term replaced by)
+
+AnnotationAssertion(obo:IAO_0000115 obo:IAO_0100001 "Use on obsolete terms, relating the term to another term that can be used as a substitute"@en)
+AnnotationAssertion(rdfs:label obo:IAO_0100001 "term replaced by"@en)
 
 # Annotation Property: <http://purl.org/dc/elements/1.1/source> (Source)
 
@@ -1276,7 +1283,7 @@ AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000522> "is a 
 AnnotationAssertion(skos:definition <https://w3id.org/pmd/co/PMD_0000522> "ist ein Prozess, bei dem Kräfte, Momente oder auferlegte Verschiebungen auf Objekte oder Objektaggregate und/oder das Äquivalent (Spannungen, Dehnungen) auf Materialien oder Teile der Materie auftreten"@de)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000522> obo:BFO_0000015)
 
-# Class: <https://w3id.org/pmd/co/PMD_0000553> (chemical potential)
+# Class: <https://w3id.org/pmd/co/PMD_0000553> (chemisches Potential)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemical potential"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0000553> "chemisches Potential"@de)
